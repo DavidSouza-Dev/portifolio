@@ -1,37 +1,32 @@
 <template>
 	 <main >
-		
-			<section id="quem-sou">
-				<b-container fluid>
-					Quem sou Eu
-				</b-container>
-			</section>
-			
-			<section id="conhecimento">
-				<div class="container-fluid">
-					Conhecimentos
-					</div>
-			</section>
-
-			<section id="experiencia">
-				<div class="container-fluid">
-					Experiências
-					</div>
-			</section>
-
-			<section id="cases">
-				<div class="container-fluid">
-					Cases
-					</div>
-			</section>
-
-			<section id="contato">
-				<div class="container-fluid">
-					teste
-					</div>
-			</section>
-		
-    </main>
+		 <!-- https://bootstrapmade.com/demo/DevFolio/ -->
+		<b-container fluid>
+			<b-container  id="quem-sou">
+				Quem sou Eu
+			</b-container>
+		</b-container>
+		<b-container fluid>
+			<b-container id="conhecimento">
+				Conhecimentos
+			</b-container>
+		</b-container>
+		<b-container fluid>
+			<b-container id="experiencia">
+				Experiências
+			</b-container>
+		</b-container>
+		<b-container fluid>
+			<b-container  id="cases">
+				Cases
+			</b-container>
+		</b-container>
+		<b-container fluid>
+			<b-container id="contato">
+				Cases
+			</b-container>
+		</b-container>
+	</main>
 </template>
 
 <script>
@@ -60,14 +55,18 @@ export default {
 
 main{
 	margin-top: 900px;
-	section{
+	.container-fluid{
 		height:250px;
+		.container{
+			border: 1px solid red;
+			height: 100%;
+		}
 	}
-    section:nth-child(even){
+    .container-fluid:nth-child(even){
 		background-color: whitesmoke;
 	}
 
-	section:nth-child(odd){
+	.container-fluid:nth-child(odd){
 		background-color: lightgray;
 	}
 }
