@@ -42,6 +42,34 @@ export default {
             searchValue: ''
         }
     },
+    methods: {
+        renderizaBar(){
+            $(function(){
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if(scroll > 800){
+                $('.background').addClass("gray-mode")
+                $(".navbar").addClass("gray-mode")
+                //$('.menu a').addClass('active');
+                //$('.custom-logo').addClass('logo-menor')
+                }
+                else{
+                $('.background').removeClass("gray-mode")
+                $(".navbar").removeClass("gray-mode")
+                //$('.custom-logo').removeClass('logo-menor');
+                //$('.menu-bar').removeClass('active');
+                }
+
+            });
+            
+        });	
+        }        
+        
+    },
+
+    mounted() {
+        
+    },
     
 }
 </script>
@@ -60,7 +88,7 @@ export default {
 	top: 0;
 	opacity: 1;
 	z-index:-3;
-	height:800px;
+	height:750px;
  	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent),url("../../static/assets/img/NoteAndDesk2.jpg");
  	background-size: 100%;
 	background-position: -20% 30%;
@@ -97,39 +125,7 @@ export default {
                 background-position: 20% 0%;
                 height: 68x;    
             }
-           /*  .foto-titulo{
-                filter: drop-shadow(2px 4px 6px black);
-                position: absolute;
-                top: 253px;
-                left: 35%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                .foto{
-                    filter: drop-shadow(2px 4px 6px black);
-                    background-position: -20%;
-                    background-repeat: no-repeat;
-                    width: 205px;
-                    height: 204px;
-                    z-index:-2;
-                    
-                    background-image:  url("../../static/assets/img/foto.jpg");
-                    background-size: 100%;
-                    border-radius: 121px;
-                    border: 4px solid #42311b;
-                
-                }
-                .titulo{
-                    font-family: 'Acme', sans-serif!important;  
-                    text-align: center;
-                    color: white;
-                    font-weight: 500;
-                    font-size: 40px;
-                }
-            } */
-            
-
+           
             .navbar{
                 opacity: 1;
                 background:transparent!important;

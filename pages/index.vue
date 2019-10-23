@@ -11,29 +11,56 @@
 		 <!-- https://bootstrapmade.com/demo/DevFolio/ -->
 		<b-container fluid  id="quem-sou">
 			<b-container >
-				<div class="coluna1">
-					<div class="foto-desc">
-						<div class="foto"></div>
-						<div class="desc">
-							<p>Nacionalidade: Brasil</p>
-							<p>E-mail: davidrs.souza@gmail.com</p>
-							<p>Celular: (11) 994886041</p>
-							<p>Linkedin: www.linkedin.com/in/dav1dsouza</p>
-							<p>Skype: daviiid.souza</p>
-						</div>
-					</div>
-					<div class="habilidades">
-
-					</div>
-				</div>
-				<div class="coluna2">
-					<h2 class="sobre">Quem Sou</h2>
-					<p class="texto">Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt.</p>
-				</div>
+				<b-row>
+					<b-col lg="12" class="form">
+						<b-col lg="6" class="coluna1">
+							<div class="foto-desc">
+								<div class="foto"></div>
+								<div class="desc">
+									<p><span>Nacionalidade:</span> Brasil</p>
+									<p><span>E-mail:</span> davidrs.souza@gmail.com</p>
+									<p><span>Celular:</span> (11) 994886041</p>
+									<p><span>Linkedin:</span> www.linkedin.com/in/dav1dsouza</p>
+									<p><span>Skype:</span> daviiid.souza</p>
+								</div>
+							</div>
+							<div class="habilidades">
+								<h5>Habilidades</h5>
+								<p>Proficiência no trabalho de equipe </p>
+								<div class="bar"></div>
+								<p>HTML5 </p>
+								<div class="bar"></div>
+								<p>CSS3 </p>
+								<div class="bar"></div>
+								<p>Bootstrap 4 </p>
+								<div class="bar"></div>
+								<p>Pré-processador CSS (SASS) </p>
+								<div class="bar"></div>  
+								<p>Javascript </p>
+								<div class="bar"></div>
+								<p>AJAX API REST </p>
+								<div class="bar"></div>
+								<p>Wordpress </p>
+								<div class="bar"></div>
+								<p>Task Runner GruntJs </p>
+								<div class="bar"></div>
+								<p>Controladores de Versão GIT </p>
+								<div class="bar"></div>
+							</div>
+						</b-col>
+						<b-col lg="6" class="coluna2">
+							<h2 class="sobre">Quem Sou</h2>
+							<p class="texto">Nascido em Belém do Pará, casado com a Caroline e </p>
+						</b-col>
+					</b-col>
+					
 				
 				
 				
-			</b-container>
+				
+			
+			</b-row>
+			</b-container>	
 		</b-container>
 		<b-container fluid id="conhecimento">
 			<b-container >
@@ -79,7 +106,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+
 
 
 main{
@@ -109,7 +136,7 @@ main{
 		
 		}
 		.titulo{
-			font-family: 'Acme', sans-serif!important;  
+			
 			text-align: center;
 			color: white;
 			font-weight: 500;
@@ -121,7 +148,7 @@ main{
 		display: flex;
 		align-items: center;
 		.container{
-			background-color: whitesmoke;
+			background-color: white;
 			border: 1px solid red;
 			height: 80%;
 		}
@@ -136,21 +163,23 @@ main{
 	}
 
 	#quem-sou{
-		height: 400px;
+		height: 950px;
 		.container{
+			border: 1px solid transparent;
+			height: 750px;
 			box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
-			display:flex;
-			justify-content: center;
-			align-items: center;
+			.form{
+				display: flex;
+				padding-top: 60px;
+			}
 			.coluna1{
 				width:60%;
-				display:flex;
-				flex-direction: column;
-				justify-content: center;
 				.foto-desc{
 					display:flex;
 					justify-content: space-evenly;
+					margin-bottom: 30px;
 					.foto{
+						border-radius: 15px;
 						background-size: 100%;
 						width: 150px;
 						height: 175px;
@@ -159,6 +188,26 @@ main{
 					}
 					.desc{
 						font-size:15px;
+						line-height: 1.5;
+						span{
+							font-weight: 500;
+						}
+					}
+				}
+				.habilidades{
+					padding-left: 30px;
+					h5{
+						margin-bottom: 1.2rem;
+					}
+					p{
+						margin-bottom: 0.5rem!important;
+						line-height: .8;
+					}
+					.bar{
+						height: 2px;
+						width: 100%;
+						background-color: #2c2b2b2d;
+						margin-bottom: 1rem!important;
 					}
 				}
 			}
