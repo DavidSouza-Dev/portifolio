@@ -4,13 +4,6 @@
         <header>
            
             <div class="background">
-                <div class="foto-titulo">
-                    <div class="foto"> </div>
-                    <div class="titulo">
-                        <p>David Souza</p>
-                        <p>Desenvolvedor Front-End</p>
-                    </div>
-                </div>
             <b-navbar toggleable="lg" type="light" variant="info">
                 <div class="menu">  
                     <b-navbar-brand href="#">
@@ -82,7 +75,7 @@ export default {
 
 
  header{
-        
+        z-index:1;
         position: fixed;
         top: 0px;
         width: 100%;
@@ -104,10 +97,10 @@ export default {
                 background-position: 20% 0%;
                 height: 68x;    
             }
-            .foto-titulo{
+           /*  .foto-titulo{
                 filter: drop-shadow(2px 4px 6px black);
                 position: absolute;
-                top: 313px;
+                top: 253px;
                 left: 35%;
                 display: flex;
                 flex-direction: column;
@@ -121,7 +114,7 @@ export default {
                     height: 204px;
                     z-index:-2;
                     
-                    background-image:  url(/_nuxt/static/assets/img/foto.jpg);
+                    background-image:  url("../../static/assets/img/foto.jpg");
                     background-size: 100%;
                     border-radius: 121px;
                     border: 4px solid #42311b;
@@ -134,7 +127,7 @@ export default {
                     font-weight: 500;
                     font-size: 40px;
                 }
-            }
+            } */
             
 
             .navbar{
