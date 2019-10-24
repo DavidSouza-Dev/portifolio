@@ -4,7 +4,7 @@
         <header>
            
             <div class="background">
-            <b-navbar toggleable="lg" type="light" variant="info">
+            <b-navbar class="opacity0" toggleable="lg" type="light" variant="info">
                 <div class="menu">  
                     <b-navbar-brand href="#">
                         <img src="../../static/assets/img/logo.jpg" height="90%" alt="">
@@ -34,6 +34,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import $ from 'jquery'
 
 export default {
     name: 'Header',
@@ -44,31 +45,29 @@ export default {
     },
     methods: {
         renderizaBar(){
-            $(function(){
-            $(window).scroll(function () {
+           $(window).scroll(function () {
                 var scroll = $(window).scrollTop();
-                if(scroll > 800){
-                $('.background').addClass("gray-mode")
-                $(".navbar").addClass("gray-mode")
-                //$('.menu a').addClass('active');
-                //$('.custom-logo').addClass('logo-menor')
+                if(scroll > 750){
+                    $('.background').addClass("opacity1").removeClass("opacity0")
+                    $(".navbar").addClass("opacity1").removeClass("opacity0")
+                    $(".navbar-nav").css({background:"white"})
+                    $(".nav-link").css({color:"black"})
                 }
                 else{
-                $('.background').removeClass("gray-mode")
-                $(".navbar").removeClass("gray-mode")
-                //$('.custom-logo').removeClass('logo-menor');
-                //$('.menu-bar').removeClass('active');
+                    $('.background').removeClass("opacity1").addClass("opacity0")
+                    $(".navbar").removeClass("opacity1").addClass("opacity0")
+                    $(".navbar-nav").css({background:"#8c795ff3"})
+                    $(".nav-link").css({color:"aliceblue"})
                 }
+            });	
+        },
 
-            });
-            
-        });	
-        }        
+
         
     },
 
     mounted() {
-        
+        this.renderizaBar()
     },
     
 }
@@ -111,11 +110,14 @@ export default {
             height: 68x!important;
         }
 
-        .gray-mode{
-            background-color: rgba(128, 128, 128, 0.418)!important;
-            
+        .opacity1{
+            background-color: rgb(255, 255, 255)!important;
+            box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+
             height: 60px;
-            transition: all .9s;
+            transition: all .5s ease-in-out;        }
+        .opacity0{
+            transition: all .5s ease-in-out;    background-color: transparent!important;
         }
         .background{
             position: relative;
@@ -127,8 +129,8 @@ export default {
             }
            
             .navbar{
-                opacity: 1;
-                background:transparent!important;
+                
+                
                 @media only screen and (max-width: 768px){
                     padding: 0!important; 
                     height: 68x!important;
@@ -192,14 +194,15 @@ export default {
                     }
 
                     .navbar-nav{
-                        
-                        background: #8c795ff3;
+                        transition: background-color .5s ease-in-out;
+                        background-color: #8c795ff3;
                         border-radius: 10px;
                         @media only screen and (max-width: 768px){
                             background: #8c795ff3;
                             border-radius: 0px; 
                         }
                         .nav-link{
+                            transition: color .5s ease-in-out;
                             color: aliceblue;
                             padding-right: .6rem;
                             padding-left: .6rem;
