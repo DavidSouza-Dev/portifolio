@@ -4,8 +4,16 @@
 			<div class="foto-titulo">
 				<div class="foto"> </div>
 				<div class="titulo">
-					<p>David Souza</p>
-					<p>Desenvolvedor Front-End</p>
+					<p>Oi, eu sou o David!</p>
+					<p class="texto-digitado"></P>
+					<!-- <vue-typed-js> 
+						:string="["Desenvolvedor Front-End.", "Apaixonado por Tecnologia.", "Nascido em Belém, Pará"]" 
+						:loop="true"
+						:startDelay="3000"
+						:backDelay=" 500"
+						:backSpeed="20"
+						:loopCount="5"
+					</vue-typed-js> -->
 				</div>
 			</div>
 		 <!-- https://bootstrapmade.com/demo/DevFolio/ -->
@@ -86,7 +94,12 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import $ from 'jquery'
+import Vue from 'vue'
+import { VueTypedJs } from 'vue-typed-js'
+import '../plugins/typed/typed.js'
+ 
+Vue.use(VueTypedJs)
 
 export default {
 	layout: 'default',
@@ -98,9 +111,27 @@ export default {
 		
 		}
 	},
-	computed: {
+	 methods: {
 		
+		EfeitoDigitacao(){
+			
+			$(".texto-digitado").typed({
+				string: ["Desenvolvedor Front-End.", "Apaixonado por Tecnologia.", "Nascido em Belém, Pará"],
+				typeSpeed: 30,
+				startDelay: 3000,
+				backSpeed: 20,
+				backDelay: 500,
+				loop: true,
+				loopCount: 5
+
+			});
+
+		}
 	},
+	mounted() {
+		this.EfeitoDigitacao();
+		
+	}, 
 	
 }
 </script>
@@ -183,7 +214,7 @@ main{
 						background-size: 100%;
 						width: 150px;
 						height: 175px;
-						background-image: url(/_nuxt/static/assets/img/foto.jpg);
+						background-image: url(/_nuxt/static/assets/img/fotoIndice.png);
 						background-repeat: no-repeat;
 					}
 					.desc{

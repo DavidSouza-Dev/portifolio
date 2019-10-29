@@ -1,11 +1,11 @@
 {
-  "name": "empregacampinas",
+  "name": "Portifolio",
   "version": "1.0.0",
   "engines": {
     "node": "10.3.0"
   },
-  "description": "New front-end app for Empregacampinas.com.br",
-  "author": "Lucas Martim",
+  "description": "Portifolio",
+  "author": "David Souza",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -28,7 +28,8 @@
     "nuxt": "^2.10.0",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-vuex-localstorage": "^1.2.6",
-    "sass": "^1.23.0"
+    "sass": "^1.23.0",
+    "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
