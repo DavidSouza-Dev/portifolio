@@ -1,7 +1,9 @@
 <template>
+<!-- https://github.com/FortAwesome/vue-fontawesome#nuxtjs -->
     <footer id="footer">
         <b-container fluid>
             <b-container>
+                <font-awesome-icon :icon="['fab', 'fa-whatsapp-square']"/>
                 footer
             </b-container>
         </b-container>

@@ -7,9 +7,10 @@
             <b-navbar class="opacity0" toggleable="lg" type="light" variant="info">
                 <div class="menu">  
                     <b-navbar-brand href="#">
-                        <img src="../../static/assets/img/logo.jpg" height="90%" alt="">
+                       DAVID SOUZA
                     </b-navbar-brand>
                     <font-awesome-icon :icon="['fas', 'fa-bars']"/>
+                   <!--  <font-awesome-icon :icon="['fa', 'times']"/> -->
                     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
                     
                 
@@ -49,13 +50,13 @@ export default {
                 if(scroll > 750){
                     $('.background').addClass("opacity1").removeClass("opacity0")
                     $(".navbar").addClass("opacity1").removeClass("opacity0")
-                    $(".navbar-nav").css({background:"white"})
+                    $(".navbar").css({background:"white"})
                     $(".nav-link").css({color:"black"})
                 }
                 else{
                     $('.background').removeClass("opacity1").addClass("opacity0")
                     $(".navbar").removeClass("opacity1").addClass("opacity0")
-                    $(".navbar-nav").css({background:"#8c795ff3"})
+                    $(".navbar").css({background:"transparent"})
                     $(".nav-link").css({color:"aliceblue"})
                 }
             });	
@@ -77,7 +78,7 @@ export default {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Audiowide|Cardo|Spectral&display=swap');
 
 
 .header-head{
@@ -86,10 +87,12 @@ export default {
 	top: 0;
 	opacity: 1;
 	z-index:-3;
-	height:750px;
+	height:900px;
+    filter: blur(0.8px);
+    background-blend-mode: color-dodge;
  	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent),url("../../static/assets/img/NoteAndDesk2.jpg");
- 	background-size: 100%;
-	background-position: -20% 30%;
+ 	background-size: 110%;
+    background-position: 60% 13%;
 	background-repeat: no-repeat;
 	width: 100%;
     margin-top: -6px;
@@ -110,13 +113,14 @@ export default {
         }
 
         .opacity1{
-            background-color: rgb(255, 255, 255)!important;
+             background-color: rgb(255, 255, 255)!important; 
             box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
 
             height: 60px;
-            transition: all .5s ease-in-out;        }
+            transition: background-color .5s ease-in-out;        }
         .opacity0{
-            transition: all .5s ease-in-out;    background-color: transparent!important;
+            transition: background-color .5s ease-in-out;    
+            background-color: transparent!important;
         }
         .background{
             position: relative;
@@ -128,7 +132,7 @@ export default {
             }
            
             .navbar{
-                
+                transition: all .4s ease-in-out;
                 
                 @media only screen and (max-width: 768px){
                     padding: 0!important; 
@@ -139,11 +143,16 @@ export default {
                     height: 70px;
                     display: flex;
                     justify-content: space-between;
+                    align-items: center;
                     @media only screen and (max-width: 768px){
                         width: 100%;
                     }
 
                     .navbar-brand{
+                        font-size: 30px;
+                        font-weight: bold;
+                        color: white;
+                        font-family: 'Spectral', serif;
                         padding:10px 0 10px 0;
                         margin-left: 2em!important;
                         opacity: .8;
@@ -193,29 +202,34 @@ export default {
                     }
 
                     .navbar-nav{
+                         
                         transition: background-color .5s ease-in-out;
-                        background-color: #8c795ff3;
+                       /*  background-color: #8c795ff3; */
                         border-radius: 10px;
                         @media only screen and (max-width: 768px){
                             background: #8c795ff3;
                             border-radius: 0px; 
                         }
-                        .nav-link{
-                            transition: color .5s ease-in-out;
-                            color: aliceblue;
-                            padding-right: .6rem;
-                            padding-left: .6rem;
-                        }
+                        .nav-item{
+                            font-size: 18px;
+                            .nav-link{
+                                transition: color .5s ease-in-out;
+                                color: aliceblue;
+                                padding-right: .6rem;
+                                padding-left: .6rem;
+                            }
 
-                        .nav-link:hover, .nav-link:active{
-                            
-                            color:black;
-                            background-color: rgba(211, 211, 211, 0.26);
-                            border-radius: 10px;
-                            @media only screen and (max-width: 768px){
-                                padding-left: 1.5em;
+                            .nav-link:hover, .nav-link:active{
+                                
+                                color:black;
+                                background-color: rgba(211, 211, 211, 0.26);
+                                border-radius: 10px;
+                                @media only screen and (max-width: 768px){
+                                    padding-left: 1.5em;
+                                }
                             }
                         }
+                        
                     }
                 }
             }

@@ -25,11 +25,11 @@ export default {
   /*
   ** Global CSS
   */
-  css: [ '@/assets/css/main.css', 'vue-typed-js/dist/vue-typed-js.css' ],
+  css: [ '@/assets/css/main.css', 'vue-typed-js/dist/vue-typed-js.css', '@fortawesome/fontawesome-svg-core/styles.css' ],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [   ],
+  plugins: [ '@/plugins/fontawesome.js'  ],
   /*
   ** Nuxt.js dev-modules
   */
