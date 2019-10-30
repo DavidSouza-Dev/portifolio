@@ -11,6 +11,9 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
+    script: [
+      { src: 'https://cdn.jsdelivr.net/npm/typed.js@2.0.11' }
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
@@ -22,12 +25,11 @@ export default {
   /*
   ** Global CSS
   */
-  css: [ '@/assets/css/main.css' ],
+  css: [ '@/assets/css/main.css', 'vue-typed-js/dist/vue-typed-js.css' ],
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [   ],
   /*
   ** Nuxt.js dev-modules
   */

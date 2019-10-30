@@ -96,9 +96,10 @@
 <script>
 import $ from 'jquery'
 import Vue from 'vue'
+import Typed from 'typed.js';
 import { VueTypedJs } from 'vue-typed-js'
-import '../plugins/typed/typed.js'
- 
+
+
 Vue.use(VueTypedJs)
 
 export default {
@@ -111,24 +112,26 @@ export default {
 		
 		}
 	},
-	 methods: {
-		
+
+	methods:{
 		EfeitoDigitacao(){
-			
-			$(".texto-digitado").typed({
-				string: ["Desenvolvedor Front-End.", "Apaixonado por Tecnologia.", "Nascido em Belém, Pará"],
-				typeSpeed: 30,
+		 	var type = new Typed(".texto-digitado",{
+				strings: ["Desenvolvedor Front-End.", "Apaixonado por Tecnologia.", "Nascido em Belém, Pará"],
+				typeSpeed: 60,
 				startDelay: 3000,
-				backSpeed: 20,
-				backDelay: 500,
+				backSpeed: 60,
+				backDelay: 1000,
 				loop: true,
-				loopCount: 5
-
+				loopCount: 999
 			});
-
 		}
 	},
+	
 	mounted() {
+
+		
+		
+		
 		this.EfeitoDigitacao();
 		
 	}, 
@@ -170,8 +173,11 @@ main{
 			
 			text-align: center;
 			color: white;
-			font-weight: 500;
 			font-size: 40px;
+			.texto-digitado{
+				opacity:0.9;
+				display: inline-block;
+			}
 		}
 	}
 	.container-fluid{
