@@ -19,9 +19,10 @@
                 <b-collapse id="nav-collapse" is-nav>
                 <div class="menu-in">
                     <b-navbar-nav>
+                        <b-nav-item href="#quem-sou">Home</b-nav-item>
                         <b-nav-item href="#quem-sou">Quem sou eu?</b-nav-item>
                         <b-nav-item href="#conhecimento">Conhecimentos</b-nav-item>
-                        <b-nav-item href="#experiencia">Experiências</b-nav-item>
+                        <b-nav-item href="#experiencia">Tecnologias</b-nav-item>
                         <b-nav-item href="#cases">Cases</b-nav-item>
                         <b-nav-item href="#contato">Contato</b-nav-item>
                     </b-navbar-nav>
@@ -46,22 +47,38 @@ export default {
     methods: {
         renderizaBar(){
            $(window).scroll(function () {
-                var scroll = $(window).scrollTop();
+                let scroll = $(window).scrollTop();
+               /*  console.log(scroll) */
                 if(scroll > 750){
-                    $('.background').addClass("opacity1").removeClass("opacity0")
-                    $(".navbar").addClass("opacity1").removeClass("opacity0")
-                    $(".navbar").css({background:"white"})
-                    $(".nav-link").css({color:"black"})
+                    $('.background').addClass("opacity1").removeClass("opacity0");
+                    $(".navbar").addClass("opacity1").removeClass("opacity0");
+                    $(".navbar").css({background:"white"});
+                    $(".nav-link").css({color:"black"});
+                   
                 }
                 else{
-                    $('.background').removeClass("opacity1").addClass("opacity0")
-                    $(".navbar").removeClass("opacity1").addClass("opacity0")
-                    $(".navbar").css({background:"transparent"})
-                    $(".nav-link").css({color:"aliceblue"})
+                    $('.background').removeClass("opacity1").addClass("opacity0");
+                    $(".navbar").removeClass("opacity1").addClass("opacity0");
+                    $(".navbar").css({background:"transparent"});
+                    $(".nav-link").css({color:"aliceblue"});
+                    
+                }
+
+                if(scroll >500){
+                    
                 }
             });	
         },
 
+        activeMenu(){
+            $(window).scroll( function (){
+                let scroll = $(window).scrollTop();
+                if(scroll > 1943){
+
+
+                }
+            });
+        }
 
         
     },
