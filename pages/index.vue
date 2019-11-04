@@ -62,7 +62,7 @@
 								<div class="bar"></div>  
 								<p>Javascript </p>
 								<div class="bar"></div>
-								<p>AJAX API REST </p>
+								<p>API REST </p>
 								<div class="bar"></div>
 								<p>Wordpress </p>
 								<div class="bar"></div>
@@ -73,8 +73,7 @@
 								<p>Framework Vue.js </p>
 								<div class="bar"></div>
 							</div>
-							<!-- <h2 class="sobre">Quem Sou</h2>
-							<p class="texto">Nascido em Belém do Pará, casado com a Caroline e </p> -->
+							
 						</b-col>
 					</b-col>
 				</b-row>
@@ -82,7 +81,7 @@
 		</b-container>
 		<b-container fluid id="tecnologias">
 			<b-container >
-				<h1><span>Tecnologias</span></h1>
+				<!-- <h1><span>Tecnologias</span></h1> -->
 				<b-row>
 					 <div class="linha1">
 						 <b-col lg="2">
@@ -147,13 +146,30 @@
 			</b-container>
 		</b-container>
 		<b-container fluid  id="cases" >
-			<b-container >
-				Cases
+
+			<div id="myModal" class="modal">
+				<span class="close"></span>
+				<div class="modalTela">
+					<img class="modal-content" id="img01">
+					<div id="caption"></div>
+				</div>
+
+				
+			</div>
+
+			<b-container>
+				<b-row>
+					<b-col lg="2" class="owli"><img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora"></b-col>
+					<b-col lg="2" class="teste1">Teste</b-col>
+					<b-col lg="2" class="teste2">Teste</b-col>
+					<b-col lg="2" class="teste3">Teste</b-col>
+					<b-col lg="2" class="teste4">Teste</b-col>
+				</b-row>
 			</b-container>
 		</b-container>
 		<b-container fluid id="contato">
 			<b-container >
-				Cases
+				Contato
 			</b-container>
 		</b-container>
 	</main>
@@ -190,10 +206,32 @@ export default {
 				loop: true,
 				loopCount: 999
 			});
+		},
+		efeitoModal(){
+			var modal = document.getElementById("myModal");
+
+			var img = document.getElementById("imgOwli");
+			var modalImg = document.getElementById("img01");
+			var captionText = document.getElementById("caption");
+			$(".imgOwli").on("click", 
+				function(){
+					$('header').css({"z-index":"0"})
+					modal.style.display = "block"
+					modalImg.src = this.src
+					captionText.innerHTML = this.alt
+
+				})
+			$(".modal").on("click", 
+				function(){
+					modal.style.display = "none";
+					$('header').css({"z-index":"1"})
+			}) 
+
 		}
 	},
 	
 	mounted() {
+		this.efeitoModal();
 		this.EfeitoDigitacao();
 		
 	}, 
@@ -306,6 +344,7 @@ main{
 	}
 
 	#conhecimento{
+	
 		height: 800px;
 		.container{
 			border: 1px solid transparent;
@@ -370,7 +409,33 @@ main{
 
 	#tecnologias{
 		height: 600px;
-		background:white;
+		z-index: 0;
+		position: relative;
+		background-color: white;
+		&::before{
+			content: "";
+			position: absolute;
+			top: 4px;
+			right: 0;
+			height: 2px;
+			width: 100%;
+			background-color: #00000030;
+		}
+
+		&::after{
+			content: "Tecnologias";
+			position: absolute;
+			top: -10px;
+			right: 0;
+			letter-spacing: 2px;
+			width: 20%;
+			background-color: white;
+			font-size: 25px;
+			font-weight: 500;
+			text-align: center;
+			transform: translateX(-200%);
+		}
+
 		h1{
 			color: black;
 			font-weight: 500;
@@ -969,6 +1034,146 @@ main{
 				
 			}
 		}
+	}
+
+	
+
+	#cases{
+		z-index: 0;
+		position: relative;
+		.container{
+			.row{
+				display: flex;
+				justify-content: space-evenly;
+				align-items: center;
+				.owli{
+					background-color: black;
+					overflow: hidden;
+					
+					
+					.imgOwli{
+						height: 100%;
+						width: 100%;
+						cursor: pointer;
+						transition: .3s;
+						&:hover{
+						opacity: .7;
+						
+					}
+					}
+				}
+
+			}
+		}
+	}
+	.modal{
+		display: none;
+		position: fixed;
+		z-index: 10;
+		padding-top: 150px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgb(0,0,0); /* Fallback color */
+  		background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+	}
+	.modalTela{
+		box-shadow: 0 0 25px #000;
+		margin: auto;
+		display: block;
+		width: 80%;
+		max-width: 700px;
+	}
+	.modal-content {
+		margin: auto;
+		display: block;
+		/* width: 80%; */
+		max-width: 700px;
+		border: 0px solid rgba(0, 0, 0, 0.2); 
+    	border-radius:0rem;
+	}
+
+	#caption {
+		margin: auto;
+		display: block;
+		/* width: 80%; */
+		max-width: 700px;
+		text-align: center;
+		color: #fdfdfe;
+		font-size: 19px;
+		font-weight: 500;
+		height: 40px;
+		background-color: #343a40;
+		padding-top: 8px;
+	}
+	.close {
+		position: absolute;
+		height: 36px;
+		width: 36px;
+		top: 15px;
+		right: 35px;
+		color: #f1f1f1;
+		font-size: 40px;
+		font-weight: bold;
+		transition: 0.3s;
+		background-image: url(../static/assets/img/close.png);
+		background-repeat: no-repeat;
+		border-radius: 3rem;
+		filter: grayscale(1);
+		
+	}
+
+	.close:hover,.close:focus {
+		color: #bbb;
+		text-decoration: none;
+		cursor: pointer;
+	}
+
+	/* Add Animation */
+/* .modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+} */
+
+
+
+
+	#cases::before{
+		content: "";
+		position: absolute;
+		top: 0px;
+		right: 0;
+		height: 2px;
+		width: 100%;
+		background-color: #00000030;
+	}
+
+	#cases::after{
+		content: "Cases";
+		position: absolute;
+		top: -17px;
+		right: 0;
+		letter-spacing: 2px;
+		width: 20%;
+		background-color: white;
+		font-size: 25px;
+		font-weight: 500;
+		text-align: center;
+		transform: translateX(-200%);
 	}
 
 }
