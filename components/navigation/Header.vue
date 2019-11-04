@@ -6,7 +6,7 @@
             <div class="background">
             <b-navbar class="opacity0" toggleable="lg" type="light" variant="info">
                 <div class="menu">  
-                    <b-navbar-brand href="#">
+                    <b-navbar-brand class="logo" href="#">
                        DAVID SOUZA
                     </b-navbar-brand>
                     <font-awesome-icon :icon="['fas', 'fa-bars']"/>
@@ -52,12 +52,14 @@ export default {
                     $(".navbar").addClass("opacity1").removeClass("opacity0")
                     $(".navbar").css({background:"white"})
                     $(".nav-link").css({color:"black"})
+                    $(".logo").css({color:"black"})
                 }
                 else{
                     $('.background').removeClass("opacity1").addClass("opacity0")
                     $(".navbar").removeClass("opacity1").addClass("opacity0")
                     $(".navbar").css({background:"transparent"})
                     $(".nav-link").css({color:"aliceblue"})
+                    $(".logo").css({color:"white"})
                 }
             });	
         },
@@ -104,7 +106,7 @@ export default {
 
 
  header{
-        z-index:1;
+        z-index:4;
         position: fixed;
         top: 0px;
         width: 100%;
@@ -149,13 +151,16 @@ export default {
                     }
 
                     .navbar-brand{
+                        color: white!important;
                         font-size: 30px;
                         font-weight: bold;
-                        color: white;
                         font-family: 'Spectral', serif;
                         padding:10px 0 10px 0;
                         margin-left: 2em!important;
                         opacity: .8;
+                        .logo{
+                           
+                        }
                         @media only screen and (max-width: 768px){
                             margin-left: 1em!important;
                         }
