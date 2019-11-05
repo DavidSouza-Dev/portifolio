@@ -170,11 +170,14 @@
 		</b-container>
 		<b-container fluid id="contato">
 			<b-container >
-				Entre em contato ;)
-				<p><span>E-mail:</span> davidrs.souza@gmail.com</p>
-									<p><span>Celular:</span> (11) 994886041</p>
-									<p><span>Linkedin:</span> www.linkedin.com/in/dav1dsouza</p>
-									<p><span>Skype:</span> daviiid.souza</p>
+				<div class="card">
+					<p><span>Entre em contato</span> ;)</p>
+					<p><span>E-mail:</span> davidrs.souza@gmail.com</p>
+					<p><span>Celular:</span> (11) 994886041</p>
+					<p><span>Linkedin:</span> www.linkedin.com/in/dav1dsouza</p>
+					<p><span>Skype:</span> daviiid.souza</p>
+				</div>				
+				
 
 
 			</b-container>
