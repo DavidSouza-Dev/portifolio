@@ -167,7 +167,7 @@ export default {
                     }
 
                     .navbar-brand{
-                        color: white!important;
+                        color: white;
                         font-size: 30px;
                         font-weight: bold;
                         font-family: 'Spectral', serif;

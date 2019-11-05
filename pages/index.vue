@@ -39,10 +39,11 @@
 								<div class="foto"></div>
 								<div class="desc">
 									<p><span>Nacionalidade:</span> Brasil</p>
-									<p><span>E-mail:</span> davidrs.souza@gmail.com</p>
-									<p><span>Celular:</span> (11) 994886041</p>
-									<p><span>Linkedin:</span> www.linkedin.com/in/dav1dsouza</p>
-									<p><span>Skype:</span> daviiid.souza</p>
+									<p><span>Estado Civil:</span> Casado</p>
+									<p><span>Perfil:</span> Desenvolvedor Front-End</p>
+									<p><span>Formação:</span> Bacharel em Ciência da Computação</p>
+									<!-- 
+									<p><span>Skype:</span> daviiid.souza</p> -->
 								</div>
 							</div>
 							
@@ -169,7 +170,13 @@
 		</b-container>
 		<b-container fluid id="contato">
 			<b-container >
-				Contato
+				Entre em contato ;)
+				<p><span>E-mail:</span> davidrs.souza@gmail.com</p>
+									<p><span>Celular:</span> (11) 994886041</p>
+									<p><span>Linkedin:</span> www.linkedin.com/in/dav1dsouza</p>
+									<p><span>Skype:</span> daviiid.souza</p>
+
+
 			</b-container>
 		</b-container>
 	</main>
@@ -1039,9 +1046,11 @@ main{
 	
 
 	#cases{
+		height: 500px;
 		z-index: 0;
 		position: relative;
 		.container{
+			padding: 30px;
 			.row{
 				display: flex;
 				justify-content: space-evenly;
@@ -1176,6 +1185,10 @@ main{
 		transform: translateX(-200%);
 	}
 
+	#contato{
+		height: 500px;
+		background-color: white;
+	}
 }
 
 
