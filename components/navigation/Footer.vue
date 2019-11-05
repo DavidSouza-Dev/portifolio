@@ -3,8 +3,7 @@
     <footer id="footer">
         <b-container fluid>
             <b-container>
-                <font-awesome-icon :icon="['fab', 'fa-whatsapp-square']"/>
-                footer
+                <div class="copyright">David Souza © 2019</div>
             </b-container>
         </b-container>
     </footer>
@@ -25,8 +24,27 @@ export default {
         .container-fluid{
 		    height:150px;
 		    .container{
-                border: 1px solid red;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items:center;
                 height: 100%;
+                .copyright{
+                    width: 150px;
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: -11px;
+                        /* bottom: 0px; */
+                        left: -100px;
+                        /* right: 12px; */
+                        width: 350px;
+                        height: 2px;
+                        background-color: #ffffff66 !important;
+
+                    }
+                }
             }
 	    }
     }

@@ -81,8 +81,9 @@
 			</b-container>
 		</b-container>
 		<b-container fluid id="tecnologias">
+			<h1>Tecnologias</h1>
 			<b-container >
-				<!-- <h1><span>Tecnologias</span></h1> -->
+				
 				<b-row>
 					 <div class="linha1">
 						 <b-col lg="2">
@@ -157,27 +158,44 @@
 
 				
 			</div>
-
+			<h1>Portifolio</h1>
 			<b-container>
 				<b-row>
-					<b-col lg="2" class="owli"><img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora"></b-col>
-					<b-col lg="2" class="teste1">Teste</b-col>
-					<b-col lg="2" class="teste2">Teste</b-col>
-					<b-col lg="2" class="teste3">Teste</b-col>
-					<b-col lg="2" class="teste4">Teste</b-col>
+					<b-col lg="3" class="owli"><img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora"></b-col>
+					<b-col lg="3" class="teste1"></b-col>
+					<b-col lg="3" class="teste2"></b-col>
+					<b-col lg="3" class="teste3"></b-col>
+					
 				</b-row>
 			</b-container>
 		</b-container>
 		<b-container fluid id="contato">
+			<h1>Entre em Contato ; )</h1>
 			<b-container >
-				<div class="card">
-					<p><span>Entre em contato</span> ;)</p>
-					<p><span>E-mail:</span> davidrs.souza@gmail.com</p>
-					<p><span>Celular:</span> (11) 994886041</p>
-					<p><span>Linkedin:</span> www.linkedin.com/in/dav1dsouza</p>
-					<p><span>Skype:</span> daviiid.souza</p>
-				</div>				
 				
+				<div class="card">
+					<!-- <p><span>Entre em contato</span> ;)</p> -->
+					<p  class="mail">E-mail: davidrs.souza@gmail.com</p>
+					<p  class="wpp">Whatsapp: (11) 994886041</p>
+					<!-- <p><span>Linkedin:</span> www.linkedin.com/in/dav1dsouza</p> -->
+					<p class="skype">Skype: daviiid.souza</p>
+				</div>				
+				<div class="sociais">
+					<h3>Redes Sociais</h3>
+					<div class="linkSocial">
+						<a href="https://www.instagram.com/dav1dsouza/">
+							<img src ="../static/assets/img/iconfinder_Rounded_Instagram_svg_5282544.png" class="instagram">
+						</a>
+						<a href="https://twitter.com/DaviidRPS">
+							<img src="../static/assets/img/iconfinder_Rounded_Twitter5_svg_5282551.png" class="twitter">
+						</a>
+						<a href="https://www.linkedin.com/in/dav1dsouza/">
+							<img src="../static/assets/img/iconfinder_Rounded_Linkedin2_svg_5282542.png" class="linkedin">
+						</a>
+					</div>
+					
+
+				</div>
 
 
 			</b-container>
@@ -418,43 +436,36 @@ main{
 	}
 
 	#tecnologias{
+		padding-top: 20px;
 		height: 600px;
 		z-index: 0;
 		position: relative;
-		background-color: white;
-		&::before{
-			content: "";
-			position: absolute;
-			top: 4px;
-			right: 0;
-			height: 2px;
-			width: 100%;
-			background-color: #00000030;
-		}
-
-		&::after{
-			content: "Tecnologias";
-			position: absolute;
-			top: -10px;
-			right: 0;
-			letter-spacing: 2px;
-			width: 20%;
-			background-color: white;
-			font-size: 25px;
-			font-weight: 500;
-			text-align: center;
-			transform: translateX(-200%);
-		}
-
+		background-color: whitesmoke;
+		display: flex;
+		flex-direction: column;
 		h1{
+			position: relative;
 			color: black;
-			font-weight: 500;
-			background-image: linear-gradient(90deg, transparent 6%, darkgray),  url(../static/assets/img/h-background.png);
-			text-align: left;
-			margin-bottom:50px;
+			font-weight: bold!important;
+			letter-spacing: 2px;
+			font-size: 35px;
+			font-weight: 500!important;
+			text-align: center;
+			&::before{
+				content: "";
+				position: absolute;
+				bottom: -22px;
+				transform: translateX(36%);
+				width: 60%;
+				height: 4px;
+				background-color: black;
+			}
 		}
+
+		
 		.container{
-			background:transparent;
+			background: transparent;
+			margin-top: 80px;
 			/* .linha1{
 				font-size: 21px;
 				height: 187.81px;
@@ -465,9 +476,7 @@ main{
 				text-decoration: none;
 				overflow: hidden;
 			} */
-			.shadow{
-				box-shadow: 0px 2px 1px -1px
-			}
+			
 			.linha1{
 				font-size: 21px;
 				height: 190px;
@@ -1049,20 +1058,53 @@ main{
 	
 
 	#cases{
+		padding-top: 20px;
 		height: 500px;
 		z-index: 0;
 		position: relative;
+		display: flex;
+		flex-direction: column;
+		h1{
+			position: relative;
+			color: black;
+			font-weight: bold!important;
+			letter-spacing: 2px;
+			font-size: 35px;
+			font-weight: 500!important;
+			text-align: center;
+			&::before{
+				content: "";
+				position: absolute;
+				bottom: -22px;
+				transform: translateX(36%);
+				width: 60%;
+				height: 4px;
+				background-color: black;
+			}
+		}
 		.container{
 			padding: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			.row{
 				display: flex;
 				justify-content: space-evenly;
 				align-items: center;
 				.owli{
+					/* background-color: black;
+					overflow: hidden;
+					padding-left: 0;
+					padding-right: 0; */
+
+					
 					background-color: black;
 					overflow: hidden;
-					
-					
+					padding-left: 0;
+					padding-right: 0;
+					border: 2px solid gray;
+					transform: scale(1.5);
+ 
 					.imgOwli{
 						height: 100%;
 						width: 100%;
@@ -1071,7 +1113,7 @@ main{
 						&:hover{
 						opacity: .7;
 						
-					}
+						}
 					}
 				}
 
@@ -1161,37 +1203,202 @@ main{
   to {transform:scale(1)}
 } */
 
-
-
-
-	#cases::before{
-		content: "";
-		position: absolute;
-		top: 0px;
-		right: 0;
-		height: 2px;
-		width: 100%;
-		background-color: #00000030;
-	}
-
-	#cases::after{
-		content: "Cases";
-		position: absolute;
-		top: -17px;
-		right: 0;
-		letter-spacing: 2px;
-		width: 20%;
-		background-color: white;
-		font-size: 25px;
-		font-weight: 500;
-		text-align: center;
-		transform: translateX(-200%);
-	}
-
 	#contato{
-		height: 500px;
-		background-color: white;
+		position: relative;
+		height: 400px;
+		background-color: #424242;
+		display: flex;
+		flex-direction: column;
+		padding-top: 30px;
+		h1{
+			position: relative;
+			color: white;
+			font-weight: bold!important;
+			letter-spacing: 2px;
+			font-size: 35px;
+			font-weight: 500!important;
+			text-align: center;
+			&::before{
+				content: "";
+				position: absolute;
+				bottom: -22px;
+				transform: translateX(36%);
+				width: 60%;
+				height: 4px;
+				background-color: white;
+			}
+		}
+		.container{
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			background-color: #424242;
+			.card{
+				height: 170px;
+				position: relative;
+				color: white;
+				font-weight: 700;
+				width: 500px;
+				background-color: #424242;
+				padding: 10px 10px 10px 50px;
+				justify-content: center;
+				
+				&::after{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					opacity: .2;
+					background-image: url("../static/assets/img/pngguru.com-id-nzsxy.png");
+					background-size: 68%;
+					background-position: 123% 0;
+					background-repeat: no-repeat;
+					filter: grayscale(1);
+					box-shadow: 0px 0px 3px 1px;
+
+				}
+				.mail{
+					z-index: 2;
+					position: relative;
+					&::before{
+						z-index: -1;
+						background-size: 5%;
+						background-repeat: no-repeat;
+						content: "";
+						position: absolute;
+						top: 0;
+						left: -55px;
+						bottom: 0;
+						right: 0;
+						height: 118%;
+						background-image: url("../static/assets/img/iconfinder_aiga_mail_inver_134147.png");
+						background-position: 4% 38%;
+						filter: invert(1);
+					}
+				}
+				.wpp{
+					z-index: 2;
+					position: relative;
+					&::before{
+						z-index: -1;
+						background-size: 5%;
+						background-repeat: no-repeat;
+						content: "";
+						position: absolute;
+						top: 0;
+						left: -55px;
+						bottom: 0;
+						right: 0;
+						height: 118%;
+						background-image: url("../static/assets/img/iconfinder_Rounded_Whatsapp_svg_5282549.png");
+						background-position: 4% 38%;
+						filter: invert(1);
+					}
+				}
+				.skype{
+					z-index: 2;
+					position: relative;
+					&::before{
+						z-index: -1;
+						background-size: 5%;
+						background-repeat: no-repeat;
+						content: "";
+						position: absolute;
+						top: 0;
+						left: -55px;
+						bottom: 0;
+						right: 0;
+						height: 118%;
+						background-image: url("../static/assets/img/iconfinder_skype_312649.png");
+						background-position: 4% 38%;
+						filter: invert(1);
+					}
+				}
+				
+
+			}	
+			.sociais{
+				    height: 168px;
+					width: 250px;
+					display: flex;
+					flex-direction: column;
+					justify-content: space-evenly;
+					align-items: center;
+					box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.19);
+
+				h3{
+					color: white;
+ 					font-weight: 400;
+				}
+				.linkSocial{
+					display: flex;
+					justify-content: space-around;
+					width: 100%;
+					border-bottom: 2px solid #ffffff1a;
+					height: 48px;
+					a{
+						background: white;
+						border-radius: 50% !important;
+						height: 40px;
+						width: 40px;
+					}
+					.instagram{
+						height: 100%;
+						width: 100%;
+						&:hover{
+							filter:invert(1);
+							background: #71dacb;
+						}
+					}
+					.twitter{
+						height: 100%;
+						width: 100%;
+						&:hover{
+							filter:invert(1);
+							background: #ff5e00;
+						}
+					}
+					.linkedin{
+						height: 100%;
+						width: 100%;
+						&:hover{
+							filter:invert(1);
+							background: #e4a65a;
+						}
+					}
+				}
+				
+				
+			}
+
+		}
+		/* &::before{
+			content: "";
+			position: absolute;
+			top: 0px;
+			right: 0;
+			height: 2px;
+			width: 100%;
+			background-color: #00000030;
+		}
+
+		&::after{
+			content: "Entre em Contato ; )";
+			position: absolute;
+			top: -17px;
+			right: 0;
+			letter-spacing: 2px;
+			width: 25%;
+			background-color: white;
+			font-size: 25px;
+			font-weight: 500;
+			text-align: center;
+			transform: translateX(-150%);
+		} */
 	}
+
 }
 
 
