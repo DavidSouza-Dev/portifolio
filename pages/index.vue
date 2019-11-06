@@ -175,27 +175,22 @@
 				
 				<div class="card">
 					<!-- <p><span>Entre em contato</span> ;)</p> -->
-					<p  class="mail">E-mail: davidrs.souza@gmail.com</p>
-					<p  class="wpp">Whatsapp: (11) 994886041</p>
-					<!-- <p><span>Linkedin:</span> www.linkedin.com/in/dav1dsouza</p> -->
-					<p class="skype">Skype: daviiid.souza</p>
+					<p  class="mail"><font-awesome-icon :icon="['fa', 'envelope']"/>  E-mail: davidrs.souza@gmail.com</p>
+					<p  class="wpp"><font-awesome-icon :icon="['fab', 'whatsapp']"/>  Whatsapp: (11) 994886041</p>				
+					<p  class="wpp"><font-awesome-icon :icon="['fab', 'skype']"/>  Skype: daviiid.souza</p>
 				</div>				
-				<div class="sociais">
+				<!-- <div class="sociais">
 					<h3>Redes Sociais</h3>
 					<div class="linkSocial">
-						<a href="https://www.instagram.com/dav1dsouza/">
-							<img src ="../static/assets/img/iconfinder_Rounded_Instagram_svg_5282544.png" class="instagram">
-						</a>
-						<a href="https://twitter.com/DaviidRPS">
-							<img src="../static/assets/img/iconfinder_Rounded_Twitter5_svg_5282551.png" class="twitter">
-						</a>
-						<a href="https://www.linkedin.com/in/dav1dsouza/">
-							<img src="../static/assets/img/iconfinder_Rounded_Linkedin2_svg_5282542.png" class="linkedin">
-						</a>
+						
+						<span class="linkedin"><font-awesome-icon :icon="['fab', 'linkedin']"/></span>
+						<span class="github"><font-awesome-icon :icon="['fab', 'github-square']"/></span>
+						<span class="instagram"><font-awesome-icon :icon="['fab', 'instagram']"/></span>
+						<span class="twitter"><font-awesome-icon :icon="['fab', 'twitter-square']"/></span>
 					</div>
 					
 
-				</div>
+				</div> -->
 
 
 			</b-container>
@@ -1262,64 +1257,22 @@ main{
 				.mail{
 					z-index: 2;
 					position: relative;
-					&::before{
-						z-index: -1;
-						background-size: 5%;
-						background-repeat: no-repeat;
-						content: "";
-						position: absolute;
-						top: 0;
-						left: -55px;
-						bottom: 0;
-						right: 0;
-						height: 118%;
-						background-image: url("../static/assets/img/iconfinder_aiga_mail_inver_134147.png");
-						background-position: 4% 38%;
-						filter: invert(1);
-					}
+					
 				}
 				.wpp{
 					z-index: 2;
 					position: relative;
-					&::before{
-						z-index: -1;
-						background-size: 5%;
-						background-repeat: no-repeat;
-						content: "";
-						position: absolute;
-						top: 0;
-						left: -55px;
-						bottom: 0;
-						right: 0;
-						height: 118%;
-						background-image: url("../static/assets/img/iconfinder_Rounded_Whatsapp_svg_5282549.png");
-						background-position: 4% 38%;
-						filter: invert(1);
-					}
+					
 				}
 				.skype{
 					z-index: 2;
 					position: relative;
-					&::before{
-						z-index: -1;
-						background-size: 5%;
-						background-repeat: no-repeat;
-						content: "";
-						position: absolute;
-						top: 0;
-						left: -55px;
-						bottom: 0;
-						right: 0;
-						height: 118%;
-						background-image: url("../static/assets/img/iconfinder_skype_312649.png");
-						background-position: 4% 38%;
-						filter: invert(1);
-					}
+					
 				}
 				
 
 			}	
-			.sociais{
+			/* .sociais{
 				    height: 168px;
 					width: 250px;
 					display: flex;
@@ -1338,65 +1291,50 @@ main{
 					width: 100%;
 					border-bottom: 2px solid #ffffff1a;
 					height: 48px;
-					a{
-						background: white;
-						border-radius: 50% !important;
-						height: 40px;
-						width: 40px;
+					.linkedin{
+						font-size: 40px;
+						background: whitesmoke;
+						height: 30px;
+						width: 30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+					.github{
+						font-size: 40px;
+						background: whitesmoke;
+						height: 30px;
+						width: 30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 					}
 					.instagram{
-						height: 100%;
-						width: 100%;
-						&:hover{
-							filter:invert(1);
-							background: #71dacb;
-						}
+						font-size: 40px;
+						background: whitesmoke;
+						height: 29px;
+						width: 29px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 					}
 					.twitter{
-						height: 100%;
-						width: 100%;
-						&:hover{
-							filter:invert(1);
-							background: #ff5e00;
-						}
+						font-size: 40px;
+						background: whitesmoke;
+						height: 30px;
+						width: 30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
 					}
-					.linkedin{
-						height: 100%;
-						width: 100%;
-						&:hover{
-							filter:invert(1);
-							background: #e4a65a;
-						}
-					}
+					
 				}
 				
 				
-			}
+			} */
 
 		}
-		/* &::before{
-			content: "";
-			position: absolute;
-			top: 0px;
-			right: 0;
-			height: 2px;
-			width: 100%;
-			background-color: #00000030;
-		}
-
-		&::after{
-			content: "Entre em Contato ; )";
-			position: absolute;
-			top: -17px;
-			right: 0;
-			letter-spacing: 2px;
-			width: 25%;
-			background-color: white;
-			font-size: 25px;
-			font-weight: 500;
-			text-align: center;
-			transform: translateX(-150%);
-		} */
+		
 	}
 
 }

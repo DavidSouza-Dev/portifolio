@@ -78,12 +78,12 @@ export default {
             $(window).scroll( function (){
                 let scroll = $(window).scrollTop();
                 if(scroll > 1943){
-                    (".nav-link").trigger("mouseover");
-                   /*  console.log("teste") */
-
+                   
                 }
             });
-        }
+        },
+
+       
 
         
     },
@@ -237,40 +237,62 @@ export default {
                             border-radius: 0px; 
                         }
                         .nav-item{
-                            font-size: 18px;
+                            font-size: 19px;
                             .nav-link{
                                 position: relative;
                                 transition: color .5s ease-in-out;
                                 color: white;
                                 padding-right: .6rem;
                                 padding-left: .6rem;
-                                &::after{
+                                 .active{
                                     content: "";
                                     position: absolute;
                                     
                                     top: 0;
-                                    left: 7px;
-                                    right:7px;
-                                    bottom:0;
+                                    left: 0px;
+                                    
                                     display: block;
                                     
                                     border-bottom: 3px solid currentColor;
                                     height: 40px !important;
                                     transform: scaleX(0);
                                     transform-origin: right;
-                                    transition: transform .3s ease-in;
+                                    transition: transform .25s ease-in;
+                                 }
+                                
+
+                               &::after{
+                                    content: "";
+                                    position: absolute;
+                                    
+                                    top: 0;
+                                    left: 0px;
+                                    
+                                    display: block;
+                                    
+                                    border-bottom: 3px solid currentColor;
+                                    height: 40px !important;
+                                    transform: scaleX(0);
+                                    transform-origin: right;
+                                    transition: transform .25s ease-in;
                                    
-                                }
-                                &:hover::after,  &:active::after{
-                                        transform: scaleX(1);
-                                        transform-origin: left;
-                                    }
-                              
+                                } 
+
+
+                                /* &:hover::after,  &:active::after{
+                                    transform: scaleX(1);
+                                    transform-origin: left;
+                                } */
+                               
                                 
                             }
 
                             .nav-link:hover, .nav-link:active{
                                 background-color: transparent;
+                                &::after{
+                                    transform: scaleX(1);
+                                    transform-origin: left;
+                                }
                                
                                 @media only screen and (max-width: 768px){
                                     padding-left: 1.5em;
