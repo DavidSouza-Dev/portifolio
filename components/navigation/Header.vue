@@ -36,12 +36,13 @@
 
 <script>
 import $ from 'jquery'
-
+/* https://codepen.io/zebt/pen/aGjOML */
 export default {
     name: 'Header',
     data() {
         return {
-            searchValue: ''
+            searchValue: '',
+            active: false
         }
     },
     methods: {
@@ -55,6 +56,7 @@ export default {
                     $(".navbar").css({background:"white"})
                     $(".nav-link").css({color:"black"})
                     $(".logo").css({color:"black"})
+                    
                 }
                 else{
                     $('.background').removeClass("opacity1").addClass("opacity0")
@@ -62,6 +64,7 @@ export default {
                     $(".navbar").css({background:"transparent"})
                     $(".nav-link").css({color:"aliceblue"})
                     $(".logo").css({color:"white"})
+                    
                 }
 
                 if(scroll >500){
@@ -75,7 +78,8 @@ export default {
             $(window).scroll( function (){
                 let scroll = $(window).scrollTop();
                 if(scroll > 1943){
-
+                    (".nav-link").trigger("mouseover");
+                   /*  console.log("teste") */
 
                 }
             });
@@ -86,6 +90,7 @@ export default {
 
     mounted() {
         this.renderizaBar()
+        this.activeMenu()
     },
     
 }
@@ -234,17 +239,39 @@ export default {
                         .nav-item{
                             font-size: 18px;
                             .nav-link{
+                                position: relative;
                                 transition: color .5s ease-in-out;
-                                color: aliceblue;
+                                color: white;
                                 padding-right: .6rem;
                                 padding-left: .6rem;
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    
+                                    top: 0;
+                                    left: 7px;
+                                    right:7px;
+                                    bottom:0;
+                                    display: block;
+                                    
+                                    border-bottom: 3px solid currentColor;
+                                    height: 40px !important;
+                                    transform: scaleX(0);
+                                    transform-origin: right;
+                                    transition: transform .3s ease-in;
+                                   
+                                }
+                                &:hover::after,  &:active::after{
+                                        transform: scaleX(1);
+                                        transform-origin: left;
+                                    }
+                              
+                                
                             }
 
                             .nav-link:hover, .nav-link:active{
-                                
-                                color:black;
-                                background-color: rgba(211, 211, 211, 0.26);
-                                border-radius: 10px;
+                                background-color: transparent;
+                               
                                 @media only screen and (max-width: 768px){
                                     padding-left: 1.5em;
                                 }
