@@ -31,6 +31,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding:0px;
+  overflow-x: hidden;
 }
 
 *,
@@ -39,7 +44,7 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
-
+/* 
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -67,5 +72,5 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
-}
+} */
 </style>

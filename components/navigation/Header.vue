@@ -1,17 +1,20 @@
 <template>
     <div>
-        <div class="header-head"></div>
+        <div id="home" class="header-head"></div>
         <header>
            
             <div class="background">
-            <b-navbar class="opacity0" toggleable="lg" type="light" variant="info">
+            <b-navbar  toggleable="lg" type="light" variant="info">
                 <div class="menu">  
                     <b-navbar-brand class="logo" href="#">
                        DAVID SOUZA
                     </b-navbar-brand>
-                    <!-- <font-awesome-icon :icon="['fas', 'fa-bars']"/> -->
-                   <!--  <font-awesome-icon :icon="['fa', 'times']"/> -->
-                    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+                   
+                   
+                    <b-navbar-toggle target="nav-collapse"> 
+                        <font-awesome-icon :icon="['fas', 'bars']"/>
+                        <!-- <font-awesome-icon :icon="['fas', 'times-circle']"/> -->
+                    </b-navbar-toggle>
                     
                 
                 </div>
@@ -19,7 +22,7 @@
                 <b-collapse id="nav-collapse" is-nav>
                 <div class="menu-in">
                     <b-navbar-nav>
-                        <b-nav-item href="#quem-sou">Home</b-nav-item>
+                        <b-nav-item href="#home">Home</b-nav-item>
                         <b-nav-item href="#quem-sou">Quem sou eu?</b-nav-item>
                         <b-nav-item href="#conhecimento">Conhecimentos</b-nav-item>
                         <b-nav-item href="#experiencia">Tecnologias</b-nav-item>
@@ -48,23 +51,29 @@ export default {
     methods: {
         renderizaBar(){
            $(window).scroll(function () {
+               
                 let scroll = $(window).scrollTop();
                /*  console.log(scroll) */
                 if(scroll > 750){
+                    console.log("testado")
                     $('.background').addClass("opacity1").removeClass("opacity0")
                     $(".navbar").addClass("opacity1").removeClass("opacity0")
-                    $(".navbar").css({background:"white"})
+                   /*  $(".navbar").css({background:"white"}) */
                     $(".nav-link").css({color:"black"})
                     $(".logo").css({color:"black"})
+                    $(".navbar-toggler").css({color:"black"})
                     
-                }
-                else{
+                    
+                }else
+                if(scroll < 750){
+                    console.log("testado2")
                     $('.background').removeClass("opacity1").addClass("opacity0")
                     $(".navbar").removeClass("opacity1").addClass("opacity0")
-                    $(".navbar").css({background:"transparent"})
-                    $(".nav-link").css({color:"aliceblue"})
+                    /* $(".menu").css({background:"transparent"}) */
+                    $(".nav-link").css({color:"white"})
                     $(".logo").css({color:"white"})
-                    
+                    $(".navbar-toggler").css({color:"white"})
+                   
                 }
 
                 if(scroll >500){
@@ -111,16 +120,20 @@ export default {
 	opacity: 1;
 	z-index:-3;
 	height:900px;
-    filter: blur(0.8px);
-    background-blend-mode: color-dodge;
+   /*  filter: blur(0.8px); */
+    background-blend-mode: difference;
  	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent),url("../../static/assets/img/NoteAndDesk2.jpg");
  	background-size: 110%;
     background-position: 60% 13%;
 	background-repeat: no-repeat;
 	width: 100%;
     margin-top: -6px;
+    transition: opacity .3s ease-in-out;
 	@media only screen and (max-width: 768px){
-		background-position: -20% 0%;
+        background-blend-mode: difference;
+        height: 740px;
+        background-size: cover;
+        background-position: 6% 0%;
 	}
     
 }
@@ -145,17 +158,17 @@ export default {
             transition: background-color .5s ease-in-out;    
             background-color: transparent!important;
         }
+
         .background{
             position: relative;
             z-index: 9999;
             @media only screen and (max-width: 768px){
-                height:70px;
-                background-position: 20% 0%;
-                height: 68x;    
+                
             }
            
             .navbar{
                 transition: all .4s ease-in-out;
+                background-color: transparent!important;
                 
                 @media only screen and (max-width: 768px){
                     padding: 0!important; 
@@ -167,8 +180,12 @@ export default {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    background-color: transparent;
                     @media only screen and (max-width: 768px){
                         width: 100%;
+                        height: 50px;
+                        background-color: black;
+                        border-bottom: 3px solid #404040;
                     }
 
                     .navbar-brand{
@@ -178,32 +195,31 @@ export default {
                         font-family: 'Spectral', serif;
                         padding:10px 0 10px 0;
                         margin-left: 2em!important;
-                        opacity: .8;
+                        @media only screen and (max-width: 768px){
+                            font-size: 26px;
+                        }
                         .logo{
                            
                         }
                         @media only screen and (max-width: 768px){
-                            margin-left: 1em!important;
+                           margin-left: .3em !important;
                         }
                     }
             
                     .navbar-toggler {
-                        color: transparent!important;
-                        border-color: transparent!important;
-                        background-color: #8c795ff3!important;
-                        border-radius: 50px;
-                        background-size: 50px;
-                        position: absolute;
+                        color: white;
+                        /* position: absolute;
                         right: 1em;
                         top: .5em;
                         height: 50px;
-                        width: 50px;
-                        .fa, .fas {
-                            font-size: 32px!important;
-                            color: #faebd7b3!important;
-                            margin-left: -2px;
+                        width: 50px; */
+                        margin-right: .4em;
+                        transform: scale(1.5);
+                        border: none;
+                        outline: none;
+                        @media only screen and (max-width: 768px){
+                           
                         }
-                        
                     }
 
                     .my-toggle{
@@ -222,7 +238,7 @@ export default {
                     
                     position: absolute;
                     right: 4em;
-                    opacity: .9;
+                    
                     @media only screen and (max-width: 768px){
                         position: static;
                     }
@@ -233,22 +249,26 @@ export default {
                        /*  background-color: #8c795ff3; */
                         border-radius: 10px;
                         @media only screen and (max-width: 768px){
-                            background: #8c795ff3;
+                            background: #6b6b6b;
+                            border-bottom: 3px solid #404040;
                             border-radius: 0px; 
                         }
                         .nav-item{
                             font-size: 19px;
+                            @media only screen and (max-width: 768px){
+                                line-height: 2!important;
+                            }
                             .nav-link{
                                 position: relative;
                                 transition: color .5s ease-in-out;
                                 color: white;
                                 padding-right: .6rem;
                                 padding-left: .6rem;
-                               
+                                
                                 &::after{
                                     content: "";
                                     position: absolute;
-                                    top: 0;
+                                    top: 4;
                                     left: 8px;
                                     right: 8px;
                                     
@@ -277,9 +297,9 @@ export default {
                                     transform-origin: left;
                                 }
                                
-                                @media only screen and (max-width: 768px){
+                               /*  @media only screen and (max-width: 768px){
                                     padding-left: 1.5em;
-                                }
+                                } */
                             }
                         }
                         

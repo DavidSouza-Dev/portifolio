@@ -41,7 +41,7 @@ export default {
     #footer {
         background: #2d2d2d;
         .container-fluid{
-		    height:150px;
+		    height:120px;
 		    .container{
                 color: white;
                 display: flex;
@@ -96,7 +96,7 @@ export default {
                     }
                     .wpp{
                         color: white;
-                        height: 27px;
+                        height: 28px;
                         width: 30px;
                         &:hover{
                             border-radius: 18%;

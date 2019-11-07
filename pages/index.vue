@@ -4,7 +4,7 @@
 			<div class="foto-titulo">
 <!-- 				<div class="foto"> </div>
  -->				<div class="titulo">
-					<p class="meu-nome"><strong>Oi! meu nome é David.</strong></p>
+					<p class="meu-nome">Oi! meu nome é David.</p>
 					<p class="texto-digitado"></P>
 					<!-- <vue-typed-js> 
 						:string="["Desenvolvedor Front-End.", "Apaixonado por Tecnologia.", "Nascido em Belém, Pará"]" 
@@ -34,7 +34,7 @@
 			<b-container >
 				<b-row>
 					<b-col lg="12" class="form">
-						<b-col lg="6" class="coluna1">
+						<b-col lg="6" sm="12" class="coluna1">
 							<div class="foto-desc">
 								<div class="foto"></div>
 								<div class="desc">
@@ -48,30 +48,30 @@
 							</div>
 							
 						</b-col>
-						<b-col lg="6" class="coluna2">
+						<b-col lg="6" sm="12" class="coluna2">
 							<div class="habilidades">
 								<h5>Habilidades</h5>
-								<p>Proficiência no trabalho de equipe </p>
+								<p class="detalhe">Proficiência no trabalho de equipe </p>
 								<div class="bar"></div>
-								<p>HTML5 </p>
+								<p class="detalhe">HTML5 </p>
 								<div class="bar"></div>
-								<p>CSS3 </p>
+								<p class="detalhe">CSS3 </p>
 								<div class="bar"></div>
-								<p>Bootstrap 4 </p>
+								<p class="detalhe">Bootstrap 4 </p>
 								<div class="bar"></div>
-								<p>Pré-processador CSS (SASS) </p>
+								<p class="detalhe">Pré-processador CSS (SASS) </p>
 								<div class="bar"></div>  
-								<p>Javascript </p>
+								<p class="detalhe">Javascript </p>
 								<div class="bar"></div>
-								<p>API REST </p>
+								<p class="detalhe">API REST </p>
 								<div class="bar"></div>
-								<p>Wordpress </p>
+								<p class="detalhe">Wordpress </p>
 								<div class="bar"></div>
-								<p>Task Runner GruntJs </p>
+								<p class="detalhe">Task Runner GruntJs </p>
 								<div class="bar"></div>
-								<p>Controladores de Versão GIT </p>
+								<p class="detalhe">Controladores de Versão GIT </p>
 								<div class="bar"></div>
-								<p>Framework Vue.js </p>
+								<p class="detalhe">Framework Vue.js </p>
 								<div class="bar"></div>
 							</div>
 							
@@ -86,27 +86,27 @@
 				
 				<b-row>
 					 <div class="linha1">
-						 <b-col lg="2">
+						 <b-col lg="2" sm="6">
 						<div class="html" href="#">HTML5
 							<a class="img-html"/>
 						</div>
 					</b-col>
-					<b-col lg="2">
+					<b-col lg="2" sm="6">
 						<div class="css3" href="#">CSS3
 							<a class="img-css3"/>
 						</div>
 					</b-col>
-					<b-col lg="2">
+					<b-col lg="2" sm="6">
 						<div class="bs4" href="#">BOOTSTRAP 4
 							<a class="img-bs4"/>
 						</div>
 					</b-col>
-					<b-col lg="2">
+					<b-col lg="2" sm="6">
 						<div class="sass" href="#">SASS
 							<a class="img-sass"/>
 						</div>
 					</b-col>
-					<b-col lg="2">
+					<b-col lg="2" sm="6">
 						<div class="javascript" href="#">JAVASCRIPT
 							<a class="img-javascript"/>
 						</div>
@@ -116,29 +116,29 @@
 					
 				</b-row>
 				<b-row>
-					<div class="linha2">
+					<div class="linha2" >
 						<b-col lg="2">
 							<div class="wordpress" href="#">
 								<span>WORDPRESS</span>
 								<a class="img-wordpress"/>
 							</div>
 							</b-col>
-							<b-col lg="2">
+							<b-col lg="2" sm="6">
 								<div class="grunt" href="#">GRUNT
 									<a class="img-grunt"/>
 								</div>
 							</b-col>
-							<b-col lg="2">
+							<b-col lg="2" sm="6">
 								<div class="git" href="#">GIT
 									<a class="img-git"/>
 								</div>
 							</b-col>
-							<b-col lg="2">
+							<b-col lg="2" sm="6">
 								<div class="vue" href="#">VUE
 									<a class="img-vue"/>
 								</div>
 							</b-col>
-							<b-col lg="2">
+							<b-col lg="2" sm="6">
 								<div class="nuxt" href="#">NUXT
 									<a class="img-nuxt"/>
 							</div>
@@ -268,6 +268,9 @@ export default {
 
 main{
 	margin-top: 480px;
+	@media only screen and (max-width: 768px){
+		margin-top: 88px;
+	}
 	 .foto-titulo{
 		filter: drop-shadow(2px 4px 6px black);
 		/* position: absolute;
@@ -278,6 +281,12 @@ main{
 		justify-content: center;
 		align-items: center;
 		margin-bottom:200px;
+		@media only screen and (max-width: 768px){
+			margin-top: 344px;
+			margin-bottom: 190px;
+
+
+		}
 		.foto{
 			filter: drop-shadow(2px 4px 6px black);
 			background-position: -20%;
@@ -297,10 +306,16 @@ main{
 			text-align: center;
 			color: white;
 			font-size: 60px;
+			@media only screen and (max-width: 768px){
+				font-size: 32px;
+			}
 			.texto-digitado{
 				font-size:35px;
 				opacity:0.9;
 				display: inline-block;
+				@media only screen and (max-width: 768px){
+					font-size: 27px;
+				}
 			}
 		}
 	}
@@ -346,12 +361,20 @@ main{
 				height: 200px;
 				width: 200px;
 				margin-left: auto;
-   				margin-right: auto;
+				margin-right: auto;
+				@media only screen and (max-width: 768px){
+					transform: rotate(10deg) scale(1.2);
+					margin-top: 0;
+            	}
 			}
 			.texto-historia{
 				margin-top: 80px;
 				font-weight: 100;
 				text-align: justify;
+				@media only screen and (max-width: 768px){
+					font-size: 18px;
+					
+            	}
 			}
 			.pata-dog{
 				filter: invert(1);
@@ -372,10 +395,17 @@ main{
 		.container{
 			border: 1px solid transparent;
 			height:600px;
+			@media only screen and (max-width: 768px){
+				height:700px;
+			}
 			filter: drop-shadow(0px 2px 2px black);
 			.form{
 				display: flex;
 				padding-top: 60px;
+				@media only screen and (max-width: 768px){
+					flex-direction: column; 
+					padding-top: 0px;         
+				}
 			}
 			.coluna1{
 				padding-top: 20px;
@@ -394,12 +424,18 @@ main{
 						background-size: 110%;
 						background-image: url(../static/assets/img/fotoIndice.png);
 						background-repeat: no-repeat;
+						@media only screen and (max-width: 768px){
+							margin-right: 30px;
+						}
 					}
 					.desc{
 						font-size:15px;
 						line-height: 1.5;
+						@media only screen and (max-width: 768px){
+                           font-size: 13px;
+                        }
 						span{
-							font-weight: 500;
+							font-weight: 600;
 						}
 					}
 				}
@@ -412,12 +448,18 @@ main{
 				/* width:60%; */
 				.habilidades{
 					padding-left: 30px;
+					@media only screen and (max-width: 768px){
+						padding-left: 0;
+					}
 					h5{
 						margin-bottom: 1.2rem;
 					}
-					p{
+					.detalhe{
 						margin-bottom: 0.5rem!important;
 						line-height: .8;
+						@media only screen and (max-width: 768px){
+                           font-size: 13px
+                        }
 					}
 					.bar{
 						height: 4px;
