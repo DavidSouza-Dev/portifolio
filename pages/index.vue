@@ -325,10 +325,10 @@ main{
 
 	#quem-sou{
 		height: 600px;
-		background-color: black;
+		background-color: #404040;
 		.container{
 			background-color: transparent;
-			color: rgb(201, 198, 198);
+			color: white;
 			font-size: 25px;
 			
 		}
