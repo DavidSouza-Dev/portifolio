@@ -4,13 +4,17 @@
         <b-container fluid>
             <b-container>
                 <div class="linkFooter">
-                    <a class="linkedin" href=""><font-awesome-icon :icon="['fab', 'linkedin']"/></a>
-                    <a class="github" href=""><font-awesome-icon :icon="['fab', 'github']"/></a>
-                    <a  class="instagram" href=""><font-awesome-icon :icon="['fab', 'instagram']"/></a>
-                    <a class="twitter" href=""><font-awesome-icon :icon="['fab', 'twitter-square']"/></a>
-                    <a class="wpp" href=""><font-awesome-icon :icon="['fab', 'whatsapp']"/></a>
-                    <a href=""><font-awesome-icon :icon="['fa', 'envelope']"/></a> 
-                    <a href=""><font-awesome-icon :icon="['fas', 'coffee']"/></a>
+                    <a class="linkedin" href="https://www.linkedin.com/in/dav1dsouza/">
+                        <font-awesome-icon :icon="['fab', 'linkedin']"/></a>
+                    <a class="github" href="https://github.com/DaviiidSouza">
+                        <font-awesome-icon :icon="['fab', 'github']"/></a>
+                    <a  class="instagram" href="https://www.instagram.com/dav1dsouza">
+                        <font-awesome-icon :icon="['fab', 'instagram']"/></a>
+                    <a class="twitter" href="https://twitter.com/DaviidRPS">
+                        <font-awesome-icon :icon="['fab', 'twitter-square']"/></a>
+                    <a class="wpp" href="https://api.whatsapp.com/send?phone=5511994886041"><font-awesome-icon :icon="['fab', 'whatsapp']"/></a>
+                    <a class="mail" href="mailto:davidrs.souza@gmail.com"><font-awesome-icon :icon="['fa', 'envelope']"/></a> 
+                    <!-- <a href=""><font-awesome-icon :icon="['fas', 'coffee']"/></a> -->
                 </div>
                 
                
@@ -51,6 +55,7 @@ export default {
                     font-size: 32px;
                     display: inherit;
                     justify-content: space-evenly;
+                    align-items: center;
                     a{
                         color: white;
                         height: 25px;
@@ -67,25 +72,42 @@ export default {
                     }
                     .github{
                         &:hover{
-                            height: 26px;
+                            height: 27px;
                             border-radius: 35%;
                             background: white;
-                            color: #411041;
+                            color: #571657;
                         }
                     }
                     .instagram{
                         &:hover{
-                            color: #a04a4a
+                            height: 26px;
+                            border-radius: 35%;
+                            background: white;
+                            color: #ff697b
                         }
                     }
                     .twitter{
                         &:hover{
-                            color: #9ae4e8;
+                            height: 26px;
+                            border-radius: 35%;
+                            background: white;
+                            color: #1da1f2;
                         }
                     }
                     .wpp{
+                        color: white;
+                        height: 27px;
+                        width: 30px;
                         &:hover{
-                            color:rgb(0, 128, 96)
+                            border-radius: 18%;
+                            background: white;
+                            color: #14ca2a;
+                        }
+                    }
+                    .mail{
+                        color: white;
+                        &:hover{
+                            color: firebrick;
                         }
                     }
                 }

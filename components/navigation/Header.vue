@@ -9,7 +9,7 @@
                     <b-navbar-brand class="logo" href="#">
                        DAVID SOUZA
                     </b-navbar-brand>
-                    <font-awesome-icon :icon="['fas', 'fa-bars']"/>
+                    <!-- <font-awesome-icon :icon="['fas', 'fa-bars']"/> -->
                    <!--  <font-awesome-icon :icon="['fa', 'times']"/> -->
                     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
                     
@@ -244,45 +244,28 @@ export default {
                                 color: white;
                                 padding-right: .6rem;
                                 padding-left: .6rem;
-                                 .active{
+                               
+                                &::after{
                                     content: "";
                                     position: absolute;
-                                    
                                     top: 0;
-                                    left: 0px;
+                                    left: 8px;
+                                    right: 8px;
                                     
                                     display: block;
-                                    
                                     border-bottom: 3px solid currentColor;
                                     height: 40px !important;
                                     transform: scaleX(0);
-                                    transform-origin: right;
+                                    transform-origin: left;
                                     transition: transform .25s ease-in;
-                                 }
-                                
-
-                               &::after{
-                                    content: "";
-                                    position: absolute;
                                     
-                                    top: 0;
-                                    left: 0px;
-                                    
-                                    display: block;
-                                    
-                                    border-bottom: 3px solid currentColor;
-                                    height: 40px !important;
-                                    transform: scaleX(0);
-                                    transform-origin: right;
-                                    transition: transform .25s ease-in;
-                                   
                                 } 
 
 
-                                /* &:hover::after,  &:active::after{
+                                &:hover::after,  &:active::after{
                                     transform: scaleX(1);
-                                    transform-origin: left;
-                                } */
+                                   
+                                }
                                
                                 
                             }

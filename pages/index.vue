@@ -355,7 +355,7 @@ main{
 			}
 			.pata-dog{
 				filter: invert(1);
-				opacity: .5;
+				opacity: .7;
 				background-size: 10%;
 				background-repeat: no-repeat;
 				
@@ -1229,13 +1229,13 @@ main{
 			align-items: center;
 			background-color: #424242;
 			.card{
-				height: 170px;
+				height: 220px;
 				position: relative;
 				color: white;
 				font-weight: 700;
-				width: 500px;
+				width: 700px;
 				background-color: #424242;
-				padding: 10px 10px 10px 50px;
+				padding: 10px 10px 10px 30px;
 				justify-content: center;
 				
 				&::after{
@@ -1257,82 +1257,35 @@ main{
 				.mail{
 					z-index: 2;
 					position: relative;
+					display: inherit;
+					svg{
+						margin-right: 25px;
+    					font-size: 23px;
+					}
 					
 				}
 				.wpp{
 					z-index: 2;
 					position: relative;
-					
+					display: inherit;
+					svg{
+						margin-right: 25px;
+    					font-size: 23px;
+					}
 				}
 				.skype{
 					z-index: 2;
 					position: relative;
-					
+					display: inherit;
+					svg{
+						margin-right: 25px;
+    					font-size: 23px;
+					}
 				}
 				
 
 			}	
-			/* .sociais{
-				    height: 168px;
-					width: 250px;
-					display: flex;
-					flex-direction: column;
-					justify-content: space-evenly;
-					align-items: center;
-					box-shadow: 0px 0px 3px 1px rgba(255, 255, 255, 0.19);
-
-				h3{
-					color: white;
- 					font-weight: 400;
-				}
-				.linkSocial{
-					display: flex;
-					justify-content: space-around;
-					width: 100%;
-					border-bottom: 2px solid #ffffff1a;
-					height: 48px;
-					.linkedin{
-						font-size: 40px;
-						background: whitesmoke;
-						height: 30px;
-						width: 30px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
-					.github{
-						font-size: 40px;
-						background: whitesmoke;
-						height: 30px;
-						width: 30px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
-					.instagram{
-						font-size: 40px;
-						background: whitesmoke;
-						height: 29px;
-						width: 29px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
-					.twitter{
-						font-size: 40px;
-						background: whitesmoke;
-						height: 30px;
-						width: 30px;
-						display: flex;
-						justify-content: center;
-						align-items: center;
-					}
-					
-				}
-				
-				
-			} */
-
+			
 		}
 		
 	}
