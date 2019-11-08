@@ -4,16 +4,36 @@
         <b-container fluid>
             <b-container>
                 <div class="linkFooter">
-                    <a class="linkedin" href="https://www.linkedin.com/in/dav1dsouza/">
-                        <font-awesome-icon :icon="['fab', 'linkedin']"/></a>
-                    <a class="github" href="https://github.com/DaviiidSouza">
-                        <font-awesome-icon :icon="['fab', 'github']"/></a>
-                    <a  class="instagram" href="https://www.instagram.com/dav1dsouza">
-                        <font-awesome-icon :icon="['fab', 'instagram']"/></a>
-                    <a class="twitter" href="https://twitter.com/DaviidRPS">
-                        <font-awesome-icon :icon="['fab', 'twitter-square']"/></a>
-                    <a class="wpp" href="https://api.whatsapp.com/send?phone=5511994886041"><font-awesome-icon :icon="['fab', 'whatsapp']"/></a>
-                    <a class="mail" href="mailto:davidrs.souza@gmail.com"><font-awesome-icon :icon="['fa', 'envelope']"/></a> 
+                    <a class="linkedin" href="https://www.linkedin.com/in/dav1dsouza/"
+                        data-aos="fade"
+                        data-aos-duration="2600">
+                        <font-awesome-icon :icon="['fab', 'linkedin']"/>
+                    </a>
+                    <a class="github" href="https://github.com/DaviiidSouza"
+                        data-aos="fade"
+                        data-aos-duration="2400">
+                        <font-awesome-icon :icon="['fab', 'github']"/>
+                    </a>
+                    <a  class="instagram" href="https://www.instagram.com/dav1dsouza"
+                        data-aos="fade"
+                        data-aos-duration="2000">
+                        <font-awesome-icon :icon="['fab', 'instagram']"/>
+                    </a>
+                    <a class="twitter" href="https://twitter.com/DaviidRPS"
+                        data-aos="fade"
+                        data-aos-duration="1600">
+                        <font-awesome-icon :icon="['fab', 'twitter-square']"/>
+                    </a>
+                    <a class="wpp" href="https://api.whatsapp.com/send?phone=5511994886041"
+                        data-aos="fade"
+                        data-aos-duration="1200">
+                        <font-awesome-icon :icon="['fab', 'whatsapp']"/>
+                    </a>
+                    <a class="mail" href="mailto:davidrs.souza@gmail.com"
+                        data-aos="fade"
+                        data-aos-duration="800">
+                        <font-awesome-icon :icon="['fa', 'envelope']"/>
+                    </a> 
                     <!-- <a href=""><font-awesome-icon :icon="['fas', 'coffee']"/></a> -->
                 </div>
                 
@@ -41,7 +61,7 @@ export default {
     #footer {
         background: #2d2d2d;
         .container-fluid{
-		    height:120px;
+		    height:200px;
 		    .container{
                 color: white;
                 display: flex;

@@ -151,7 +151,9 @@ export default {
         .opacity1{
             background-color: rgb(255, 255, 255)!important; 
             box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-            transition: background-color .5s ease-in-out;        }
+            transition: background-color .5s ease-in-out;
+            height: 60px;
+            }
         .opacity0{
             transition: background-color .5s ease-in-out;    
             background-color: transparent!important;
@@ -269,7 +271,7 @@ export default {
                                 &::after{
                                     content: "";
                                     position: absolute;
-                                    top: 4;
+                                    top: 4px;
                                     left: 8px;
                                     right: 8px;
                                     

@@ -20,8 +20,15 @@
 		<b-container fluid  id="quem-sou">
 			<b-container >
 				<div class="historia">
-					<div class="foto-historia" alt=""></div>
-					<p class="texto-historia">Nascido em Belém do Pará, tenho 34 anos, formado em Ciência da Computação, sou casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/img/animal-paw-print.png" >. Atuo a bastante tempo em TI, mas foi recente que me senti atraído por Front-end e estudo muito as tecnologias relacionadas. Estou bastante animado em trilhar este caminho.</p>
+					<div class="foto-historia" alt=""
+						data-aos="zoom-in"
+						
+					>
+					</div>
+					<p 
+					
+						data-aos="fade-right"
+						data-aos-duration="1000" data-aos-easing="ease-in-out" class="texto-historia">Nascido em Belém do Pará, tenho 34 anos, formado em Ciência da Computação, sou casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/img/animal-paw-print.png" >. Atuo a bastante tempo em TI, mas foi recente que me senti atraído por Front-end e estudo muito as tecnologias relacionadas. Estou bastante animado em trilhar este caminho.</p>
 					
 
 
@@ -30,11 +37,14 @@
 				</div>
 			</b-container>	
 		</b-container>
-		<b-container fluid id="conhecimento">
-			<b-container >
+		<b-container  fluid id="conhecimento">
+			<b-container  >
 				<b-row>
 					<b-col lg="12" class="form">
-						<b-col lg="6" sm="12" class="coluna1">
+						<b-col lg="6" sm="12" class="coluna1"
+						 data-aos="fade-right"
+						 data-aos-duration="1000"
+						 data-aos-easing="ease-in-out">
 							<div class="foto-desc">
 								<div class="foto"></div>
 								<div class="desc">
@@ -48,11 +58,18 @@
 							</div>
 							
 						</b-col>
-						<b-col lg="6" sm="12" class="coluna2">
+						<b-col lg="6" sm="12" class="coluna2"
+							data-aos="fade-left" 
+							data-aos-duration="1000"
+							data-aos-easing="ease-in-out">
 							<div class="habilidades">
 								<h5>Habilidades</h5>
 								<p class="detalhe">Proficiência no trabalho de equipe </p>
-								<div class="bar"></div>
+								<div class="bar" 
+									data-aos="fade-right"
+									data-aos-duration="3000"
+									data-aos-easing="ease-in-out"
+								></div>
 								<p class="detalhe">HTML5 </p>
 								<div class="bar"></div>
 								<p class="detalhe">CSS3 </p>
@@ -81,7 +98,12 @@
 			</b-container>
 		</b-container>
 		<b-container fluid id="tecnologias">
-			<h1>Tecnologias</h1>
+			<h1 data-aos="fade-right"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+			>
+			Tecnologias
+			</h1>
 			<b-container >
 				
 				<b-row>
@@ -158,10 +180,21 @@
 
 				
 			</div>
-			<h1>Portifolio</h1>
+			<h1 data-aos="fade-right"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+			>
+				Portifolio
+			</h1>
 			<b-container>
 				<b-row>
-					<b-col cols="4" lg="3" class="owli"><img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora"></b-col>
+					<b-col cols="4" lg="3" class="owli"
+						data-aos="fade"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out"
+						>
+						<img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora">
+					</b-col>
 					<b-col cols="2" lg="3" class="teste1"></b-col>
 					<b-col cols="2" lg="3" class="teste2"></b-col>
 					<b-col cols="2" lg="3" class="teste3"></b-col>
@@ -170,14 +203,34 @@
 			</b-container>
 		</b-container>
 		<b-container fluid id="contato">
-			<h1>Entre em Contato ; )</h1>
+			<h1 data-aos="fade"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+
+			>
+				Entre em Contato ; )
+
+			</h1>
 			<b-container >
 				
-				<div class="card">
+				<div class="card" 
+					data-aos="zoom-in"
+					data-aos-duration="600"
+					data-aos-easing="ease-in-out"
+				>
 					<!-- <p><span>Entre em contato</span> ;)</p> -->
-					<p  class="mail"><font-awesome-icon :icon="['fa', 'envelope']"/>  E-mail: davidrs.souza@gmail.com</p>
-					<p  class="wpp"><font-awesome-icon :icon="['fab', 'whatsapp']"/>  Whatsapp: (11) 994886041</p>				
-					<p  class="wpp"><font-awesome-icon :icon="['fab', 'skype']"/>  Skype: daviiid.souza</p>
+					<p  class="mail">
+						<font-awesome-icon :icon="['fa', 'envelope']"/>  
+						E-mail: davidrs.souza@gmail.com
+					</p>
+					<p  class="wpp">
+						<font-awesome-icon :icon="['fab', 'whatsapp']"/>  
+						Whatsapp: (11) 994886041
+					</p>				
+					<p  class="wpp">
+						<font-awesome-icon :icon="['fab', 'skype']"/>  
+						Skype: daviiid.souza
+					</p>
 				</div>				
 				<!-- <div class="sociais">
 					<h3>Redes Sociais</h3>
@@ -203,8 +256,11 @@ import $ from 'jquery'
 import Vue from 'vue'
 import Typed from 'typed.js';
 import { VueTypedJs } from 'vue-typed-js'
+/* import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 
-
+Vue.use(AOS) */
 Vue.use(VueTypedJs)
 
 export default {
@@ -252,6 +308,10 @@ export default {
 
 		}
 	},
+
+	/* created(){
+		AOS.init();
+	}, */
 	
 	mounted() {
 		this.efeitoModal();
@@ -411,6 +471,9 @@ main{
 				padding-top: 20px;
 				/* 	width:40%; */
 				padding: 0;
+				[data-aos="fade-right"] {
+				transform: translate3d(-150px,0,0);
+				}
     			.foto-desc{
 					margin-top: 20px;
 					display:flex;
@@ -424,6 +487,7 @@ main{
 						background-size: 110%;
 						background-image: url(../static/assets/img/fotoIndice.png);
 						background-repeat: no-repeat;
+						margin-right: 30px;
 						@media only screen and (max-width: 768px){
 							margin-right: 30px;
 						}
@@ -532,6 +596,16 @@ main{
 					justify-content: center;
 				}
 				
+				@keyframes entradaTech {
+					0% {
+						transform: translateY(-100%);
+					}
+					100%{
+						transform: translateY(0%);
+					}
+					
+				}
+
 				
 				.html{
 					position: relative;
@@ -569,8 +643,18 @@ main{
 						height:100%;
 						transition: transform .5s ease-in!important;
 						transform: translateY(-100%);
+
+						animation-duration: 0.9s;
+						animation-timing-function: ease-out;
+						animation-delay: .8s;
+						animation-iteration-count: 1;
+						animation-direction: normal;
+						animation-fill-mode: forwards;
+						animation-play-state: running;
+						animation-name: entradaTech;
+
 						background-size: 80%;
-						    background-repeat: no-repeat;
+						background-repeat: no-repeat;
 						background-position: 50% 65%;
 						background-image: url(../static/assets/img/html.png);
 						

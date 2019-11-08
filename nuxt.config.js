@@ -12,10 +12,12 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     script: [
-      { src: 'https://cdn.jsdelivr.net/npm/typed.js@2.0.11' }
+      { src: 'https://cdn.jsdelivr.net/npm/typed.js@2.0.11' }/* ,
+      { src: 'https://unpkg.com/aos@next/dist/aos.js'} */
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }/* ,
+      { rel: 'stylesheet', href: 'https://unpkg.com/aos@next/dist/aos.css'} */
     ]
   },
   /*
@@ -29,7 +31,10 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [ '@/plugins/fontawesome.js'  ],
+  plugins: [ '@/plugins/fontawesome.js',
+  { src: "@/plugins/aos", ssr: false } 
+ ],
+  
   /*
   ** Nuxt.js dev-modules
   */
