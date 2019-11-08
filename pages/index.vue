@@ -123,22 +123,22 @@
 								<a class="img-wordpress"/>
 							</div>
 							</b-col>
-							<b-col lg="2" sm="6">
+							<b-col lg="2" cols="6">
 								<div class="grunt" href="#">GRUNT
 									<a class="img-grunt"/>
 								</div>
 							</b-col>
-							<b-col lg="2" sm="6">
+							<b-col lg="2" cols="6">
 								<div class="git" href="#">GIT
 									<a class="img-git"/>
 								</div>
 							</b-col>
-							<b-col lg="2" sm="6">
+							<b-col lg="2" cols="6">
 								<div class="vue" href="#">VUE
 									<a class="img-vue"/>
 								</div>
 							</b-col>
-							<b-col lg="2" sm="6">
+							<b-col lg="2" cols="6">
 								<div class="nuxt" href="#">NUXT
 									<a class="img-nuxt"/>
 							</div>
@@ -161,10 +161,10 @@
 			<h1>Portifolio</h1>
 			<b-container>
 				<b-row>
-					<b-col lg="3" class="owli"><img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora"></b-col>
-					<b-col lg="3" class="teste1"></b-col>
-					<b-col lg="3" class="teste2"></b-col>
-					<b-col lg="3" class="teste3"></b-col>
+					<b-col cols="4" lg="3" class="owli"><img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora"></b-col>
+					<b-col cols="2" lg="3" class="teste1"></b-col>
+					<b-col cols="2" lg="3" class="teste2"></b-col>
+					<b-col cols="2" lg="3" class="teste3"></b-col>
 					
 				</b-row>
 			</b-container>

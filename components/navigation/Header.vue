@@ -149,21 +149,23 @@ export default {
         }
 
         .opacity1{
-             background-color: rgb(255, 255, 255)!important; 
+            background-color: rgb(255, 255, 255)!important; 
             box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-
-            height: 60px;
             transition: background-color .5s ease-in-out;        }
         .opacity0{
             transition: background-color .5s ease-in-out;    
             background-color: transparent!important;
+            @media only screen and (max-width: 768px){
+                background-color: black!important;
+            }
         }
 
         .background{
             position: relative;
             z-index: 9999;
             @media only screen and (max-width: 768px){
-                
+                  background-color: black;
+                        border-bottom: 3px solid #404040;
             }
            
             .navbar{
@@ -172,7 +174,7 @@ export default {
                 
                 @media only screen and (max-width: 768px){
                     padding: 0!important; 
-                    height: 68x!important;
+                    /* height: 68x!important; */
                 }
                 
                 .menu{
@@ -184,8 +186,7 @@ export default {
                     @media only screen and (max-width: 768px){
                         width: 100%;
                         height: 50px;
-                        background-color: black;
-                        border-bottom: 3px solid #404040;
+                      
                     }
 
                     .navbar-brand{

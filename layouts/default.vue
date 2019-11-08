@@ -31,6 +31,8 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+}
+body{
   width: 100%;
   height: 100%;
   margin: 0px;
