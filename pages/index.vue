@@ -109,29 +109,45 @@
 				<b-row>
 					 <div class="linha1">
 						 <b-col lg="2" sm="6">
-						<div class="html" href="#">HTML5
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-html">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>HTML5</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						<!-- <div class="html" href="#">HTML5
 							<a class="img-html"/>
-						</div>
+						</div> -->
 					</b-col>
 					<b-col lg="2" sm="6">
-						<div class="css3" href="#">CSS3
+						<!-- <div class="css3" href="#">CSS3
 							<a class="img-css3"/>
-						</div>
+						</div> -->
 					</b-col>
 					<b-col lg="2" sm="6">
-						<div class="bs4" href="#">BOOTSTRAP 4
+						
+						<!-- <div class="bs4" href="#">BOOTSTRAP 4
 							<a class="img-bs4"/>
-						</div>
+						</div >-->
 					</b-col>
 					<b-col lg="2" sm="6">
-						<div class="sass" href="#">SASS
+						<!-- <div class="sass" href="#">SASS
 							<a class="img-sass"/>
-						</div>
+						</div> -->
 					</b-col>
 					<b-col lg="2" sm="6">
-						<div class="javascript" href="#">JAVASCRIPT
+						<!-- <div class="javascript" href="#">JAVASCRIPT
 							<a class="img-javascript"/>
-						</div>
+						</div> -->
 					</b-col>
 					 </div>
 					
@@ -140,30 +156,30 @@
 				<b-row>
 					<div class="linha2" >
 						<b-col lg="2">
-							<div class="wordpress" href="#">
+							<!-- <div class="wordpress" href="#">
 								<span>WORDPRESS</span>
 								<a class="img-wordpress"/>
-							</div>
+							</div> -->
 							</b-col>
 							<b-col lg="2" cols="6">
-								<div class="grunt" href="#">GRUNT
+								<!-- <div class="grunt" href="#">GRUNT
 									<a class="img-grunt"/>
-								</div>
+								</div> -->
 							</b-col>
 							<b-col lg="2" cols="6">
-								<div class="git" href="#">GIT
+								<!-- <div class="git" href="#">GIT
 									<a class="img-git"/>
-								</div>
+								</div> -->
 							</b-col>
 							<b-col lg="2" cols="6">
-								<div class="vue" href="#">VUE
+								<!-- <div class="vue" href="#">VUE
 									<a class="img-vue"/>
-								</div>
+								</div> -->
 							</b-col>
 							<b-col lg="2" cols="6">
-								<div class="nuxt" href="#">NUXT
+								<!-- <div class="nuxt" href="#">NUXT
 									<a class="img-nuxt"/>
-							</div>
+								</div> -->
 						</b-col>
 					</div>
 				</b-row>
@@ -589,8 +605,9 @@ main{
 				overflow: hidden;
 				
 				div{
+					position: relative;
 					height: 84.1%;
-					border-radius: 50%;
+					/* border-radius: 50%; */
 					display: flex;
 					align-items: center;
 					justify-content: center;
@@ -606,8 +623,102 @@ main{
 					
 				}
 
-				
-				.html{
+				.info-html{
+					cursor: pointer;
+					position: absolute;
+					top:50%;
+					left:50%;
+					transform: translate(-50%, -50%);
+					width: 150px;
+					height: 150px;
+					transform-style: preserve-3d;
+					perspective: 600px;
+					background:transparent;
+				/* 	transition: all .5s; */
+					.front, .back{
+						width: 100%;
+						height: 100%;
+						overflow: hidden;
+						backface-visibility: hidden;
+						position: absolute;
+						transition: all .4s linear;
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							position:relative;
+							width: 100%;
+							height: 100%;
+							background-color:rgb(0, 128, 100);
+							transform: rotate(45deg);
+							&::before{
+								content:"";
+								position:absolute;
+								top:0;
+								left:0;
+								width: 100%;
+								height:100%;
+								background-image: url(../static/assets/img/html.png);
+								background-size: 80%;
+								background-repeat:no-repeat;
+								background-position: 50%;
+								transform: rotate(-45deg);
+								filter:grayscale(1)
+
+							}
+
+						}	
+						
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							width: 100%;
+							height: 100%;
+							background-color:transparent;
+							z-index: 0;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-direction: column;
+							cursor: default;
+							
+							&::after{
+								content:"";
+								position:absolute;
+								z-index:-1;
+								top:0;
+								left:0;
+								width: 100%;
+								height:100%;
+								background-color:lightgray;
+								transform: rotate(45deg);
+							}
+							a{
+								text-decoration: none;
+								color:black;
+								font-size: 15px;
+								&:hover{
+									color:black;
+								}
+							}
+						}	
+						
+					}
+					&:hover > .front{
+
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
+						
+					}
+					
+				}
+				/* .html{
 					position: relative;
 					width: 90%;
 					height: 90% !important;
@@ -886,7 +997,7 @@ main{
 						
 					
 					}
-				}
+				} */
 			}
 			.linha2{
 				font-size: 21px;
@@ -904,7 +1015,7 @@ main{
 					align-items: center;
 					justify-content: center;
 				}
-				.wordpress{
+				/* .wordpress{
 					position: relative;
 					width: 90%;
 					height: 90% !important;
@@ -1170,7 +1281,7 @@ main{
 						
 					
 					}
-				}
+				} */
 				
 			}
 		}
