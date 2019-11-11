@@ -7,7 +7,7 @@
             <b-navbar  toggleable="lg" type="light" variant="info">
                 <div class="menu">  
                     <b-navbar-brand class="logo" href="#">
-                       DAVID SOUZA
+                       David Souza
                     </b-navbar-brand>
                    
                    
@@ -109,8 +109,7 @@ export default {
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Audiowide|Cardo|Spectral&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap');
 
 
 .header-head{
@@ -152,7 +151,7 @@ export default {
             background-color: rgb(255, 255, 255)!important; 
             box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
             transition: background-color .5s ease-in-out;
-            height: 60px;
+            height: 50px;
             }
         .opacity0{
             transition: background-color .5s ease-in-out;    
@@ -195,9 +194,10 @@ export default {
                         color: white;
                         font-size: 30px;
                         font-weight: bold;
-                        font-family: 'Spectral', serif;
+                        font-family: 'Shadows Into Light Two', cursive;
                         padding:10px 0 10px 0;
                         margin-left: 2em!important;
+                        letter-spacing: 3px;
                         @media only screen and (max-width: 768px){
                             font-size: 26px;
                         }

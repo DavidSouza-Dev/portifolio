@@ -107,8 +107,8 @@
 			<b-container >
 				
 				<b-row>
-					 <div class="linha1">
-						 <b-col lg="2" sm="6">
+					<div class="linha1">
+						 <b-col cols="6" lg="2" sm="6">
 							<div  data-aos="fade-right"
 								data-aos-duration="1000"
 								data-aos-easing="ease-in-out" class="info-html">
@@ -124,62 +124,180 @@
 									</div>
 								</div>
 							</div>
-						<!-- <div class="html" href="#">HTML5
-							<a class="img-html"/>
-						</div> -->
-					</b-col>
-					<b-col lg="2" sm="6">
-						<!-- <div class="css3" href="#">CSS3
-							<a class="img-css3"/>
-						</div> -->
-					</b-col>
-					<b-col lg="2" sm="6">
-						
-						<!-- <div class="bs4" href="#">BOOTSTRAP 4
-							<a class="img-bs4"/>
-						</div >-->
-					</b-col>
-					<b-col lg="2" sm="6">
-						<!-- <div class="sass" href="#">SASS
-							<a class="img-sass"/>
-						</div> -->
-					</b-col>
-					<b-col lg="2" sm="6">
-						<!-- <div class="javascript" href="#">JAVASCRIPT
-							<a class="img-javascript"/>
-						</div> -->
-					</b-col>
-					 </div>
-					
-					
+						</b-col>
+						<b-col cols="6" lg="2" sm="6">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-css">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>CSS3</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+						<b-col cols="6" lg="2" sm="6">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-bs4">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>BOOTSTRAP 4</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+						<b-col cols="6" lg="2" sm="6">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-sass">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>SASS</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+						<b-col cols="6" lg="2" sm="6">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-javascript">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>JAVASCRIPT</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+						<b-col cols="6" lg="2" class="large">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-wordpress">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>WORDPRESS</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+					</div>
 				</b-row>
 				<b-row>
 					<div class="linha2" >
-						<b-col lg="2">
-							<!-- <div class="wordpress" href="#">
-								<span>WORDPRESS</span>
-								<a class="img-wordpress"/>
-							</div> -->
-							</b-col>
-							<b-col lg="2" cols="6">
-								<!-- <div class="grunt" href="#">GRUNT
-									<a class="img-grunt"/>
-								</div> -->
-							</b-col>
-							<b-col lg="2" cols="6">
-								<!-- <div class="git" href="#">GIT
-									<a class="img-git"/>
-								</div> -->
-							</b-col>
-							<b-col lg="2" cols="6">
-								<!-- <div class="vue" href="#">VUE
-									<a class="img-vue"/>
-								</div> -->
-							</b-col>
-							<b-col lg="2" cols="6">
-								<!-- <div class="nuxt" href="#">NUXT
-									<a class="img-nuxt"/>
-								</div> -->
+						<b-col cols="6" lg="2" class="small">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-wordpress">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>WORDPRESS</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+						<b-col lg="2" cols="6">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-grunt">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>GRUNT</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+						<b-col lg="2" cols="6">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-git">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>GIT</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+						<b-col lg="2" cols="6">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-vue">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>VUE</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
+						</b-col>
+						<b-col lg="2" cols="6" class="move">
+							<div  data-aos="fade-right"
+								data-aos-duration="1000"
+								data-aos-easing="ease-in-out" class="info-nuxt">
+								<div class="front">
+									<div class="octo-front">
+										
+									</div>
+								</div>
+								<div class="back">
+									<div class="octo-back">
+										<h5>NUXT</h5>
+										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+									</div>
+								</div>
+							</div>
 						</b-col>
 					</div>
 				</b-row>
@@ -204,6 +322,7 @@
 			</h1>
 			<b-container>
 				<b-row>
+					<b-col cols="2" lg="3" class="teste1"></b-col>
 					<b-col cols="4" lg="3" class="owli"
 						data-aos="fade"
 						data-aos-duration="1000"
@@ -211,7 +330,7 @@
 						>
 						<img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora">
 					</b-col>
-					<b-col cols="2" lg="3" class="teste1"></b-col>
+					
 					<b-col cols="2" lg="3" class="teste2"></b-col>
 					<b-col cols="2" lg="3" class="teste3"></b-col>
 					
@@ -339,7 +458,74 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$cor-padrao: black;
+@mixin estilo_tecnologia(){
+	cursor: pointer;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
+	width: 150px;
+	height: 150px;
+	transform-style: preserve-3d;
+	perspective: 600px;
+	background:transparent;
+	@media only screen and (max-width: 768px){
+		transform: translate(-50%, -50%) scale(.8)!important;
+	}
+}
 
+@mixin estilo_front_back(){
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	transition: all .4s linear;
+}
+
+@mixin estilo_octo_front(){
+	position:relative;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(135deg, #837b7b 30%, $cor-padrao);
+	transform: rotate(45deg);
+}
+
+@mixin estilo_front_before(){
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height:100%;
+	background-repeat:no-repeat;
+	transform: rotate(-45deg);
+}
+
+@mixin estilo_octo_back(){
+	width: 100%;
+	height: 100%;
+	background-color:transparent;
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	cursor: default;
+}
+
+@mixin estilo_back_after(){
+	content:"";
+	position:absolute;
+	z-index:-1;
+	top:0;
+	left:0;
+	width: 100%;
+	height:100%;
+	background-color:lightgray;
+	transform: rotate(45deg);
+}
 
 
 main{
@@ -348,7 +534,7 @@ main{
 		margin-top: 88px;
 	}
 	 .foto-titulo{
-		filter: drop-shadow(2px 4px 6px black);
+		filter: drop-shadow(2px 4px 6px $cor-padrao);
 		/* position: absolute;
 		top: 253px;
 		left: 35%; */
@@ -358,13 +544,13 @@ main{
 		align-items: center;
 		margin-bottom:200px;
 		@media only screen and (max-width: 768px){
-			margin-top: 344px;
-			margin-bottom: 190px;
+			margin-top: 290px;
+			margin-bottom: 270px;
 
 
 		}
 		.foto{
-			filter: drop-shadow(2px 4px 6px black);
+			filter: drop-shadow(2px 4px 6px $cor-padrao);
 			background-position: -20%;
 			background-repeat: no-repeat;
 			width: 205px;
@@ -387,10 +573,9 @@ main{
 			}
 			.texto-digitado{
 				font-size:35px;
-				opacity:0.9;
 				display: inline-block;
 				@media only screen and (max-width: 768px){
-					font-size: 27px;
+					font-size: 24px;
 				}
 			}
 		}
@@ -474,7 +659,7 @@ main{
 			@media only screen and (max-width: 768px){
 				height:700px;
 			}
-			filter: drop-shadow(0px 2px 2px black);
+			filter: drop-shadow(0px 2px 2px $cor-padrao);
 			.form{
 				display: flex;
 				padding-top: 60px;
@@ -560,14 +745,23 @@ main{
 		background-color: whitesmoke;
 		display: flex;
 		flex-direction: column;
+		@media only screen and (max-width: 768px){
+			height: 900px;
+		}
 		h1{
 			position: relative;
-			color: black;
+			color: $cor-padrao;
 			font-weight: bold!important;
 			letter-spacing: 2px;
 			font-size: 35px;
 			font-weight: 500!important;
 			text-align: center;
+			@media only screen and (max-width: 768px){
+				font-size: 30px
+			}
+			@media only screen and (max-width: 320px){
+				font-size: 27px
+			}
 			&::before{
 				content: "";
 				position: absolute;
@@ -575,7 +769,7 @@ main{
 				transform: translateX(36%);
 				width: 60%;
 				height: 4px;
-				background-color: black;
+				background-color: $cor-padrao;
 			}
 		}
 
@@ -603,6 +797,10 @@ main{
 				justify-content: space-evenly;
 				align-items: center;
 				overflow: hidden;
+				@media only screen and (max-width: 768px){
+					flex-wrap: wrap;
+					height: 420px;
+				}
 				
 				div{
 					position: relative;
@@ -611,6 +809,11 @@ main{
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					flex-wrap: wrap;
+					@media only screen and (max-width: 768px){
+						height: auto;
+					}
+					
 				}
 				
 				@keyframes entradaTech {
@@ -624,84 +827,154 @@ main{
 				}
 
 				.info-html{
-					cursor: pointer;
-					position: absolute;
-					top:50%;
-					left:50%;
-					transform: translate(-50%, -50%);
-					width: 150px;
-					height: 150px;
-					transform-style: preserve-3d;
-					perspective: 600px;
-					background:transparent;
-				/* 	transition: all .5s; */
+					@include estilo_tecnologia();
+					
 					.front, .back{
-						width: 100%;
-						height: 100%;
-						overflow: hidden;
-						backface-visibility: hidden;
-						position: absolute;
-						transition: all .4s linear;
+						@include estilo_front_back();
 					}
 					.front{
 						background: whitesmoke;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
-							position:relative;
-							width: 100%;
-							height: 100%;
-							background-color:rgb(0, 128, 100);
-							transform: rotate(45deg);
+							@include estilo_octo_front();
 							&::before{
-								content:"";
-								position:absolute;
-								top:0;
-								left:0;
-								width: 100%;
-								height:100%;
-								background-image: url(../static/assets/img/html.png);
+								@include estilo_front_before();
 								background-size: 80%;
-								background-repeat:no-repeat;
+								background-image: url(../static/assets/img/html.png);
 								background-position: 50%;
-								transform: rotate(-45deg);
-								filter:grayscale(1)
-
 							}
-
 						}	
-						
 					}
 					.back{
 						background: whitesmoke;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
-							width: 100%;
-							height: 100%;
-							background-color:transparent;
-							z-index: 0;
-							display: flex;
-							justify-content: center;
-							align-items: center;
-							flex-direction: column;
-							cursor: default;
+							@include estilo_octo_back();
+							
+								
+							
 							
 							&::after{
-								content:"";
-								position:absolute;
-								z-index:-1;
-								top:0;
-								left:0;
-								width: 100%;
-								height:100%;
-								background-color:lightgray;
-								transform: rotate(45deg);
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
 							}
 							a{
 								text-decoration: none;
-								color:black;
+								color:$cor-padrao;
 								font-size: 15px;
 								&:hover{
-									color:black;
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+							
+						}	
+						
+					}
+					&:hover > .front{
+
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
+						
+					}
+					
+				}
+				.info-css{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 72%;
+								background-image: url(../static/assets/img/css.png);
+								background-position: 50% 57%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
+						
+					}
+					&:hover > .front{
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						transform: perspective(600px) rotateY(0deg);
+					}
+					
+				}
+				.info-bs4{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 80%;
+								background-image: url(../static/assets/img/bs.png);
+								background-position: 50%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
 								}
 							}
 						}	
@@ -718,286 +991,176 @@ main{
 					}
 					
 				}
-				/* .html{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #ec5900;
-					
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
+				.info-sass{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 80%;
+								background-image: url(../static/assets/img/sass.png);
+								background-position: 65%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
 						
+					}
+					&:hover > .front{
 
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
 						
 					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
+					
+				}
+				.info-javascript{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 67%;
+								background-image: url(../static/assets/img/js.png);
+								background-position: 50% 57%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
+						
+					}
+					&:hover > .front{
 
-						animation-duration: 0.9s;
-						animation-timing-function: ease-out;
-						animation-delay: .8s;
-						animation-iteration-count: 1;
-						animation-direction: normal;
-						animation-fill-mode: forwards;
-						animation-play-state: running;
-						animation-name: entradaTech;
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
+						
+					}
+					
+				}
+				.large{
+					display: none;
+					@media only screen and (max-width: 768px){
+						display: block;
+					}
+				}
+				.info-wordpress{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 80%;
+								background-image: url(../static/assets/img/wp.png);
+								background-position: 50%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
+						
+					}
+					&:hover > .front{
 
-						background-size: 80%;
-						background-repeat: no-repeat;
-						background-position: 50% 65%;
-						background-image: url(../static/assets/img/html.png);
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
 						
-					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: .9s color ease-in;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
+						transform: perspective(600px) rotateY(0deg);
 						
-					
 					}
 					
-				}
-				.css3{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #0277bd;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						
-					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 73%;
-						background-repeat: no-repeat;
-						background-position: 48% 64%;
-						background-image: url(../static/assets/img/css.png);
-						
-					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: .9s color ease-in;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
+				} 
+			
 					
-					}
-					
-				}
-				.bs4{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #6632b2;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						
-					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 80%;
-						background-repeat: no-repeat;
-						background-position: 50%;
-						background-image: url(../static/assets/img/bs.png);
-						
-					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: 1.2s color ease-out;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
-					
-					}
-				}
-				.sass{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #cc6699;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						
-					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 80%;
-						background-repeat: no-repeat;
-						background-position: 60%;
-						background-image: url(../static/assets/img/sass.png);
-						
-					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: .9s color ease-in;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
-					
-					}
-				}
-				.javascript{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #d6ba32;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						
-					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 67%;
-						background-repeat: no-repeat;
-						background-position: 50% 62%;
-						background-image: url(../static/assets/img/js.png);
-						
-					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: .9s color ease-in;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
-					
-					}
-				} */
 			}
 			.linha2{
 				font-size: 21px;
@@ -1008,280 +1171,301 @@ main{
 				justify-content: space-evenly;
 				align-items: center;
 				overflow: hidden;
+				@media only screen and (max-width: 768px){
+					position: relative;
+					flex-wrap: wrap;
+					height: 294px;
+					justify-content: right;
+
+				}
 				div{
+					position: relative;
 					height: 84.1%;
-					border-radius: 50%;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-				}
-				/* .wordpress{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: black;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						
-					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 80%;
-						background-repeat: no-repeat;
-						background-position: 50%;
-						background-image: url(../static/assets/img/wp.png);
-						
-					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: 1.2s  color ease-in;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
-					
+					@media only screen and (max-width: 768px){
+						height: auto;
 					}
 				}
-				.grunt{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #fba91b;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						
-					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 80%;
-						background-repeat: no-repeat;
-						background-position: 50%;
-						background-image: url(../static/assets/img/grunt.png);
-						
-					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: .9s color ease-in;
-						transition-delay: 1.2s color ease-out;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
-					
+				
+				.small{
+					display: block;
+					@media only screen and (max-width: 768px){
+						display: none;
 					}
 				}
-				.git{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #de4c36;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
+				.info-wordpress{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 80%;
+								background-image: url(../static/assets/img/wp.png);
+								background-position: 50%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
 						
 					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 80%;
-						background-repeat: no-repeat;
-						background-position: 50%;
-						background-image: url(../static/assets/img/git.png);
+					&:hover > .front{
+
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
 						
 					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: .9s color ease-in;
-						transition-delay: 2s color ease-out;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
 					
+				} 
+				.info-grunt{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
 					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 80%;
+								background-image: url(../static/assets/img/grunt.png);
+								background-position: 50%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
+						
+					}
+					&:hover > .front{
+
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
+						
+					}
+					
 				}
-				.vue{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #3fba84;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
+				.info-git{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 80%;
+								background-image: url(../static/assets/img/git.png);
+								background-position: 50%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
 						
 					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 75%;
-						background-repeat: no-repeat;
-						background-position: 50% 70%;
-						background-image: url(../static/assets/img/vue.png);
+					&:hover > .front{
+
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
 						
 					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: .9s color ease-in;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
 					
-					}
 				}
-				.nuxt{
-					position: relative;
-					width: 90%;
-					height: 90% !important;
-					display: flex;
-					justify-content: center;
-					transition: background-color .7s, color .2s ease-in-out;
-					border-bottom: 1.5px solid rgba(70, 68, 68, 0.34118);
-					filter: drop-shadow(0px 2px 1px black);
-					overflow: hidden;
-					color: #468c7c;
-					&::before {
-						content: "";
-						position: absolute;
-						z-index: 1;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
+				.info-vue{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
+					}
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 71%;
+								background-image: url(../static/assets/img/vue.png);
+								background-position: 50% 65%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
 						
 					}
-					&::after {
-						content: "";
-						position: absolute;
-						top: 0px;
-						left: 0px;
-						right:0px;
-						bottom: 0px;
-						z-index: 2;
-						width:100%;
-						height:100%;
-						transition: transform .5s ease-in!important;
-						transform: translateY(-100%);
-						background-size: 80%;
-						background-repeat: no-repeat;
-						background-position: 50% 30%;
-						background-image: url(../static/assets/img/nuxt.png);
+					&:hover > .front{
+
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
 						
 					}
-					&:hover{
-						background-color: #534f4f;
-						text-decoration: none;
-						transition-delay: .9s color ease-in;
-						color:transparent;
-						margin-right: -15px;
-						margin-left: -15px;
-						&::after{
-							transform: translateY(0%);
-						}
-						
 					
+				}
+				
+				.info-nuxt{
+					@include estilo_tecnologia();
+					.front, .back{
+						@include estilo_front_back();
 					}
-				} */
+					.front{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(0deg);
+						.octo-front{
+							@include estilo_octo_front();
+							&::before{
+								@include estilo_front_before();
+								background-size: 80%;
+								background-image: url(../static/assets/img/nuxt.png);
+								background-position: 50% 29%;
+							}
+						}	
+					}
+					.back{
+						background: whitesmoke;
+						transform: perspective(600px) rotateY(180deg);
+						.octo-back{
+							@include estilo_octo_back();
+							&::after{
+								@include estilo_back_after();	
+							}
+							h5{
+								font-weight: 600;
+								margin-bottom: 20px;
+							}
+							a{
+								text-decoration: none;
+								color:$cor-padrao;
+								font-size: 15px;
+								&:hover{
+									font-weight: 600;
+									color:currentColor;
+									
+								}
+							}
+						}	
+						
+					}
+					&:hover > .front{
+
+						transform: perspective(600px) rotateY(-180deg);
+					}	
+					&:hover > .back{
+						
+						transform: perspective(600px) rotateY(0deg);
+						
+					}
+					
+				}
 				
 			}
 		}
@@ -1298,12 +1482,18 @@ main{
 		flex-direction: column;
 		h1{
 			position: relative;
-			color: black;
+			color: $cor-padrao;
 			font-weight: bold!important;
 			letter-spacing: 2px;
 			font-size: 35px;
 			font-weight: 500!important;
 			text-align: center;
+			@media only screen and (max-width: 768px){
+				font-size: 30px
+			}
+			@media only screen and (max-width: 320px){
+				font-size: 27px
+			}
 			&::before{
 				content: "";
 				position: absolute;
@@ -1311,7 +1501,7 @@ main{
 				transform: translateX(36%);
 				width: 60%;
 				height: 4px;
-				background-color: black;
+				background-color: $cor-padrao;
 			}
 		}
 		.container{
@@ -1324,13 +1514,13 @@ main{
 				justify-content: space-evenly;
 				align-items: center;
 				.owli{
-					/* background-color: black;
+					/* background-color: $cor-padrao;
 					overflow: hidden;
 					padding-left: 0;
 					padding-right: 0; */
 
 					
-					background-color: black;
+					background-color: $cor-padrao;
 					overflow: hidden;
 					padding-left: 0;
 					padding-right: 0;
@@ -1362,7 +1552,7 @@ main{
 		width: 100%;
 		height: 100%;
 		overflow: auto;
-		background-color: rgb(0,0,0); /* Fallback color */
+		background-color: $cor-padrao; /* Fallback color */
   		background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
 	}
 	.modalTela{
@@ -1450,6 +1640,12 @@ main{
 			font-size: 35px;
 			font-weight: 500!important;
 			text-align: center;
+			@media only screen and (max-width: 768px){
+				font-size: 30px
+			}
+			@media only screen and (max-width: 320px){
+				font-size: 27px
+			}
 			&::before{
 				content: "";
 				position: absolute;
@@ -1474,6 +1670,10 @@ main{
 				background-color: #424242;
 				padding: 10px 10px 10px 30px;
 				justify-content: center;
+				@media only screen and (max-width: 768px){
+					padding: 10px 10px 10px 15px;
+					font-size: 12px;	
+				}
 				
 				&::after{
 					content: "";

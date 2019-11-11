@@ -76,6 +76,9 @@ export default {
                     display: inherit;
                     justify-content: space-evenly;
                     align-items: center;
+                    @media only screen and (max-width: 768px){
+                        font-size: 25px;
+                    }
                     a{
                         color: white;
                         height: 25px;
@@ -88,6 +91,10 @@ export default {
                         &:hover{
                             background: white;
                             color:#0073b2; 
+                            @media only screen and (max-width: 768px){
+                                height: 21px;
+                                width: 21px;
+                            }
                         }
                     }
                     .github{
