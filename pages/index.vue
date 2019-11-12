@@ -358,11 +358,11 @@
 						<font-awesome-icon :icon="['fa', 'envelope']"/>  
 						E-mail: davidrs.souza@gmail.com
 					</p>
-					<p  class="wpp">
-						<font-awesome-icon :icon="['fab', 'whatsapp']"/>  
-						Whatsapp: (11) 994886041
+					<p  class="tel">
+						<font-awesome-icon :icon="['fa', 'mobile-alt']"/>  
+						Telefone: (11) 994886041
 					</p>				
-					<p  class="wpp">
+					<p  class="skype">
 						<font-awesome-icon :icon="['fab', 'skype']"/>  
 						Skype: daviiid.souza
 					</p>
@@ -601,7 +601,7 @@ main{
 
 	#quem-sou{
 		height: 600px;
-		background-color: #404040;
+		background-color: #2d2d2d;
 		.container{
 			background-color: transparent;
 			color: white;
@@ -610,6 +610,9 @@ main{
 		}
 		.historia{
 			margin:10px;
+			@media only screen and (max-width: 375px){
+			margin: 0;
+			}
 			.foto-historia{
 				filter: grayscale(1);
 				margin-top: 50px;
@@ -627,6 +630,9 @@ main{
 					transform: rotate(10deg) scale(1.2);
 					margin-top: 0;
             	}
+				@media only screen and (max-width: 375px){
+					margin-top: 10px;
+				}
 			}
 			.texto-historia{
 				margin-top: 80px;
@@ -636,6 +642,9 @@ main{
 					font-size: 18px;
 					
             	}
+				@media only screen and (max-width: 375px){
+					margin-top: 10px;
+				}
 			}
 			.pata-dog{
 				filter: invert(1);
@@ -1701,13 +1710,14 @@ main{
 					}
 					
 				}
-				.wpp{
+				.tel{
 					z-index: 2;
 					position: relative;
 					display: inherit;
 					svg{
-						margin-right: 25px;
-    					font-size: 23px;
+						margin-right: 30px;
+						font-size: 23px;
+						margin-left: 4px;
 					}
 				}
 				.skype{
@@ -1715,7 +1725,8 @@ main{
 					position: relative;
 					display: inherit;
 					svg{
-						margin-right: 25px;
+						margin-right: 28px;
+						margin-left: 2px;
     					font-size: 23px;
 					}
 				}

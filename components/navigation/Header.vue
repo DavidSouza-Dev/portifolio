@@ -11,9 +11,9 @@
                     </b-navbar-brand>
                    
                    
-                    <b-navbar-toggle target="nav-collapse"> 
-                        <font-awesome-icon :icon="['fas', 'bars']"/>
-                        <!-- <font-awesome-icon :icon="['fas', 'times-circle']"/> -->
+                    <b-navbar-toggle target="nav-collapse" @click="active = !active"> 
+                        <font-awesome-icon :icon="['fas', 'bars']" v-show="active"/>
+                        <font-awesome-icon :icon="['fa', 'times']" v-show="!active" />
                     </b-navbar-toggle>
                     
                 
@@ -44,8 +44,8 @@ export default {
     name: 'Header',
     data() {
         return {
-            searchValue: '',
-            active: false
+            
+            active: true
         }
     },
     methods: {
