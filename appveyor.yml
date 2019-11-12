@@ -5,7 +5,7 @@ environment:
   github_access_token:
     secure: DvMR/6N40NiuMrAX60kTZB//44suyvVMpMwV8bkkMX4+2JqpAVCAyE/klEktd2dA
   github_email:
-    secure: davidrs.souza@gmail.com
+    secure: iE/QT9elKS4C2NXbL//X/UDnOa/aHjJCnztt3omHb4g=
 
 # Only run on master branch
 branches:
