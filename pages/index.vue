@@ -28,7 +28,7 @@
 					<p 
 					
 						data-aos="fade-right"
-						data-aos-duration="1000" data-aos-easing="ease-in-out" class="texto-historia">Nascido em Belém do Pará, tenho 34 anos, formado em Ciência da Computação, sou casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/img/animal-paw-print.png" >. Atuo a bastante tempo em TI, mas foi recente que me senti atraído por Front-end e estudo muito as tecnologias relacionadas. Estou bastante animado em trilhar este caminho.</p>
+						data-aos-duration="1000" data-aos-easing="ease-in-out" class="texto-historia">Nascido em Belém do Pará, tenho 34 anos, formado em Ciência da Computação, sou casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/animal-paw-print.png" >. Atuo a bastante tempo em TI, mas foi recente que me senti atraído por Front-end e estudo muito as tecnologias relacionadas. Estou bastante animado em trilhar este caminho.</p>
 					
 
 
@@ -328,7 +328,7 @@
 						data-aos-duration="1000"
 						data-aos-easing="ease-in-out"
 						>
-						<img class="imgOwli" src="../static/assets/img/caseOwli.png" alt="Owli Administradora">
+						<img class="imgOwli" src="../static/assets/caseOwli.png" alt="Owli Administradora">
 					</b-col>
 					
 					<b-col cols="2" lg="3" class="teste2"></b-col>
@@ -557,7 +557,7 @@ main{
 			height: 204px;
 			z-index:-2;
 			
-			background-image:  url("../static/assets/img/foto.jpg");
+			background-image:  url("../static/assets/foto.jpg");
 			background-size: 100%;
 			border-radius: 121px;
 			border: 4px solid #42311b;
@@ -616,7 +616,7 @@ main{
 			.foto-historia{
 				filter: grayscale(1);
 				margin-top: 50px;
-				background-image: url("../static/assets/img/foto.jpg");
+				background-image: url("../static/assets/foto.jpg");
 				background-size: 100%;
 				background-position: 30% 40%;
 				transform: rotate(10deg) scale(1.5); 
@@ -695,7 +695,7 @@ main{
 						width: 150px;
 						height: 175px;
 						background-size: 110%;
-						background-image: url(../static/assets/img/fotoIndice.png);
+						background-image: url(../static/assets/fotoIndice.png);
 						background-repeat: no-repeat;
 						margin-right: 30px;
 						@media only screen and (max-width: 768px){
@@ -849,7 +849,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 80%;
-								background-image: url(../static/assets/img/html.png);
+								background-image: url(../static/assets/html.png);
 								background-position: 50%;
 							}
 						}	
@@ -908,7 +908,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 72%;
-								background-image: url(../static/assets/img/css.png);
+								background-image: url(../static/assets/css.png);
 								background-position: 50% 57%;
 							}
 						}	
@@ -959,7 +959,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 80%;
-								background-image: url(../static/assets/img/bs.png);
+								background-image: url(../static/assets/bs.png);
 								background-position: 50%;
 							}
 						}	
@@ -1013,7 +1013,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 80%;
-								background-image: url(../static/assets/img/sass.png);
+								background-image: url(../static/assets/sass.png);
 								background-position: 65%;
 							}
 						}	
@@ -1067,7 +1067,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 67%;
-								background-image: url(../static/assets/img/js.png);
+								background-image: url(../static/assets/js.png);
 								background-position: 50% 57%;
 							}
 						}	
@@ -1127,7 +1127,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 80%;
-								background-image: url(../static/assets/img/wp.png);
+								background-image: url(../static/assets/wp.png);
 								background-position: 50%;
 							}
 						}	
@@ -1217,7 +1217,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 80%;
-								background-image: url(../static/assets/img/wp.png);
+								background-image: url(../static/assets/wp.png);
 								background-position: 50%;
 							}
 						}	
@@ -1271,7 +1271,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 80%;
-								background-image: url(../static/assets/img/grunt.png);
+								background-image: url(../static/assets/grunt.png);
 								background-position: 50%;
 							}
 						}	
@@ -1325,7 +1325,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 80%;
-								background-image: url(../static/assets/img/git.png);
+								background-image: url(../static/assets/git.png);
 								background-position: 50%;
 							}
 						}	
@@ -1379,7 +1379,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 71%;
-								background-image: url(../static/assets/img/vue.png);
+								background-image: url(../static/assets/vue.png);
 								background-position: 50% 65%;
 							}
 						}	
@@ -1434,7 +1434,7 @@ main{
 							&::before{
 								@include estilo_front_before();
 								background-size: 80%;
-								background-image: url(../static/assets/img/nuxt.png);
+								background-image: url(../static/assets/nuxt.png);
 								background-position: 50% 29%;
 							}
 						}	
@@ -1603,7 +1603,7 @@ main{
 		font-size: 40px;
 		font-weight: bold;
 		transition: 0.3s;
-		background-image: url(../static/assets/img/close.png);
+		background-image: url(../static/assets/close.png);
 		background-repeat: no-repeat;
 		border-radius: 3rem;
 		filter: grayscale(1);
@@ -1692,7 +1692,7 @@ main{
 					bottom: 0;
 					right: 0;
 					opacity: .2;
-					background-image: url("../static/assets/img/pngguru.com-id-nzsxy.png");
+					background-image: url("../static/assets/pngguru.com-id-nzsxy.png");
 					background-size: 68%;
 					background-position: 123% 0;
 					background-repeat: no-repeat;
