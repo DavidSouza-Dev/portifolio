@@ -121,7 +121,7 @@ export default {
 	height:900px;
    /*  filter: blur(0.8px); */
     background-blend-mode: difference;
- 	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent),url("../../static/assets/img/NoteAndDesk2.jpg");
+ 	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent),url("../../static/assets/NoteAndDesk2.jpg");
  	background-size: 110%;
     background-position: 60% 13%;
 	background-repeat: no-repeat;
