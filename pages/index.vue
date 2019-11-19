@@ -328,7 +328,7 @@
 						data-aos-duration="1000"
 						data-aos-easing="ease-in-out"
 						>
-						<img class="imgOwli" :src="require(`../static/assets/caseOwli.png`)" alt="Owli Administradora">
+						<!-- <img class="imgOwli" :src="require(`../static/assets/caseOwli.png`)" alt="Owli Administradora"> -->
 					</b-col>
 					
 					<b-col cols="2" lg="3" class="teste2"></b-col>
