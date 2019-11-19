@@ -2,9 +2,9 @@
   "name": "David-Souza",
   "version": "1.0.0",
   "engines": {
-    "node": "10.3.0"
+    "node": "10.16.0"
   },
-  "description": "David Souza",
+  "description": "Portifolio Frontend Dev",
   "author": "David Souza",
   "private": true,
   "scripts": {
