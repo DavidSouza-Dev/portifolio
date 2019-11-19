@@ -549,7 +549,7 @@ main{
 
 
 		}
-		.foto{
+		/* .foto{
 			filter: drop-shadow(2px 4px 6px $cor-padrao);
 			background-position: -20%;
 			background-repeat: no-repeat;
@@ -562,7 +562,7 @@ main{
 			border-radius: 121px;
 			border: 4px solid #42311b;
 		
-		}
+		} */
 		.titulo{
 			height: 205px;
 			text-align: center;
