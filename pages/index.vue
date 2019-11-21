@@ -343,10 +343,10 @@
 						data-aos="fade"
 						data-aos-duration="1000"
 						data-aos-easing="ease-in-out">
-						<img class="imgOwli" src="../static/assets/caseOwli.png" alt="Owli Administradora">
+						<!-- <img class="imgOwli" src="../static/assets/caseOwli.png" alt="Owli Administradora">
 						<a class="link" href="https://owli.com.br/">
 							<font-awesome-icon :icon="['fa', 'link']" />
-						</a>
+						</a> -->
 					</b-col>
 					<b-col cols="12" lg="3" class="teste1"></b-col>
 					<b-col cols="12" lg="3" class="teste2"></b-col>
