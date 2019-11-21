@@ -7,7 +7,7 @@
             <b-navbar  toggleable="lg" type="light" variant="info">
                 <div class="menu">  
                     <b-navbar-brand class="logo" href="#">
-                       David Souza
+                       DAVID <span>SOUZA</span>
                     </b-navbar-brand>
                    
                    
@@ -109,7 +109,7 @@ export default {
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Livvic:600&display=swap');
 
 
 .header-head{
@@ -193,8 +193,8 @@ export default {
                     .navbar-brand{
                         color: white;
                         font-size: 30px;
-                        font-weight: bold;
-                        font-family: 'Shadows Into Light Two', cursive;
+                        /* font-weight: bold; */
+                        font-family: 'Livvic', sans-serif;
                         padding:10px 0 10px 0;
                         margin-left: 2em!important;
                         letter-spacing: 3px;
