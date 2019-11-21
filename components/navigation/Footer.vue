@@ -39,8 +39,10 @@
                 
                
                 <div class="copyright">David Souza © 2019 Todos os direitos reservados</div>
+
             </b-container>
         </b-container>
+        <div class="credits">Developed By <span>David Souza</span></div>
     </footer>
 
 </template>
@@ -59,7 +61,19 @@ export default {
     @import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
 
     #footer {
+        position: relative;
         background: #2d2d2d;
+        .credits{
+            position:absolute;
+            bottom:2%;
+            right:5%;
+            font-size: 10px;
+            color:white;
+            opacity: .4;
+            span{
+                color: #ff6e19;
+            }
+        }
         .container-fluid{
 		    height:200px;
 		    .container{
@@ -80,6 +94,7 @@ export default {
                         font-size: 31px;
                     }
                     a{
+                        cursor: pointer;
                         color: white;
                         height: 25px;
                         width: 25px;

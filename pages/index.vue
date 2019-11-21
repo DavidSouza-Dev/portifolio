@@ -26,14 +26,18 @@
 					>
 					</div>
 					<p 
-					
-						data-aos="fade-right"
-						data-aos-duration="1000" data-aos-easing="ease-in-out" class="texto-historia">Nascido em Belém do Pará, tenho 34 anos, formado em Ciência da Computação, sou casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/animal-paw-print.png" >. Atuo a bastante tempo em TI, mas foi recente que me senti atraído por Front-end e estudo muito as tecnologias relacionadas. Estou bastante animado em trilhar este caminho.</p>
-					
-
-
-
-
+					data-aos="fade-right"
+					data-aos-duration="1000" 
+					data-aos-easing="ease-in-out" 
+					class="texto-historia">
+						Nascido em Belém do Pará, tenho 34 anos, formado em Ciência da Computação, moro em São Paulo e sou casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/animal-paw-print.png" ></p>
+					<p
+					data-aos="fade-right"
+					data-aos-duration="1000" 
+					data-aos-easing="ease-in-out" 
+					>
+						Atuo desde o inicio da minha carreira profissional em TI, mas foi recente que me senti atraído por trabalhar com Desenvolvimento Front-end. Contantemente busco me atualizar sobre as tecnologias relacionadas e estou bastante animado em trabalhar nesta area.
+					</p>
 				</div>
 			</b-container>	
 		</b-container>
@@ -42,7 +46,7 @@
 				<b-row>
 					<b-col lg="12" class="form">
 						<b-col lg="6" sm="12" class="coluna1"
-						 data-aos="fade-right"
+						 data-aos="fade-up"
 						 data-aos-duration="1000"
 						 data-aos-easing="ease-in-out">
 							<div class="foto-desc">
@@ -52,14 +56,12 @@
 									<p><span>Estado Civil:</span> Casado</p>
 									<p><span>Perfil:</span> Desenvolvedor Front-End</p>
 									<p><span>Formação:</span> Bacharel em Ciência da Computação</p>
-									<!-- 
-									<p><span>Skype:</span> daviiid.souza</p> -->
 								</div>
 							</div>
 							
 						</b-col>
 						<b-col lg="6" sm="12" class="coluna2"
-							data-aos="fade-left" 
+							data-aos="fade-up" 
 							data-aos-duration="1000"
 							data-aos-easing="ease-in-out">
 							<div class="habilidades">
@@ -98,8 +100,8 @@
 			</b-container>
 		</b-container>
 		<b-container fluid id="tecnologias">
-			<h1 data-aos="fade-right"
-				data-aos-duration="1000"
+			<h1 data-aos="zoom-out"
+				data-aos-duration="500"
 				data-aos-easing="ease-in-out"
 			>
 			Tecnologias
@@ -107,15 +109,17 @@
 			<b-container >
 				
 				<b-row>
-					<div class="linha1">
-						 <b-col cols="6" lg="2" sm="6">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-html">
+					<div class="linha1" 
+					
+					 
+					>
+						<b-col cols="6" lg="2" sm="6" data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div  class="info-html">
 								<div class="front">
 									<div class="octo-front">
-										
-									</div>
+								</div>
 								</div>
 								<div class="back">
 									<div class="octo-back">
@@ -125,10 +129,11 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col cols="6" lg="2" sm="6">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-css">
+						<b-col cols="6" lg="2" sm="6"
+						data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div class="info-css">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -142,10 +147,11 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col cols="6" lg="2" sm="6">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-bs4">
+						<b-col cols="6" lg="2" sm="6"
+							data-aos="fade-right"
+							data-aos-duration="1000"
+							data-aos-easing="ease-in-out">
+							<div class="info-bs4">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -159,10 +165,11 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col cols="6" lg="2" sm="6">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-sass">
+						<b-col cols="6" lg="2" sm="6"
+						data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div class="info-sass">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -176,10 +183,11 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col cols="6" lg="2" sm="6">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-javascript">
+						<b-col cols="6" lg="2" sm="6"
+						data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div class="info-javascript">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -193,7 +201,10 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col cols="6" lg="2" class="large">
+						<b-col cols="6" lg="2" class="large"
+						data-aos="fade-right"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
 							<div  data-aos="fade-right"
 								data-aos-duration="1000"
 								data-aos-easing="ease-in-out" class="info-wordpress">
@@ -214,10 +225,11 @@
 				</b-row>
 				<b-row>
 					<div class="linha2" >
-						<b-col cols="6" lg="2" class="small">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-wordpress">
+						<b-col cols="6" lg="2" class="small"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div class="info-wordpress">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -231,10 +243,11 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col lg="2" cols="6">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-grunt">
+						<b-col lg="2" cols="6"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div class="info-grunt">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -248,10 +261,11 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col lg="2" cols="6">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-git">
+						<b-col lg="2" cols="6"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div class="info-git">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -265,10 +279,11 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col lg="2" cols="6">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-vue">
+						<b-col lg="2" cols="6"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div class="info-vue">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -282,10 +297,11 @@
 								</div>
 							</div>
 						</b-col>
-						<b-col lg="2" cols="6" class="move">
-							<div  data-aos="fade-right"
-								data-aos-duration="1000"
-								data-aos-easing="ease-in-out" class="info-nuxt">
+						<b-col lg="2" cols="6" class="move"
+						data-aos="fade-left"
+						data-aos-duration="1000"
+						data-aos-easing="ease-in-out">
+							<div class="info-nuxt">
 								<div class="front">
 									<div class="octo-front">
 										
@@ -314,31 +330,33 @@
 
 				
 			</div>
-			<h1 data-aos="fade-right"
-				data-aos-duration="1000"
+			<h1 data-aos="zoom-out"
+				data-aos-duration="500"
 				data-aos-easing="ease-in-out"
 			>
 				Portifolio
 			</h1>
 			<b-container>
 				<b-row>
-					<b-col cols="2" lg="3" class="teste1"></b-col>
-					<b-col cols="4" lg="3" class="owli"
+					
+					<b-col cols="8" lg="3" class="owli"
 						data-aos="fade"
 						data-aos-duration="1000"
-						data-aos-easing="ease-in-out"
-						>
-						<!-- <img class="imgOwli" :src="require(`../static/assets/caseOwli.png`)" alt="Owli Administradora"> -->
+						data-aos-easing="ease-in-out">
+						<img class="imgOwli" src="../static/assets/caseOwli.png" alt="Owli Administradora">
+						<a class="link" href="https://owli.com.br/">
+							<font-awesome-icon :icon="['fa', 'link']" />
+						</a>
 					</b-col>
-					
-					<b-col cols="2" lg="3" class="teste2"></b-col>
-					<b-col cols="2" lg="3" class="teste3"></b-col>
+					<b-col cols="12" lg="3" class="teste1"></b-col>
+					<b-col cols="12" lg="3" class="teste2"></b-col>
+					<b-col cols="12" lg="3" class="teste3"></b-col>
 					
 				</b-row>
 			</b-container>
 		</b-container>
 		<b-container fluid id="contato">
-			<h1 data-aos="fade"
+			<h1 data-aos="zoom-out"
 				data-aos-duration="1000"
 				data-aos-easing="ease-in-out"
 
@@ -367,20 +385,6 @@
 						Skype: daviiid.souza
 					</p>
 				</div>				
-				<!-- <div class="sociais">
-					<h3>Redes Sociais</h3>
-					<div class="linkSocial">
-						
-						<span class="linkedin"><font-awesome-icon :icon="['fab', 'linkedin']"/></span>
-						<span class="github"><font-awesome-icon :icon="['fab', 'github-square']"/></span>
-						<span class="instagram"><font-awesome-icon :icon="['fab', 'instagram']"/></span>
-						<span class="twitter"><font-awesome-icon :icon="['fab', 'twitter-square']"/></span>
-					</div>
-					
-
-				</div> -->
-
-
 			</b-container>
 		</b-container>
 	</main>
@@ -423,11 +427,10 @@ export default {
 		},
 		efeitoModal(){
 			var modal = document.getElementById("myModal");
-
-			var img = document.getElementById(`${[1-9]}`);
 			var modalImg = document.getElementById("img01");
 			var captionText = document.getElementById("caption");
-			$(`.${[1-9]}`).on("click", 
+			
+			$(".imgOwli").on("click", 
 				function(){
 					$('header').css({"z-index":"0"})
 					modal.style.display = "block"
@@ -436,6 +439,11 @@ export default {
 
 				})
 			$(".modal").on("click", 
+				function(){
+					modal.style.display = "none";
+					$('header').css({"z-index":"1"})
+			}) 
+			$(".myModal").on("click", 
 				function(){
 					modal.style.display = "none";
 					$('header').css({"z-index":"1"})
@@ -600,12 +608,12 @@ main{
 	}
 
 	#quem-sou{
-		height: 600px;
+		height: 650px;
 		background-color: #2d2d2d;
 		.container{
 			background-color: transparent;
 			color: white;
-			font-size: 25px;
+			font-size: 21px;
 			
 		}
 		.historia{
@@ -747,7 +755,7 @@ main{
 	}
 
 	#tecnologias{
-		padding-top: 20px;
+		padding-top:60px;
 		height: 600px;
 		z-index: 0;
 		position: relative;
@@ -778,7 +786,7 @@ main{
 				transform: translateX(36%);
 				width: 60%;
 				height: 4px;
-				background-color: $cor-padrao;
+				background-color: #ff6e19;
 			}
 		}
 
@@ -1480,11 +1488,9 @@ main{
 		}
 	}
 
-	
-
 	#cases{
-		padding-top: 20px;
-		height: 500px;
+		padding-top: 60px;
+		height: 550px;
 		z-index: 0;
 		position: relative;
 		display: flex;
@@ -1510,7 +1516,7 @@ main{
 				transform: translateX(36%);
 				width: 60%;
 				height: 4px;
-				background-color: $cor-padrao;
+				background-color: #ff6e19;
 			}
 		}
 		.container{
@@ -1523,28 +1529,82 @@ main{
 				justify-content: space-evenly;
 				align-items: center;
 				.owli{
-					/* background-color: $cor-padrao;
-					overflow: hidden;
-					padding-left: 0;
-					padding-right: 0; */
-
-					
+					position: relative;					
 					background-color: $cor-padrao;
 					overflow: hidden;
 					padding-left: 0;
 					padding-right: 0;
 					border: 2px solid gray;
 					transform: scale(1.5);
+					.link{
+						display: none;
+						transition: display .3s ease-in;
+						&:hover{
+							display: block;
+							position: absolute;
+							bottom: 3%;
+							right: 1%;
+							background: #ff6e19 ;
+							height: 25px;
+							width: 25px;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							border-radius: 50%;
+							color: white;
+							.imgOwli{
+								height: 100%;
+								width: 100%;
+								cursor: pointer;
+								transition: .3s ease-in;
+								&:hover{
+								opacity: .7;
+								
+								}
+							}
+						}
+						
+					}
  
 					.imgOwli{
 						height: 100%;
 						width: 100%;
 						cursor: pointer;
-						transition: .3s;
+						transition: .3s ease-in;
 						&:hover{
-						opacity: .7;
+							opacity: .7;
+							.link{
+								display: block;
+								position: absolute;
+								bottom: 3%;
+								right: 1%;
+								background: transparent;
+								height: 25px;
+								width: 25px;
+								display: flex;
+								justify-content: center;
+								align-items: center;
+								border-radius: 50%;
+								color: white;
+							}
 						
 						}
+					}
+				}
+				&:hover{
+					.link{
+						display: block;
+						position: absolute;
+						bottom: 3%;
+						right: 1%;
+						background: rgba(255, 255, 255, 0.438);
+						height: 25px;
+						width: 25px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						border-radius: 50%;
+						color: #ff6d1996;
 					}
 				}
 
@@ -1636,11 +1696,11 @@ main{
 
 	#contato{
 		position: relative;
-		height: 400px;
+		height: 460px;
 		background-color: #424242;
 		display: flex;
 		flex-direction: column;
-		padding-top: 30px;
+		padding-top: 60px;
 		h1{
 			position: relative;
 			color: white;
@@ -1662,7 +1722,7 @@ main{
 				transform: translateX(36%);
 				width: 60%;
 				height: 4px;
-				background-color: white;
+				background-color: #ff6e19;
 			}
 		}
 		.container{
