@@ -202,7 +202,13 @@ export default {
                             font-size: 26px;
                         }
                         .logo{
-                           
+                           position:relative;
+                           &::after{
+                               position:absolute;
+                               top:0;
+                               right:0;
+                               
+                           }
                         }
                         @media only screen and (max-width: 768px){
                            margin-left: .3em !important;
