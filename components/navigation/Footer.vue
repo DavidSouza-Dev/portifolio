@@ -80,6 +80,7 @@ export default {
                         font-size: 31px;
                     }
                     a{
+                        cursor: pointer;
                         color: white;
                         height: 25px;
                         width: 25px;

@@ -1,13 +1,15 @@
 <template>
     <div>
-        <div id="home" class="header-head"></div>
+        <div id="home" class="header-head">
+            <div class="efeito"></div>
+        </div>
         <header>
            
             <div class="background">
             <b-navbar  toggleable="lg" type="light" variant="info">
                 <div class="menu">  
                     <b-navbar-brand class="logo" href="#">
-                       David Souza
+                       DAVID SOUZA
                     </b-navbar-brand>
                    
                    
@@ -25,7 +27,7 @@
                         <b-nav-item href="#home">Home</b-nav-item>
                         <b-nav-item href="#quem-sou">Quem sou eu?</b-nav-item>
                         <b-nav-item href="#conhecimento">Conhecimentos</b-nav-item>
-                        <b-nav-item href="#experiencia">Tecnologias</b-nav-item>
+                        <b-nav-item href="#tecnologias">Tecnologias</b-nav-item>
                         <b-nav-item href="#cases">Cases</b-nav-item>
                         <b-nav-item href="#contato">Contato</b-nav-item>
                     </b-navbar-nav>
@@ -54,15 +56,14 @@ export default {
                
                 let scroll = $(window).scrollTop();
                /*  console.log(scroll) */
-                if(scroll > 750){
+                if(scroll > 370){
                     console.log("testado")
                     $('.background').addClass("opacity1").removeClass("opacity0")
                     $(".navbar").addClass("opacity1").removeClass("opacity0")
                    /*  $(".navbar").css({background:"white"}) */
                     $(".nav-link").css({color:"black"})
-                    $(".logo").css({color:"black"})
+                    $(".logo").css({transform: "scale(.7)"})
                     $(".navbar-toggler").css({color:"black"})
-                    
                     
                 }else
                 if(scroll < 750){
@@ -71,14 +72,9 @@ export default {
                     $(".navbar").removeClass("opacity1").addClass("opacity0")
                     /* $(".menu").css({background:"transparent"}) */
                     $(".nav-link").css({color:"white"})
-                    $(".logo").css({color:"white"})
+                    $(".logo").css({transform: "scale(1)"})
                     $(".navbar-toggler").css({color:"white"})
                    
-                }
-
-                if(scroll >500){
-                    
-
                 }
             });	
         },
@@ -106,11 +102,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-*{
-    font-family: Arial, Helvetica, sans-serif;
-}
-@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two&display=swap');
 
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Merriweather+Sans&display=swap');
 
 .header-head{
     background-color: rgb(25, 25, 25)!important;
@@ -128,6 +121,11 @@ export default {
 	width: 100%;
     margin-top: -6px;
     transition: opacity .3s ease-in-out;
+    .efeito{
+        width: 100%;
+        height: 100%;
+        background-image: url(../../static/assets/efeito.png);
+    }
 	@media only screen and (max-width: 768px){
         background-blend-mode: difference;
         height: 740px;
@@ -164,13 +162,14 @@ export default {
         .background{
             position: relative;
             z-index: 9999;
+            transition: height .4s ease-in;
             @media only screen and (max-width: 768px){
                   background-color: black;
                         border-bottom: 3px solid #404040;
             }
            
             .navbar{
-                transition: all .4s ease-in-out;
+                transition: height .4s ease-in-out;
                 background-color: transparent!important;
                 
                 @media only screen and (max-width: 768px){
@@ -191,22 +190,42 @@ export default {
                     }
 
                     .navbar-brand{
-                        color: white;
+                        
                         font-size: 30px;
                         font-weight: bold;
-                        font-family: 'Shadows Into Light Two', cursive;
-                        padding:10px 0 10px 0;
-                        margin-left: 2em!important;
+                        font-family: 'Kaushan Script', cursive;
+                        padding: 0px 0 7px 0;
+                        margin-bottom: 9px;
+                        margin-left: 2em !important;
                         letter-spacing: 3px;
                         @media only screen and (max-width: 768px){
                             font-size: 26px;
+                            margin-left: -.5em!important;
                         }
-                        .logo{
-                           
-                        }
+                        
+                    }
+                    .logo{
+                        color: #ff6e19;
+                        position: relative;
+                        border-bottom: 1px solid #80807e38;
+                        transition: transform .3s ease-in;
                         @media only screen and (max-width: 768px){
-                           margin-left: .3em !important;
+                            transform: scale(.7)!important;
                         }
+                        &::after{
+                            content: 'FrontEnd Dev.';
+                            font-family: none;
+                            font-size: 1rem;
+                            position: absolute;
+                            bottom: -11px;
+                            right: 0;
+                            transform: translate(-32%);
+                            color: #a9a7a7;
+                        }
+                    }
+                    
+                    @media only screen and (max-width: 768px){
+                        margin-left: .3em !important;
                     }
             
                     .navbar-toggler {
@@ -271,10 +290,10 @@ export default {
                                 &::after{
                                     content: "";
                                     position: absolute;
-                                    top: 4px;
+                                    top: 1px;
                                     left: 8px;
                                     right: 8px;
-                                    
+                                    color: #ff6e19;
                                     display: block;
                                     border-bottom: 3px solid currentColor;
                                     height: 40px !important;
