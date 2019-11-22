@@ -55,7 +55,7 @@ export default {
            $(window).scroll(function () {
                
                 let scroll = $(window).scrollTop();
-               /*  console.log(scroll) */
+               console.log(scroll)
                 if(scroll > 370){
                     console.log("testado")
                     $('.background').addClass("opacity1").removeClass("opacity0")
@@ -63,7 +63,7 @@ export default {
                    /*  $(".navbar").css({background:"white"}) */
                     $(".nav-link").css({color:"black"})
                     $(".logo").css({transform: "scale(.7)"})
-                    $(".navbar-toggler").css({color:"black"})
+                   /*  $(".navbar-toggler").css({color:"black"}) */
                     
                 }else
                 if(scroll < 750){
@@ -73,29 +73,15 @@ export default {
                     /* $(".menu").css({background:"transparent"}) */
                     $(".nav-link").css({color:"white"})
                     $(".logo").css({transform: "scale(1)"})
-                    $(".navbar-toggler").css({color:"white"})
+                   /*  $(".navbar-toggler").css({color:"white"}) */
                    
                 }
             });	
-        },
-
-        activeMenu(){
-            $(window).scroll( function (){
-                let scroll = $(window).scrollTop();
-                if(scroll > 1943){
-                   
-                }
-            });
-        },
-
-       
-
-        
+        }
     },
 
     mounted() {
         this.renderizaBar()
-        this.activeMenu()
     },
     
 }
@@ -193,7 +179,7 @@ export default {
                         
                         font-size: 30px;
                         font-weight: bold;
-                        font-family: 'Kaushan Script', cursive;
+                        font-family: 'Kaushan Script', Arial, Helvetica, sans-serif;
                         padding: 0px 0 7px 0;
                         margin-bottom: 9px;
                         margin-left: 2em !important;
@@ -220,7 +206,7 @@ export default {
                             bottom: -11px;
                             right: 0;
                             transform: translate(-32%);
-                            color: #a9a7a7;
+                            color: #a9a7a7b3;;
                         }
                     }
                     
@@ -229,7 +215,7 @@ export default {
                     }
             
                     .navbar-toggler {
-                        color: white;
+                        color: #ff6e19;
                         /* position: absolute;
                         right: 1em;
                         top: .5em;

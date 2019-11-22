@@ -48,9 +48,6 @@
 </template>
 
 <script>
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { config, dom } from '@fortawesome/fontawesome-svg-core'
-import { faCoffee, faStroopwafel, faDragon } from '@fortawesome/free-solid-svg-icons'
 
 export default {
     name: 'Footer'
@@ -93,6 +90,9 @@ export default {
                     @media only screen and (max-width: 768px){
                         font-size: 31px;
                     }
+                    @media only screen and (max-width: 375px){
+                        font-size: 28px;
+                    }
                     a{
                         cursor: pointer;
                         color: white;
@@ -106,9 +106,12 @@ export default {
                         &:hover, &:active{
                             background: white;
                             color:#0073b2; 
-                            @media only screen and (max-width: 768px){
-                               /*  height: 21px;
-                                width: 21px; */
+                            @media only screen and (max-width: 375px){
+                                height: 22px;
+                                width: 24px;
+                            }
+                            @media only screen and (max-width: 320px){
+                                width: 25px;
                             }
                         }
                     }
@@ -118,14 +121,25 @@ export default {
                             border-radius: 35%;
                             background: white;
                             color: #571657;
+                            @media only screen and (max-width: 375px){
+                               height: 22px;
+                               width: 24.3px; 
+                            }
+                            @media only screen and (max-width: 320px){
+                                width: 25px;
+                            }
                         }
                     }
                     .instagram{
                         &:hover{
-                            height: 26px;
+                            height: 27px;
                             border-radius: 35%;
                             background: white;
-                            color: #ff697b
+                            color: #ff697b;
+                            @media only screen and (max-width: 375px){
+                               height: 23px;
+                                width: 24.3px; 
+                            }
                         }
                     }
                     .twitter{
@@ -134,12 +148,16 @@ export default {
                             border-radius: 35%;
                             background: white;
                             color: #1da1f2;
+                            @media only screen and (max-width: 375px){
+                               height: 23px;
+                                width: 24.3px;  
+                            }
                         }
                     }
                     .wpp{
                         color: white;
                         height: 28px;
-                        width: 30px;
+                        width: 29px;
                         &:hover{
                             border-radius: 18%;
                             background: white;
@@ -157,6 +175,9 @@ export default {
                 .copyright{
                     
                     font-size: 0.7rem;
+                    @media only screen and (max-width: 320px){
+                        font-size: .6rem;
+                    }
                     
                     position: relative;
                     &::after{
@@ -165,10 +186,10 @@ export default {
                         top: -11px;
                         /* bottom: 0px; */
                         
-                        /* right: 12px; */
+                        right: 0;
                         width: 350px;
                         height: 2px;
-                        transform: translateX(-86%);
+                        transform: translateX(10%);
                         background-color: #ffffff66 !important;
 
                     }

@@ -30,13 +30,14 @@
 					data-aos-duration="1000" 
 					data-aos-easing="ease-in-out" 
 					class="texto-historia">
-						Nascido em Belém do Pará, tenho 34 anos, formado em Ciência da Computação, moro em São Paulo e sou casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/animal-paw-print.png" ></p>
-					<p
+						Nascido em Belém do Pará, tenho 34 anos, moro em São Paulo e sou casado com a Caroline e sou pai da Maya <img class="pata-dog" src="../static/assets/animal-paw-print.png" ></p>
+					<p 
+					class="texto-historia"
 					data-aos="fade-right"
 					data-aos-duration="1000" 
 					data-aos-easing="ease-in-out" 
 					>
-						Atuo desde o inicio da minha carreira profissional em TI, mas foi recente que me senti atraído por trabalhar com Desenvolvimento Front-end. Contantemente busco me atualizar sobre as tecnologias relacionadas e estou bastante animado em trabalhar nesta area.
+						Formado em Ciência da Computação e atuo desde o inicio da minha carreira profissional em TI, mas foi recente que me senti atraído por trabalhar com Desenvolvimento Front-end. Contantemente busco me atualizar sobre as tecnologias relacionadas e estou bastante animado em trabalhar nesta area.
 					</p>
 				</div>
 			</b-container>	
@@ -66,12 +67,12 @@
 							data-aos-easing="ease-in-out">
 							<div class="habilidades">
 								<h5>Habilidades</h5>
-								<p class="detalhe">Proficiência no trabalho de equipe </p>
+								<!-- <p class="detalhe">Proficiência no trabalho de equipe </p>
 								<div class="bar" 
 									data-aos="fade-right"
 									data-aos-duration="3000"
 									data-aos-easing="ease-in-out"
-								></div>
+								></div> -->
 								<p class="detalhe">HTML5 </p>
 								<div class="bar"></div>
 								<p class="detalhe">CSS3 </p>
@@ -109,10 +110,7 @@
 			<b-container >
 				
 				<b-row>
-					<div class="linha1" 
-					
-					 
-					>
+					<div class="linha1">
 						<b-col cols="6" lg="2" sm="6" data-aos="fade-right"
 						data-aos-duration="1000"
 						data-aos-easing="ease-in-out">
@@ -395,11 +393,7 @@ import $ from 'jquery'
 import Vue from 'vue'
 import Typed from 'typed.js';
 import { VueTypedJs } from 'vue-typed-js'
-/* import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
-// ..
 
-Vue.use(AOS) */
 Vue.use(VueTypedJs)
 
 export default {
@@ -449,6 +443,19 @@ export default {
 					$('header').css({"z-index":"1"})
 			}) 
 
+		},
+		efeitoBars(){
+			 $(window).scroll(function () { 
+				let scroll = $(window).scrollTop();
+				if(scroll >= 1500 && scroll<=2000)
+					$(".bar").css({ "transform": "scaleX(1)"})
+				else
+					$(".bar").css({ "transform": "scaleX(0)"})
+
+
+
+			 });
+
 		}
 	},
 
@@ -459,6 +466,7 @@ export default {
 	mounted() {
 		this.efeitoModal();
 		this.EfeitoDigitacao();
+		this.efeitoBars();
 		
 	}, 
 	
@@ -496,7 +504,7 @@ $cor-padrao: black;
 	position:relative;
 	width: 100%;
 	height: 100%;
-	background: linear-gradient(135deg, #837b7b 30%, $cor-padrao);
+	background: linear-gradient(135deg, $cor-padrao, #2d2d2d  90%);
 	transform: rotate(45deg);
 }
 
@@ -543,9 +551,6 @@ main{
 	}
 	 .foto-titulo{
 		filter: drop-shadow(2px 4px 6px $cor-padrao);
-		/* position: absolute;
-		top: 253px;
-		left: 35%; */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -557,20 +562,7 @@ main{
 
 
 		}
-		/* .foto{
-			filter: drop-shadow(2px 4px 6px $cor-padrao);
-			background-position: -20%;
-			background-repeat: no-repeat;
-			width: 205px;
-			height: 204px;
-			z-index:-2;
-			
-			background-image:  url("../static/assets/foto.jpg");
-			background-size: 100%;
-			border-radius: 121px;
-			border: 4px solid #42311b;
 		
-		} */
 		.titulo{
 			height: 205px;
 			text-align: center;
@@ -608,12 +600,16 @@ main{
 	}
 
 	#quem-sou{
-		height: 650px;
+		height: 600px;
 		background-color: #2d2d2d;
+		@media only screen and (max-width: 415px){
+			height: 760px;
+		}
+
 		.container{
 			background-color: transparent;
 			color: white;
-			font-size: 21px;
+			font-size: 19px;
 			
 		}
 		.historia{
@@ -621,13 +617,16 @@ main{
 			@media only screen and (max-width: 375px){
 			margin: 0;
 			}
+			p:nth-child(3){
+				margin-top:0px!important;
+			}
 			.foto-historia{
 				filter: grayscale(1);
-				margin-top: 50px;
+				margin-top: 40px;
 				background-image: url("../static/assets/foto.jpg");
 				background-size: 100%;
 				background-position: 30% 40%;
-				transform: rotate(10deg) scale(1.5); 
+				transform: rotate(10deg) scale(1.3); 
 				background-repeat: no-repeat;
 				border-radius: 50%;
 				height: 200px;
@@ -643,15 +642,16 @@ main{
 				}
 			}
 			.texto-historia{
-				margin-top: 80px;
+				margin-top: 60px;
 				font-weight: 100;
 				text-align: justify;
 				@media only screen and (max-width: 768px){
 					font-size: 18px;
 					
             	}
-				@media only screen and (max-width: 375px){
-					margin-top: 10px;
+				@media only screen and (max-width: 325px){
+					font-size: 17px;
+					margin-top: 25px;
 				}
 			}
 			.pata-dog{
@@ -689,9 +689,7 @@ main{
 				padding-top: 20px;
 				/* 	width:40%; */
 				padding: 0;
-				[data-aos="fade-right"] {
-				transform: translate3d(-150px,0,0);
-				}
+				
     			.foto-desc{
 					margin-top: 20px;
 					display:flex;
@@ -744,10 +742,13 @@ main{
                         }
 					}
 					.bar{
-						height: 4px;
+						height: 1px;
 						width: 100%;
-						background-color: #2c2b2b2d;
-						margin-bottom: 1rem!important;
+						background-color: #ff6e19;
+						margin-bottom: 1.5rem!important;
+						transform: scaleX(0);
+						transform-origin: left;
+						transition: transform .7s ease-in;
 					}
 				}
 			}
@@ -759,15 +760,15 @@ main{
 		height: 600px;
 		z-index: 0;
 		position: relative;
-		background-color: whitesmoke;
+		background-color: #2d2d2d;
 		display: flex;
 		flex-direction: column;
 		@media only screen and (max-width: 768px){
-			height: 900px;
+			height: 930px;
 		}
 		h1{
 			position: relative;
-			color: $cor-padrao;
+			color: white;
 			font-weight: bold!important;
 			letter-spacing: 2px;
 			font-size: 35px;
@@ -850,7 +851,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -863,7 +864,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -909,7 +910,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -922,7 +923,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -960,7 +961,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -973,7 +974,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1014,7 +1015,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -1027,7 +1028,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1068,7 +1069,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -1081,7 +1082,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1128,7 +1129,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -1141,7 +1142,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1218,7 +1219,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -1231,7 +1232,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1272,7 +1273,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -1285,7 +1286,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1326,7 +1327,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -1339,7 +1340,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1380,7 +1381,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -1393,7 +1394,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1435,7 +1436,7 @@ main{
 						@include estilo_front_back();
 					}
 					.front{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(0deg);
 						.octo-front{
 							@include estilo_octo_front();
@@ -1448,7 +1449,7 @@ main{
 						}	
 					}
 					.back{
-						background: whitesmoke;
+						background: #2d2d2d;
 						transform: perspective(600px) rotateY(180deg);
 						.octo-back{
 							@include estilo_octo_back();
@@ -1490,7 +1491,7 @@ main{
 
 	#cases{
 		padding-top: 60px;
-		height: 550px;
+		height: 600px;
 		z-index: 0;
 		position: relative;
 		display: flex;
@@ -1713,6 +1714,7 @@ main{
 				font-size: 30px
 			}
 			@media only screen and (max-width: 320px){
+				letter-spacing: 0px;
 				font-size: 27px
 			}
 			&::before{
