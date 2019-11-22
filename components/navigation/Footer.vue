@@ -189,7 +189,7 @@ export default {
                         right: 0;
                         width: 350px;
                         height: 2px;
-                        transform: translateX(10%);
+                        transform: translateX(14%);
                         background-color: #ffffff66 !important;
 
                     }
