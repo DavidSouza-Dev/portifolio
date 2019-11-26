@@ -121,7 +121,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>HTML5</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://devdocs.io/html/">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -139,7 +141,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>CSS3</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://devdocs.io/css/">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -157,7 +161,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>BOOTSTRAP 4</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://getbootstrap.com/docs/4.4/getting-started/introduction/">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -175,7 +181,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>SASS</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://sass-lang.com/documentation">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -193,7 +201,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>JAVASCRIPT</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://devdocs.io/javascript/">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -213,7 +223,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>WORDPRESS</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://codex.wordpress.org/">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -235,7 +247,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>WORDPRESS</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://codex.wordpress.org/">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -253,7 +267,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>GRUNT</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://gruntjs.com/getting-started">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -271,7 +287,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>GIT</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://git-scm.com/doc">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -289,7 +307,9 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>VUE</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://br.vuejs.org/v2/guide/">
+											<font-awesome-icon :icon="['fa', 'book']"/> Documentação
+										</a>
 									</div>
 								</div>
 							</div>
@@ -307,7 +327,7 @@
 								<div class="back">
 									<div class="octo-back">
 										<h5>NUXT</h5>
-										<a href="#"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
+										<a href="https://nuxtjs.org/guide/"><font-awesome-icon :icon="['fa', 'book']"/> Documentação</a>
 									</div>
 								</div>
 							</div>
