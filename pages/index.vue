@@ -11,7 +11,7 @@
 						:startDelay="600"
 						:backDelay=" 1100"
 						:backSpeed="30"
-						:loopCount="infinity" > 
+						:loopCount="999" > 
 						<p class="texto-digitado typing"></P>
 					</vue-typed-js>
 				</div>
