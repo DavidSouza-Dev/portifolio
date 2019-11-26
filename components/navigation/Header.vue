@@ -55,26 +55,32 @@ export default {
            $(window).scroll(function () {
                
                 let scroll = $(window).scrollTop();
-               console.log(scroll)
+                let menuResposivo = $(".navbar-nav")
                 if(scroll > 370){
-                    console.log("testado")
                     $('.background').addClass("opacity1").removeClass("opacity0")
                     $(".navbar").addClass("opacity1").removeClass("opacity0")
-                   /*  $(".navbar").css({background:"white"}) */
                     $(".nav-link").css({color:"black"})
                     $(".logo").css({transform: "scale(.7)"})
-                   /*  $(".navbar-toggler").css({color:"black"}) */
+
+                    if(menuResposivo.width()< 415){
+                       menuResposivo.css({background:"#d1d1d1"})
+                    }
                     
+                   
                 }else
                 if(scroll < 750){
-                    console.log("testado2")
                     $('.background').removeClass("opacity1").addClass("opacity0")
                     $(".navbar").removeClass("opacity1").addClass("opacity0")
-                    /* $(".menu").css({background:"transparent"}) */
                     $(".nav-link").css({color:"white"})
                     $(".logo").css({transform: "scale(1)"})
-                   /*  $(".navbar-toggler").css({color:"white"}) */
+                    if(menuResposivo.width() < 415){
+                        menuResposivo.css({background:"#6b6b6b"})
+                    }
+                    
                    
+                }
+                if(menuResposivo.width() > 415){
+                   menuResposivo.css({background:"transparent"}) 
                 }
             });	
         }
@@ -148,7 +154,8 @@ export default {
         .background{
             position: relative;
             z-index: 9999;
-            transition: height .4s ease-in;
+            transition: height, background-color .4s ease-in;
+            
             @media only screen and (max-width: 768px){
                   background-color: black;
                         border-bottom: 3px solid #404040;
@@ -169,6 +176,7 @@ export default {
                     justify-content: space-between;
                     align-items: center;
                     background-color: transparent;
+                    transition: background-color .4s ease-in-out;
                     @media only screen and (max-width: 768px){
                         width: 100%;
                         height: 50px;
@@ -210,9 +218,7 @@ export default {
                         }
                     }
                     
-                    @media only screen and (max-width: 768px){
-                        margin-left: .3em !important;
-                    }
+                   
             
                     .navbar-toggler {
                         color: #ff6e19;

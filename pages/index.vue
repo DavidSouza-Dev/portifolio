@@ -2,21 +2,20 @@
 	 <main >
 		 
 			<div class="foto-titulo">
-<!-- 				<div class="foto"> </div>
- -->				<div class="titulo">
+				<div class="titulo">
 					<p class="meu-nome">Oi! meu nome é David.</p>
-					<p class="texto-digitado"></P>
-					<!-- <vue-typed-js> 
-						:string="["Desenvolvedor Front-End.", "Apaixonado por Tecnologia.", "Nascido em Belém, Pará"]" 
+					<!-- <p class="texto-digitado"></P> -->
+					<vue-typed-js :strings="['Desenvolvedor Front-End.', 'Apaixonado por Tecnologia.', 'Nascido em Belém do Pará']" 
 						:loop="true"
-						:startDelay="3000"
-						:backDelay=" 500"
-						:backSpeed="20"
-						:loopCount="5"
-					</vue-typed-js> -->
+						:typeSpeed="50"
+						:startDelay="600"
+						:backDelay=" 1100"
+						:backSpeed="30"
+						:loopCount="infinity" > 
+						<p class="texto-digitado typing"></P>
+					</vue-typed-js>
 				</div>
 			</div>
-		 <!-- https://bootstrapmade.com/demo/DevFolio/ -->
 		<b-container fluid  id="quem-sou">
 			<b-container >
 				<div class="historia">
@@ -37,7 +36,7 @@
 					data-aos-duration="1000" 
 					data-aos-easing="ease-in-out" 
 					>
-						Formado em Ciência da Computação e atuo desde o inicio da minha carreira profissional em TI, mas foi recente que me senti atraído por trabalhar com Desenvolvimento Front-end. Contantemente busco me atualizar sobre as tecnologias relacionadas e estou bastante animado em trabalhar nesta area.
+						Formado em Ciência da Computação e atuo desde o inicio da minha carreira profissional em TI, mas foi recentemente que me senti atraído por trabalhar com Desenvolvimento Front-end. Constantemente busco me atualizar sobre as tecnologias relacionadas e estou bastante animado em trabalhar nesta area.
 					</p>
 				</div>
 			</b-container>	
@@ -392,7 +391,7 @@
 import $ from 'jquery'
 import Vue from 'vue'
 import Typed from 'typed.js';
-import { VueTypedJs } from 'vue-typed-js'
+import VueTypedJs from 'vue-typed-js'
 
 Vue.use(VueTypedJs)
 
@@ -412,7 +411,7 @@ export default {
 	},
 
 	methods:{
-		EfeitoDigitacao(){
+		/* EfeitoDigitacao(){
 		 	var type = new Typed(".texto-digitado",{
 				strings: ["Desenvolvedor Front-End.", "Apaixonado por Tecnologia.", "Nascido em Belém do Pará"],
 				typeSpeed: 60,
@@ -422,7 +421,7 @@ export default {
 				loop: true,
 				loopCount: 999
 			});
-		},
+		}, */
 		efeitoModal(){
 			var modal = document.getElementById("myModal");
 			var modalImg = document.getElementById("img01");
@@ -463,13 +462,9 @@ export default {
 		}
 	},
 
-	/* created(){
-		AOS.init();
-	}, */
-	
 	mounted() {
 		this.efeitoModal();
-		this.EfeitoDigitacao();
+		/* this.EfeitoDigitacao(); */
 		this.efeitoBars();
 		
 	}, 
@@ -575,11 +570,28 @@ main{
 			@media only screen and (max-width: 768px){
 				font-size: 32px;
 			}
+			@media only screen and (max-width: 320px){
+				.meu-nome{
+					font-size: 25px;
+				}
+				
+				
+			}
+			.typed-element {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				
+			}
 			.texto-digitado{
 				font-size:35px;
 				display: inline-block;
+				margin-bottom: 0rem;
 				@media only screen and (max-width: 768px){
 					font-size: 24px;
+				}
+				@media only screen and (max-width: 320px){
+					font-size: 20px
 				}
 			}
 		}
@@ -754,6 +766,7 @@ main{
 						transform-origin: left;
 						transition: transform .7s ease-in;
 					}
+					
 				}
 			}
 		}	
