@@ -24,7 +24,7 @@
                 <b-collapse id="nav-collapse" is-nav>
                 <div class="menu-in">
                     <b-navbar-nav>
-                        <b-nav-item href="#home">Home</b-nav-item>
+                        <b-nav-item href="#">Home</b-nav-item>
                         <b-nav-item href="#quem-sou">Quem sou eu?</b-nav-item>
                         <b-nav-item href="#conhecimento">Conhecimentos</b-nav-item>
                         <b-nav-item href="#tecnologias">Tecnologias</b-nav-item>

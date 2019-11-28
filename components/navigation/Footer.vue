@@ -9,7 +9,7 @@
                         data-aos-duration="2600">
                         <font-awesome-icon :icon="['fab', 'linkedin']"/>
                     </a>
-                    <a class="github" href="https://github.com/DaviiidSouza"
+                    <a class="github" href="https://github.com/DavidSouza-Dev"
                         data-aos="fade"
                         data-aos-duration="2400">
                         <font-awesome-icon :icon="['fab', 'github']"/>
