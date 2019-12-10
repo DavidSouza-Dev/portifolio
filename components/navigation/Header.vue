@@ -24,12 +24,12 @@
                 <b-collapse id="nav-collapse" is-nav>
                 <div class="menu-in">
                     <b-navbar-nav>
-                        <b-nav-item href="#">Home</b-nav-item>
-                        <b-nav-item href="#quem-sou">Quem sou eu?</b-nav-item>
-                        <b-nav-item href="#conhecimento">Conhecimentos</b-nav-item>
-                        <b-nav-item href="#tecnologias">Tecnologias</b-nav-item>
-                        <b-nav-item href="#cases">Cases</b-nav-item>
-                        <b-nav-item href="#contato">Contato</b-nav-item>
+                        <b-nav-item href="#" @click="active=true">Home</b-nav-item>
+                        <b-nav-item href="#quem-sou" @click="active=true">Quem sou eu?</b-nav-item>
+                        <b-nav-item href="#conhecimento" @click="active=true">Conhecimentos</b-nav-item>
+                        <b-nav-item href="#tecnologias" @click="active=true">Tecnologias</b-nav-item>
+                        <b-nav-item href="#cases" @click="active=true">Cases</b-nav-item>
+                        <b-nav-item href="#contato" @click="active=true">Contato</b-nav-item>
                     </b-navbar-nav>
                 </div>
                 </b-collapse>
