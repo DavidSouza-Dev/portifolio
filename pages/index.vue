@@ -1,21 +1,22 @@
 <template>
-	 <main >
-		 
-			<div class="foto-titulo">
-				<div class="titulo">
-					<p class="meu-nome">Oi! meu nome é David.</p>
-					<!-- <p class="texto-digitado"></P> -->
-					<vue-typed-js :strings="['Desenvolvedor Front-End.', 'Apaixonado por Tecnologia.', 'Nascido em Belém do Pará']" 
-						:loop="true"
-						:typeSpeed="50"
-						:startDelay="600"
-						:backDelay=" 1100"
-						:backSpeed="30"
-						:loopCount="999" > 
-						<p class="texto-digitado typing"></P>
-					</vue-typed-js>
-				</div>
+	 <main>
+		
+		<div class="foto-titulo" >
+			<div class="titulo">
+				<p class="meu-nome">Oi! meu nome é David.</p>
+				<!-- <p class="texto-digitado"></P> -->
+				<vue-typed-js :strings="['Desenvolvedor Front-End.', 'Apaixonado por Tecnologia.', 'Nascido em Belém do Pará']" 
+					:loop="true"
+					:typeSpeed="50"
+					:startDelay="600"
+					:backDelay=" 1100"
+					:backSpeed="30"
+					:loopCount="999" > 
+					<p class="texto-digitado typing"></P>
+				</vue-typed-js>
 			</div>
+		</div>
+		<b-container id="home"></b-container>
 		<b-container fluid  id="quem-sou">
 			<b-container >
 				<div class="historia">
@@ -569,10 +570,12 @@ $cor-padrao: black;
 
 
 main{
+	position: relative;
 	margin-top: 480px;
 	@media only screen and (max-width: 768px){
 		margin-top: 88px;
 	}
+
 	 .foto-titulo{
 		filter: drop-shadow(2px 4px 6px $cor-padrao);
 		display: flex;
@@ -639,7 +642,14 @@ main{
 	.container-fluid:nth-child(odd){
 		background-color: white;
 	}
-
+	#home{
+		position: absolute;
+		top: -287px;
+		right: 204px;
+		background: transparent;
+		height: 5px;
+		width: 10px;
+	}
 	#quem-sou{
 		height: 600px;
 		background-color: #2d2d2d;

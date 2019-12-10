@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="home" class="header-head">
+        <div class="header-head">
             <div class="efeito"></div>
         </div>
         <header>
@@ -8,7 +8,7 @@
             <div class="background">
             <b-navbar  toggleable="lg" type="light" variant="info">
                 <div class="menu">  
-                    <b-navbar-brand class="logo" href="#">
+                    <b-navbar-brand class="logo"  href="#">
                        DAVID SOUZA
                     </b-navbar-brand>
                    
@@ -22,9 +22,9 @@
                 </div>
                 
                 <b-collapse id="nav-collapse" is-nav>
-                <div class="menu-in">
+                <div class="menu-in" id="teste">
                     <b-navbar-nav>
-                        <b-nav-item href="#" @click="active=true">Home</b-nav-item>
+                        <b-nav-item href="#home" @click="active=true">Home</b-nav-item>
                         <b-nav-item href="#quem-sou" @click="active=true">Quem sou eu?</b-nav-item>
                         <b-nav-item href="#conhecimento" @click="active=true">Conhecimentos</b-nav-item>
                         <b-nav-item href="#tecnologias" @click="active=true">Tecnologias</b-nav-item>
@@ -83,7 +83,16 @@ export default {
                    menuResposivo.css({background:"transparent"}) 
                 }
             });	
+        },
+        clickScroll(){
+            $('#home').click(function(){
+                event.preventDefault();
+                console.log("teste")
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            })
         }
+        
     },
 
     mounted() {
