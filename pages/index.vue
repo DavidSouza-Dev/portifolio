@@ -469,12 +469,17 @@ export default {
 		},
 		efeitoBars(){
 			 $(window).scroll(function () { 
+				let menuResposivo = $(".navbar-nav")
+				
 				let scroll = $(window).scrollTop();
 				if(scroll >= 1500 && scroll<=2000)
 					$(".bar").css({ "transform": "scaleX(1)"})
 				else
 					$(".bar").css({ "transform": "scaleX(0)"})
 
+				 if(menuResposivo.width()< 415){
+                       $(".bar").css({ "transform": "scaleX(1)"})
+                    }
 
 
 			 });
