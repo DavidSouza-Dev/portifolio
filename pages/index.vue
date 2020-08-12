@@ -37,7 +37,7 @@
 					data-aos-duration="1200" 
 					data-aos-easing="ease-in-out" 
 					>
-						Formado em Ciência da Computação e atuo desde o inicio da minha carreira profissional em TI. Recentemente me redescobri na área e hoje trabalho como Front-End Developer. Estudo muito as tecnologias relacionadas e estou muito feliz em trilhar este caminho.
+						Formado em Ciência da Computação, atuo desde o inicio da minha carreira como profissional em TI. Recentemente me redescobri na área e hoje trabalho como Front-End Developer. Estudo muito as tecnologias relacionadas e estou muito feliz em trilhar este caminho.
 					</p>
 				</div>
 			</b-container>	
