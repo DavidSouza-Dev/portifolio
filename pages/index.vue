@@ -30,14 +30,14 @@
 					data-aos-duration="1000" 
 					data-aos-easing="ease-in-out" 
 					class="texto-historia">
-						Nascido em Belém do Pará, tenho 34 anos, moro em São Paulo e sou casado com a Caroline e sou pai da Maya <img class="pata-dog" src="../static/assets/animal-paw-print.png" ></p>
+						Nascido em Belém do Pará, tenho 34 anos, moro em São Paulo. Casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/animal-paw-print.png" ></p>
 					<p 
 					class="texto-historia"
 					data-aos="fade-right"
-					data-aos-duration="1000" 
+					data-aos-duration="1200" 
 					data-aos-easing="ease-in-out" 
 					>
-						Formado em Ciência da Computação e atuo desde o inicio da minha carreira profissional em TI, mas foi recentemente que me senti atraído por trabalhar com Desenvolvimento Front-end. Constantemente busco me atualizar sobre as tecnologias relacionadas e estou bastante animado em trabalhar nesta area.
+						Formado em Ciência da Computação e atuo desde o inicio da minha carreira profissional em TI. Atualmente me redescobri na área e hoje trabalho como Front-End Developer. Estudo muito as tecnologias relacionadas e estou muito feliz em trilhar este caminho.
 					</p>
 				</div>
 			</b-container>	
@@ -73,25 +73,27 @@
 									data-aos-duration="3000"
 									data-aos-easing="ease-in-out"
 								></div> -->
-								<p class="detalhe">HTML5 </p>
+								<p class="detalhe">Vanilla</p>
 								<div class="bar"></div>
-								<p class="detalhe">CSS3 </p>
+								<p class="detalhe">JQuery </p>
 								<div class="bar"></div>
-								<p class="detalhe">Bootstrap 4 </p>
+								<p class="detalhe">KnockoutJS </p>
 								<div class="bar"></div>
-								<p class="detalhe">Pré-processador CSS (SASS) </p>
+								<p class="detalhe">Pré-processador CSS - SASS/LESS </p>
 								<div class="bar"></div>  
-								<p class="detalhe">Javascript </p>
+								<p class="detalhe"> Padrão de Arquitetura CSS - BEM </p>
 								<div class="bar"></div>
 								<p class="detalhe">API REST </p>
 								<div class="bar"></div>
 								<p class="detalhe">Wordpress </p>
 								<div class="bar"></div>
-								<p class="detalhe">Task Runner GruntJs </p>
-								<div class="bar"></div>
 								<p class="detalhe">Controladores de Versão GIT </p>
 								<div class="bar"></div>
-								<p class="detalhe">Framework Vue.js </p>
+								<p class="detalhe">Plataforma Oracle Commerce Cloud</p>
+								<div class="bar"></div>
+								<p class="detalhe">ReactJs</p>
+								<div class="bar"></div>
+								<p class="detalhe">Vuejs </p>
 								<div class="bar"></div>
 							</div>
 							
@@ -100,6 +102,41 @@
 				</b-row>
 			</b-container>
 		</b-container>
+		
+		<b-container fluid id="contato">
+			<h1 data-aos="zoom-out"
+				data-aos-duration="1000"
+				data-aos-easing="ease-in-out"
+
+			>
+				Entre em Contato ; )
+
+			</h1>
+			<b-container >
+				
+				<div class="card" 
+					data-aos="zoom-in"
+					data-aos-duration="600"
+					data-aos-easing="ease-in-out"
+				>
+					<!-- <p><span>Entre em contato</span> ;)</p> -->
+					<p  class="mail">
+						<font-awesome-icon :icon="['fa', 'envelope']"/>  
+						E-mail: davidrs.souza@gmail.com
+					</p>
+					<p  class="tel">
+						<font-awesome-icon :icon="['fa', 'mobile-alt']"/>  
+						Telefone: (11) 994886041
+					</p>				
+					<p  class="skype">
+						<font-awesome-icon :icon="['fab', 'skype']"/>  
+						Skype: daviiid.souza
+					</p>
+				</div>				
+			</b-container>
+		</b-container>
+
+		<!-- a partir daqui o content está oculto para possivelmente ser usado no futuro -->
 		<b-container fluid id="tecnologias">
 			<h1 data-aos="zoom-out"
 				data-aos-duration="500"
@@ -371,38 +408,6 @@
 					<b-col cols="12" lg="3" class="teste3"></b-col>
 					
 				</b-row>
-			</b-container>
-		</b-container>
-		<b-container fluid id="contato">
-			<h1 data-aos="zoom-out"
-				data-aos-duration="1000"
-				data-aos-easing="ease-in-out"
-
-			>
-				Entre em Contato ; )
-
-			</h1>
-			<b-container >
-				
-				<div class="card" 
-					data-aos="zoom-in"
-					data-aos-duration="600"
-					data-aos-easing="ease-in-out"
-				>
-					<!-- <p><span>Entre em contato</span> ;)</p> -->
-					<p  class="mail">
-						<font-awesome-icon :icon="['fa', 'envelope']"/>  
-						E-mail: davidrs.souza@gmail.com
-					</p>
-					<p  class="tel">
-						<font-awesome-icon :icon="['fa', 'mobile-alt']"/>  
-						Telefone: (11) 994886041
-					</p>				
-					<p  class="skype">
-						<font-awesome-icon :icon="['fab', 'skype']"/>  
-						Skype: daviiid.souza
-					</p>
-				</div>				
 			</b-container>
 		</b-container>
 	</main>
@@ -808,6 +813,7 @@ main{
 	}
 
 	#tecnologias{
+		display:none!important;
 		padding-top:60px;
 		height: 600px;
 		z-index: 0;
@@ -1542,6 +1548,7 @@ main{
 	}
 
 	#cases{
+		display:none!important;
 		padding-top: 60px;
 		height: 600px;
 		z-index: 0;

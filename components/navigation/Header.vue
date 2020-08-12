@@ -27,8 +27,8 @@
                         <b-nav-item href="#home" @click="active=true">Home</b-nav-item>
                         <b-nav-item href="#quem-sou" @click="active=true">Quem sou eu?</b-nav-item>
                         <b-nav-item href="#conhecimento" @click="active=true">Conhecimentos</b-nav-item>
-                        <b-nav-item href="#tecnologias" @click="active=true">Tecnologias</b-nav-item>
-                        <b-nav-item href="#cases" @click="active=true">Cases</b-nav-item>
+                        <!-- <b-nav-item href="#tecnologias" @click="active=true">Tecnologias</b-nav-item>
+                        <b-nav-item href="#cases" @click="active=true">Cases</b-nav-item> -->
                         <b-nav-item href="#contato" @click="active=true">Contato</b-nav-item>
                     </b-navbar-nav>
                 </div>
