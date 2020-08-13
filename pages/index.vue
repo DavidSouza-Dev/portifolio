@@ -730,7 +730,7 @@ main{
 			border: 1px solid transparent;
 			height:600px;
 			@media only screen and (max-width: 768px){
-				height:700px;
+				height:auto;
 			}
 			filter: drop-shadow(0px 2px 2px $cor-padrao);
 			.form{
