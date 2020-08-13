@@ -13,16 +13,19 @@
                     </b-navbar-brand>
                    
                    
-                    <b-navbar-toggle target="nav-collapse" @click="active = !active"> 
-                        <font-awesome-icon :icon="['fas', 'bars']" v-show="active"/>
-                        <font-awesome-icon :icon="['fa', 'times']" v-show="!active" />
+                    <b-navbar-toggle target="nav-collapse" > 
+                        <div @click="active = !active">
+                            <font-awesome-icon :icon="['fas', 'bars']" v-show="active"/>
+                            <font-awesome-icon :icon="['fa', 'times']" v-show="!active" />
+                        </div>
+                        
                     </b-navbar-toggle>
                     
                 
                 </div>
                 
                 <b-collapse id="nav-collapse" is-nav>
-                <div class="menu-in" id="teste">
+                <div class="menu-in" id="teste" :class=" !active == true ? 'active-menu' : ''">
                     <b-navbar-nav>
                         <b-nav-item href="#home" @click="active=true">Home</b-nav-item>
                         <b-nav-item href="#quem-sou" @click="active=true">Quem sou eu?</b-nav-item>
@@ -166,8 +169,8 @@ export default {
             transition: height, background-color .4s ease-in;
             
             @media only screen and (max-width: 768px){
-                  background-color: black;
-                        border-bottom: 3px solid #404040;
+                background-color: black;
+                border-bottom: 3px solid #404040;
             }
            
             .navbar{
@@ -221,8 +224,8 @@ export default {
                             font-size: 1rem;
                             position: absolute;
                             bottom: -11px;
-                            right: 0;
-                            transform: translate(-32%);
+                            right: 50%;
+                            transform: translate(50%);
                             color: #a9a7a7b3;;
                         }
                     }
@@ -240,9 +243,7 @@ export default {
                         transform: scale(1.5);
                         border: none;
                         outline: none;
-                        @media only screen and (max-width: 768px){
-                           
-                        }
+                        
                     }
 
                     .my-toggle{
@@ -263,7 +264,13 @@ export default {
                     right: 4em;
                     
                     @media only screen and (max-width: 768px){
-                        position: static;
+                       visibility: hidden;
+                       right: unset;
+                       width: 100vw;
+
+                       &.active-menu{
+                           visibility: visible;
+                       }
                     }
 
                     .navbar-nav{
