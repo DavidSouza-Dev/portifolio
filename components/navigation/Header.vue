@@ -27,13 +27,14 @@
                 <b-collapse id="nav-collapse" is-nav>
                 <div class="menu-in" id="teste" :class=" !active == true ? 'active-menu' : ''">
                     <b-navbar-nav>
-                        <b-nav-item href="#home" @click="active=true, clickScroll()">Home</b-nav-item>
+                        <b-nav-item href="#ds-home" @click="active=true; clickScroll($event)">Home</b-nav-item>
                         <b-nav-item href="#ds-quem-sou" @click="active=true">Quem sou eu?</b-nav-item>
                         <b-nav-item href="#ds-conhecimento" @click="active=true">Conhecimentos</b-nav-item>
                         <!-- <b-nav-item href="#tecnologias" @click="active=true">Tecnologias</b-nav-item>
                         <b-nav-item href="#cases" @click="active=true">Cases</b-nav-item> -->
                         <b-nav-item href="#ds-contato" @click="active=true">Contato</b-nav-item>
                     </b-navbar-nav>
+                    <div class="ds-background-menu" :class=" !active == true ? 'active-bg':'' " @click="active=!active"></div>
                 </div>
                 </b-collapse>
             </b-navbar>
@@ -49,8 +50,7 @@ export default {
     name: 'Header',
     data() {
         return {
-            
-            active: true
+            active: true,
         }
     },
     methods: {
@@ -88,12 +88,17 @@ export default {
                 }
             });	
         },
-        clickScroll(){
-            $('#home').click(function(){
-                event.preventDefault();
-                console.log("teste")
-                $('html, body').animate({scrollTop : -480},2000);
-            })
+        clickScroll: function(event){
+            var element = event.target.attributes.target.value;
+            console.log(element)
+            /* .nav-item:nth-child(1) > a */
+            /* document.querySelector('.nav-item:nth-child(1) > a').addEventListener('click', function(){
+                window.scroll({
+                    top: 0, 
+                    left: 0, 
+                    behavior: 'smooth' 
+                });
+            }) */
         },
 
         clickMenu (){
@@ -106,6 +111,7 @@ export default {
     },
 
     mounted() {
+        
         this.renderizaBar()
     },
     
@@ -364,6 +370,8 @@ export default {
                         }  */
                         
                     }
+                    
+                    
                     .nav-item{
                         font-size: 19px;
                         @media only screen and (max-width: 768px){
@@ -421,6 +429,18 @@ export default {
                     }
                     
                 }
+                /* @media only screen and (max-width: 768px){
+                    .ds-background-menu{
+                        position: absolute;
+                        height: 100vh;
+                        width: 100vw;
+                        background: unset;
+                        //transition: .4s background ease-in-out;
+                        &.active-bg{
+                            background: rgba(0, 0, 0, 0.81);    
+                        }
+                    }
+                } */
             }
         }
     }

@@ -1,6 +1,6 @@
 <template>
 	 <main>
-		<!-- <b-container id="home"></b-container> -->
+		<b-container id="ds-home"></b-container>
 		<div class="ds-foto-perfil" >
 			<div class="ds-foto-perfil__conteudo">
 				<p class="ds-foto-perfil__conteudo--meu-nome">Oi! meu nome é David.</p>
@@ -473,7 +473,7 @@ export default {
 			}) 
 
 		},
-		efeitoBars(){
+		efeitoBars: function(event){
 			 $(window).scroll(function () { 
 				let menuResposivo = $(".navbar-nav")
 				
@@ -483,9 +483,9 @@ export default {
 				else
 					$(".bar").css({ "transform": "scaleX(0)"})
 
-				 if(menuResposivo.width()< 415){
-                       $(".bar").css({ "transform": "scaleX(1)"})
-                    }
+				if(menuResposivo.width()< 768){
+					$(".bar").css({ "transform": "scaleX(1)"})
+				}
 
 
 			 });
