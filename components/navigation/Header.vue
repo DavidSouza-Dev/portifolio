@@ -322,6 +322,13 @@ export default {
                     visibility: hidden;
                     right: unset;
                     width: 100vw;
+                    position:relative;
+                        &:after{
+                            content:'';
+                            position: absolute;
+                            background:rgba(25, 25, 25,0.5);
+                        } 
+                    
 
                     &.active-menu{
                         visibility: visible;
@@ -337,7 +344,19 @@ export default {
                         background: #6b6b6b;
                         border-bottom: 3px solid #404040;
                         border-radius: 0px;
-                        padding-bottom: 0px; 
+                        padding-bottom: 0px;
+                        /* position:relative;
+                        &:after{
+                            content: '';
+                            top: 58px;
+                            position: absolute;
+                            background: rgba(0, 0, 0, 0.7);
+                            height: 100vh;
+                            width: 110vw;
+                            z-index: -2;
+                            //filter: blur(34px);
+                        }  */
+                        
                     }
                     .nav-item{
                         font-size: 19px;
@@ -363,8 +382,8 @@ export default {
                                 content: "";
                                 position: absolute;
                                 top: 25%;
-                                left: 21px;
-                                right: 21px;
+                                left: 10px;
+                                right: 8px;
                                 color: #ff6e19;
                                 display: block;
                                 border-bottom: 3px solid currentColor;
@@ -372,13 +391,15 @@ export default {
                                 transform: scaleX(0);
                                 transform-origin: left;
                                 transition: transform .25s ease-in;
-                                
+                                @media only screen and (max-width: 768px){
+                                    left: 21px;
+                                    right: 21px;
+                                }
                             } 
 
 
                             &:hover::after,  &:active::after{
                                 transform: scaleX(1);
-                                
                             }
                             
                             
@@ -390,10 +411,6 @@ export default {
                                 transform: scaleX(1);
                                 transform-origin: left;
                             }
-                            
-                            /*  @media only screen and (max-width: 768px){
-                                padding-left: 1.5em;
-                            } */
                         }
                     }
                     
