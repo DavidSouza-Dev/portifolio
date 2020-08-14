@@ -59,6 +59,7 @@ export default {
                
                 let scroll = $(window).scrollTop();
                 let menuResposivo = $(".navbar-nav")
+                let handleScroll = $('#ds-quem-sou').offsetTop-150;
                 if(scroll > 370){
                     $('.background').addClass("opacity1").removeClass("opacity0")
                     $(".navbar").addClass("opacity1").removeClass("opacity0")
