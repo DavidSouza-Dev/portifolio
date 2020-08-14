@@ -1,6 +1,6 @@
 <template>
 	 <main>
-		
+		<!-- <b-container id="home"></b-container> -->
 		<div class="ds-foto-perfil" >
 			<div class="ds-foto-perfil__conteudo">
 				<p class="ds-foto-perfil__conteudo--meu-nome">Oi! meu nome é David.</p>
@@ -16,7 +16,7 @@
 				</vue-typed-js>
 			</div>
 		</div>
-		<b-container id="home"></b-container>
+		
 		<b-container fluid  id="ds-quem-sou">
 			<b-container >
 				<div class="historia">

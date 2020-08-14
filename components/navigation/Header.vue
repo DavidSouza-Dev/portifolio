@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header-head">
-            <div class="efeito"></div>
+            <div class="efeito" ></div>
         </div>
         <header>
            
@@ -27,12 +27,12 @@
                 <b-collapse id="nav-collapse" is-nav>
                 <div class="menu-in" id="teste" :class=" !active == true ? 'active-menu' : ''">
                     <b-navbar-nav>
-                        <b-nav-item href="#home" @click="active=true">Home</b-nav-item>
-                        <b-nav-item href="#quem-sou" @click="active=true">Quem sou eu?</b-nav-item>
-                        <b-nav-item href="#conhecimento" @click="active=true">Conhecimentos</b-nav-item>
+                        <b-nav-item href="#home" @click="active=true, clickScroll()">Home</b-nav-item>
+                        <b-nav-item href="#ds-quem-sou" @click="active=true">Quem sou eu?</b-nav-item>
+                        <b-nav-item href="#ds-conhecimento" @click="active=true">Conhecimentos</b-nav-item>
                         <!-- <b-nav-item href="#tecnologias" @click="active=true">Tecnologias</b-nav-item>
                         <b-nav-item href="#cases" @click="active=true">Cases</b-nav-item> -->
-                        <b-nav-item href="#contato" @click="active=true">Contato</b-nav-item>
+                        <b-nav-item href="#ds-contato" @click="active=true">Contato</b-nav-item>
                     </b-navbar-nav>
                 </div>
                 </b-collapse>
@@ -59,7 +59,7 @@ export default {
                
                 let scroll = $(window).scrollTop();
                 let menuResposivo = $(".navbar-nav")
-                let handleScroll = $('#ds-quem-sou').offsetTop-150;
+                let handleScroll = $('#ds-quem-sou').offsetTop+150;
                 if(scroll > 370){
                     $('.background').addClass("opacity1").removeClass("opacity0")
                     $(".navbar").addClass("opacity1").removeClass("opacity0")
@@ -92,9 +92,15 @@ export default {
             $('#home').click(function(){
                 event.preventDefault();
                 console.log("teste")
-                $('html, body').animate({scrollTop : 0},800);
-                return false;
+                $('html, body').animate({scrollTop : -480},2000);
             })
+        },
+
+        clickMenu (){
+            var el = document.querySelector('.x-title-content'); //get element
+            var position = el.getBoundingClientRect(); //method returns properties relative to the element
+            var target = window.innerWidth > 500 ? position.top-200 : position.top-100; //set value if is mobile or desktop
+            $("HTML, BODY").animate({scrollTop: target}, 1000) //creating the animation
         }
         
     },
