@@ -42,6 +42,7 @@ body{
   margin: 0px;
   padding:0px;
   overflow-x: hidden;
+  background: #2d2d2d;
 }
 
 *,

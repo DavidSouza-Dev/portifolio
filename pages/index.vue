@@ -1,9 +1,9 @@
 <template>
 	 <main>
 		
-		<div class="foto-titulo" >
-			<div class="titulo">
-				<p class="meu-nome">Oi! meu nome é David.</p>
+		<div class="ds-foto-perfil" >
+			<div class="ds-foto-perfil__conteudo">
+				<p class="ds-foto-perfil__conteudo--meu-nome">Oi! meu nome é David.</p>
 				<!-- <p class="texto-digitado"></P> -->
 				<vue-typed-js :strings="['Desenvolvedor Front-End.', 'Apaixonado por Tecnologia.', 'Nascido em Belém do Pará']" 
 					:loop="true"
@@ -17,7 +17,7 @@
 			</div>
 		</div>
 		<b-container id="home"></b-container>
-		<b-container fluid  id="quem-sou">
+		<b-container fluid  id="ds-quem-sou">
 			<b-container >
 				<div class="historia">
 					<div class="foto-historia" alt=""
@@ -42,7 +42,7 @@
 				</div>
 			</b-container>	
 		</b-container>
-		<b-container  fluid id="conhecimento">
+		<b-container  fluid id="ds-conhecimento">
 			<b-container  >
 				<b-row>
 					<b-col lg="12" class="form">
@@ -103,7 +103,7 @@
 			</b-container>
 		</b-container>
 		
-		<b-container fluid id="contato">
+		<b-container fluid id="ds-contato">
 			<h1 data-aos="zoom-out"
 				data-aos-duration="1000"
 				data-aos-easing="ease-in-out"
@@ -137,7 +137,7 @@
 		</b-container>
 
 		<!-- a partir daqui o content está oculto para possivelmente ser usado no futuro -->
-		<b-container fluid id="tecnologias">
+		<b-container fluid id="ds-tecnologias">
 			<h1 data-aos="zoom-out"
 				data-aos-duration="500"
 				data-aos-easing="ease-in-out"
@@ -374,7 +374,7 @@
 				</b-row>
 			</b-container>
 		</b-container>
-		<b-container fluid  id="cases" >
+		<b-container fluid  id="ds-cases" >
 
 			<div id="myModal" class="modal">
 				<span class="close"></span>
@@ -581,7 +581,7 @@ main{
 		margin-top: 88px;
 	}
 
-	 .foto-titulo{
+	 .ds-foto-perfil{
 		filter: drop-shadow(2px 4px 6px $cor-padrao);
 		display: flex;
 		flex-direction: column;
@@ -595,7 +595,7 @@ main{
 
 		}
 		
-		.titulo{
+		&__conteudo{
 			height: 205px;
 			text-align: center;
 			color: white;
@@ -604,7 +604,7 @@ main{
 				font-size: 32px;
 			}
 			@media only screen and (max-width: 320px){
-				.meu-nome{
+				&--meu-nome{
 					font-size: 25px;
 				}
 				
@@ -647,7 +647,7 @@ main{
 	.container-fluid:nth-child(odd){
 		background-color: white;
 	}
-	#home{
+	#ds-home{
 		position: absolute;
 		top: -287px;
 		right: 204px;
@@ -655,7 +655,7 @@ main{
 		height: 5px;
 		width: 10px;
 	}
-	#quem-sou{
+	#ds-quem-sou{
 		height: 600px;
 		background-color: #2d2d2d;
 		@media only screen and (max-width: 415px){
@@ -703,6 +703,7 @@ main{
 				text-align: justify;
 				@media only screen and (max-width: 768px){
 					font-size: 18px;
+					text-align: center;
 					
             	}
 				@media only screen and (max-width: 325px){
@@ -723,7 +724,7 @@ main{
 		}
 	}
 
-	#conhecimento{
+	#ds-conhecimento{
 	
 		height: 800px;
 		.container{
@@ -812,7 +813,7 @@ main{
 		}	
 	}
 
-	#tecnologias{
+	#ds-tecnologias{
 		display:none!important;
 		padding-top:60px;
 		height: 600px;
@@ -1547,7 +1548,7 @@ main{
 		}
 	}
 
-	#cases{
+	#ds-cases{
 		display:none!important;
 		padding-top: 60px;
 		height: 600px;
@@ -1754,7 +1755,7 @@ main{
   to {transform:scale(1)}
 } */
 
-	#contato{
+	#ds-contato{
 		position: relative;
 		height: 460px;
 		background-color: #424242;

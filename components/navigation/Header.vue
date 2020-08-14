@@ -15,8 +15,8 @@
                    
                     <b-navbar-toggle target="nav-collapse" > 
                         <div @click="active = !active">
-                            <font-awesome-icon :icon="['fas', 'bars']" v-show="active"/>
-                            <font-awesome-icon :icon="['fa', 'times']" v-show="!active" />
+                            <font-awesome-icon :icon="['fas', 'bars']" :class="active == true? 'hamb-in': ''"/>
+                            <font-awesome-icon :icon="['fa', 'times']" :class="!active == true? 'times-in': ''"/>
                         </div>
                         
                     </b-navbar-toggle>
@@ -62,7 +62,7 @@ export default {
                 if(scroll > 370){
                     $('.background').addClass("opacity1").removeClass("opacity0")
                     $(".navbar").addClass("opacity1").removeClass("opacity0")
-                    $(".nav-link").css({color:"black"})
+                    $(".nav-link").css({"color":"black","filter":"unset"})
                     $(".logo").css({transform: "scale(.7)"})
 
                     if(menuResposivo.width()< 415){
@@ -74,7 +74,7 @@ export default {
                 if(scroll < 750){
                     $('.background').removeClass("opacity1").addClass("opacity0")
                     $(".navbar").removeClass("opacity1").addClass("opacity0")
-                    $(".nav-link").css({color:"white"})
+                    $(".nav-link").css({"color":"white","filter":"drop-shadow(1px 1px 3px black)"})
                     $(".logo").css({transform: "scale(1)"})
                     if(menuResposivo.width() < 415){
                         menuResposivo.css({background:"#6b6b6b"})
@@ -141,202 +141,265 @@ export default {
 
 
  header{
-        z-index:4;
-        position: fixed;
-        top: 0px;
-        width: 100%;
+    z-index:4;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    @media only screen and (max-width: 768px){
+        height: 68x!important;
+    }
+
+    .opacity1{
+        background-color: rgb(255, 255, 255)!important; 
+        box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
+        transition: background-color .5s ease-in-out;
+        height: 50px;
+        .menu{
+            .logo{
+                &:after{
+                   color: rgba(23, 23, 23,0.7)!important;
+                }
+            }
+        }
+        }
+    .opacity0{
+        transition: background-color .5s ease-in-out;    
+        background-color: transparent!important;
         @media only screen and (max-width: 768px){
-            height: 68x!important;
+            background-color: black!important;
         }
+    }
 
-        .opacity1{
-            background-color: rgb(255, 255, 255)!important; 
-            box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.06);
-            transition: background-color .5s ease-in-out;
-            height: 50px;
-            }
-        .opacity0{
-            transition: background-color .5s ease-in-out;    
+    .background{
+        position: relative;
+        z-index: 9999;
+        transition: height, background-color .4s ease-in;
+        
+        @media only screen and (max-width: 768px){
+            background-color: black;
+            border-bottom: 3px solid #404040;
+        }
+        
+        .navbar{
+            transition: height .4s ease-in-out;
             background-color: transparent!important;
-            @media only screen and (max-width: 768px){
-                background-color: black!important;
-            }
-        }
-
-        .background{
-            position: relative;
-            z-index: 9999;
-            transition: height, background-color .4s ease-in;
             
             @media only screen and (max-width: 768px){
-                background-color: black;
-                border-bottom: 3px solid #404040;
+                padding: 0!important; 
+                /* height: 68x!important; */
             }
-           
-            .navbar{
-                transition: height .4s ease-in-out;
-                background-color: transparent!important;
+            
+            .menu{
+                height: 70px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: transparent;
+                transition: background-color .4s ease-in-out;
+                @media only screen and (max-width: 768px){
+                    width: 100%;
+                    height: 50px;
+                    
+                }
+
+                .navbar-brand{
+                    
+                    font-size: 30px;
+                    font-weight: bold;
+                    font-family: 'Kaushan Script', Arial, Helvetica, sans-serif;
+                    padding: 0px 0 7px 0;
+                    margin-bottom: 9px;
+                    margin-left: 2em !important;
+                    letter-spacing: 3px;
+                    @media only screen and (max-width: 768px){
+                        font-size: 26px;
+                        margin-left: -.5em!important;
+                    }
+                    
+                }
+                .logo{
+                    color: #ff6e19;
+                    position: relative;
+                    border-bottom: 1px solid rgba(128,128,126,0.51961);
+                    transition: transform .3s ease-in;
+                    @media only screen and (max-width: 768px){
+                        transform: scale(.7)!important;
+                    }
+                    &::after{
+                        content: 'FrontEnd Dev.';
+                        font-family: none;
+                        font-size: 1rem;
+                        position: absolute;
+                        bottom: -12px;
+                        right: 50%;
+                        transform: translate(50%);
+                        color: #a9a7a7b3;;
+                    }
+                }
+                
+                
+        
+                .navbar-toggler {
+                    color: #ff6e19;
+                    /* position: absolute;
+                    right: 1em;
+                    top: .5em;
+                    height: 50px;
+                    width: 50px; */
+                    margin-right: .4em;
+                    transform: scale(1.5);
+                    border: none;
+                    outline: none;
+                    overflow: hidden;
+                    svg{
+                        
+                        &:first-child{
+                            position: relative;
+                            top: 4rem;
+                            left: 50%;
+                            transform:translateX(-50%);
+                            transition: .8s top cubic-bezier(0.075, 0.82, 0.165, 1),  .8s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
+                            opacity: 0;
+                           &.hamb-in{
+                                opacity: 1;
+                                animation: hamburguer;
+                                transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                                animation-duration: .8s;
+                                animation-iteration-count: 1;
+                                animation-fill-mode:forwards;
+                           }
+                            @keyframes hamburguer {
+                                0% { top:0;}
+                                50% { top:0.1rem;}
+                                100% { top:0;}
+                            }
+                        }
+                        &:last-child{
+                            position: relative;
+                            top: -4rem;
+                            right: 50%;
+                            transform:translateX(50%);
+                            transition: .8s top cubic-bezier(0.075, 0.82, 0.165, 1), .8s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
+                            opacity: 0;
+                            &.times-in{
+                                opacity: 1;
+                                animation: times;
+                                transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                                animation-duration: .8s;
+                                animation-iteration-count: 1;
+                                animation-fill-mode:forwards;
+                            }
+                            @keyframes times {
+                                0% { top:0;}
+                                50% { top:-0.1rem;}
+                                100% { top:0;}
+                            }
+                        }
+                    }
+                    
+                    
+                }
+
+                .my-toggle{
+                    @media only screen and (max-width: 768px){
+                    // margin-right: .5em!important;
+                    }
+                }
+
+                
+                
+                
+
+            }
+        
+            .menu-in{
+                
+                position: absolute;
+                right: 4em;
                 
                 @media only screen and (max-width: 768px){
-                    padding: 0!important; 
-                    /* height: 68x!important; */
+                    visibility: hidden;
+                    right: unset;
+                    width: 100vw;
+
+                    &.active-menu{
+                        visibility: visible;
+                    }
                 }
-                
-                .menu{
-                    height: 70px;
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    background-color: transparent;
-                    transition: background-color .4s ease-in-out;
+
+                .navbar-nav{
+                        
+                    transition: background-color .5s ease-in-out;
+                    /*  background-color: #8c795ff3; */
+                    border-radius: 10px;
                     @media only screen and (max-width: 768px){
-                        width: 100%;
-                        height: 50px;
-                      
+                        background: #6b6b6b;
+                        border-bottom: 3px solid #404040;
+                        border-radius: 0px;
+                        padding-bottom: 0px; 
                     }
-
-                    .navbar-brand{
-                        
-                        font-size: 30px;
-                        font-weight: bold;
-                        font-family: 'Kaushan Script', Arial, Helvetica, sans-serif;
-                        padding: 0px 0 7px 0;
-                        margin-bottom: 9px;
-                        margin-left: 2em !important;
-                        letter-spacing: 3px;
+                    .nav-item{
+                        font-size: 19px;
                         @media only screen and (max-width: 768px){
-                            font-size: 26px;
-                            margin-left: -.5em!important;
-                        }
-                        
-                    }
-                    .logo{
-                        color: #ff6e19;
-                        position: relative;
-                        border-bottom: 1px solid #80807e38;
-                        transition: transform .3s ease-in;
-                        @media only screen and (max-width: 768px){
-                            transform: scale(.7)!important;
-                        }
-                        &::after{
-                            content: 'FrontEnd Dev.';
-                            font-family: none;
-                            font-size: 1rem;
-                            position: absolute;
-                            bottom: -11px;
-                            right: 50%;
-                            transform: translate(50%);
-                            color: #a9a7a7b3;;
-                        }
-                    }
-                    
-                   
-            
-                    .navbar-toggler {
-                        color: #ff6e19;
-                        /* position: absolute;
-                        right: 1em;
-                        top: .5em;
-                        height: 50px;
-                        width: 50px; */
-                        margin-right: .4em;
-                        transform: scale(1.5);
-                        border: none;
-                        outline: none;
-                        
-                    }
+                            
+                            line-height: 3!important;
+                            box-shadow: inset 0px 3px 11px 0px rgba(0, 0, 0, 0.65), 0px 3px 3px 0px rgba(0, 0, 0, 0.65);
+                            
 
-                    .my-toggle{
-                        @media only screen and (max-width: 768px){
-                        // margin-right: .5em!important;
                         }
-                    }
-
-                   
-                    
-                    
-
-                }
-            
-                .menu-in{
-                    
-                    position: absolute;
-                    right: 4em;
-                    
-                    @media only screen and (max-width: 768px){
-                       visibility: hidden;
-                       right: unset;
-                       width: 100vw;
-
-                       &.active-menu{
-                           visibility: visible;
-                       }
-                    }
-
-                    .navbar-nav{
-                         
-                        transition: background-color .5s ease-in-out;
-                       /*  background-color: #8c795ff3; */
-                        border-radius: 10px;
-                        @media only screen and (max-width: 768px){
-                            background: #6b6b6b;
-                            border-bottom: 3px solid #404040;
-                            border-radius: 0px; 
-                        }
-                        .nav-item{
-                            font-size: 19px;
+                        .nav-link{
+                            position: relative;
+                            transition: color .5s ease-in-out;
+                            color: white;
+                            padding-right: .6rem;
+                            padding-left: .6rem;
                             @media only screen and (max-width: 768px){
-                                line-height: 2!important;
+                                filter:drop-shadow(1px 1px 3px black);
+                                padding-left: 1.3rem;
                             }
-                            .nav-link{
-                                position: relative;
-                                transition: color .5s ease-in-out;
-                                color: white;
-                                padding-right: .6rem;
-                                padding-left: .6rem;
+                            
+                            &::after{
+                                content: "";
+                                position: absolute;
+                                top: 25%;
+                                left: 21px;
+                                right: 21px;
+                                color: #ff6e19;
+                                display: block;
+                                border-bottom: 3px solid currentColor;
+                                height: 40px !important;
+                                transform: scaleX(0);
+                                transform-origin: left;
+                                transition: transform .25s ease-in;
                                 
-                                &::after{
-                                    content: "";
-                                    position: absolute;
-                                    top: 1px;
-                                    left: 8px;
-                                    right: 8px;
-                                    color: #ff6e19;
-                                    display: block;
-                                    border-bottom: 3px solid currentColor;
-                                    height: 40px !important;
-                                    transform: scaleX(0);
-                                    transform-origin: left;
-                                    transition: transform .25s ease-in;
-                                    
-                                } 
+                            } 
 
 
-                                &:hover::after,  &:active::after{
-                                    transform: scaleX(1);
-                                   
-                                }
-                               
+                            &:hover::after,  &:active::after{
+                                transform: scaleX(1);
                                 
                             }
-
-                            .nav-link:hover, .nav-link:active{
-                                background-color: transparent;
-                                &::after{
-                                    transform: scaleX(1);
-                                    transform-origin: left;
-                                }
-                               
-                               /*  @media only screen and (max-width: 768px){
-                                    padding-left: 1.5em;
-                                } */
-                            }
+                            
+                            
                         }
-                        
+
+                        .nav-link:hover, .nav-link:active{
+                            background-color: transparent;
+                            &::after{
+                                transform: scaleX(1);
+                                transform-origin: left;
+                            }
+                            
+                            /*  @media only screen and (max-width: 768px){
+                                padding-left: 1.5em;
+                            } */
+                        }
                     }
+                    
                 }
             }
         }
+    }
         
     }
 
