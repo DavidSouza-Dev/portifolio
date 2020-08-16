@@ -1862,6 +1862,12 @@ main{
 					z-index: 2;
 					position: relative;
 					display: inherit;
+					&:hover, &:active{
+						color:#ff6e19;
+						a{
+							color:#ff6e19;
+						}
+					}
 					svg{
 						margin-right: 30px;
 						margin-left: 4px;
