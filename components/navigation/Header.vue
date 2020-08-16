@@ -24,8 +24,8 @@
                 
                 </div>
                 
-                <b-collapse id="nav-collapse" is-nav>
-                <div class="menu-in" id="teste" :class=" !active == true ? 'active-menu' : ''">
+                <b-collapse id="nav-collapse"  is-nav>
+                <div class="menu-in" id="teste" :class=" active == true ? '' : 'active-menu'">
                     <b-navbar-nav>
                         <b-nav-item target="#ds-home" @click="active=true; clickScroll($event)">Home</b-nav-item>
                         <b-nav-item target="#ds-quem-sou" @click="active=true; clickScroll($event)">Quem sou eu?</b-nav-item>
@@ -34,8 +34,10 @@
                         <b-nav-item href="#cases" @click="active=true">Cases</b-nav-item> -->
                         <b-nav-item target="#ds-contato" @click="active=true; clickScroll($event)">Contato</b-nav-item>
                     </b-navbar-nav>
-                    <div class="ds-background-menu" :class=" !active == true ? 'active-bg':'' " @click="active=!active"></div>
+                    
                 </div>
+                <b-navbar-toggle class="ds-background-menu" :class=" active == true ? '':'active-bg' " @click="active=true" target="nav-collapse" ></b-navbar-toggle>
+                
                 </b-collapse>
             </b-navbar>
             </div>
@@ -102,6 +104,12 @@ export default {
             }
            
         },
+        removeShow: function(){
+            var el = document.querySelector('.navbar-collapse');
+            if((el.className.match('show')[0] == 'show') && this.active){
+                el.classList.remove('show')
+            }
+        }
 
         
     },
@@ -425,17 +433,23 @@ export default {
                     }
                     
                 }
-                @media only screen and (max-width: 768px){
-                    /* .ds-background-menu{
-                        position: fixed;
-                        height: 100vh;
-                        width: 100vw;
-                        background: unset;
-                        transition: 1s background ease-in-out;
-                        &.active-bg{
-                            background: rgba(0, 0, 0, 0.81);    
-                        }
-                    } */
+                
+            }
+            @media only screen and (max-width: 768px){
+                .ds-background-menu{
+                    position: fixed;
+                    height: 100vh;
+                    width: 100vw;
+                    background: unset;
+                    /* transition: .5s background ease-in-out;
+                    transition-delay: 2s; */
+                    border: none;
+                    outline: none;
+                    &.active-bg{
+                       /*  transition: 1s background ease-in-out;
+                        transition-delay: 0s;
+                        background: rgba(0, 0, 0, 0.81);    */ 
+                    }
                 }
             }
         }
