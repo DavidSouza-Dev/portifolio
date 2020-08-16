@@ -132,6 +132,10 @@
 						<font-awesome-icon :icon="['fab', 'skype']"/>  
 						Skype: daviiid.souza
 					</p>
+					<p  class="cv">
+						<font-awesome-icon :icon="['fa', 'file-invoice']"/>  
+						<a :href="cv.loc"  target="_blank"	>{{cv.title}}</a>
+					</p>
 				</div>				
 			</b-container>
 		</b-container>
@@ -418,6 +422,7 @@ import $ from 'jquery'
 import Vue from 'vue'
 import Typed from 'typed.js';
 import VueTypedJs from 'vue-typed-js'
+import fileTemplate from "../static/files/CV Front-End David Souza.pdf";
 
 Vue.use(VueTypedJs)
 
@@ -428,6 +433,7 @@ export default {
 	},
 	data() {
 		return {
+			cv:	{title:"Baixar Currículo", loc:require('../static/files/CV Front-End David Souza.pdf') },
 			owli:{
 				img: require("../static/assets/siteOwli.jpg"),
 				desc: "Owli Administradora"
@@ -1850,6 +1856,21 @@ main{
 						margin-right: 28px;
 						margin-left: 2px;
     					font-size: 23px;
+					}
+				}
+				.cv{
+					z-index: 2;
+					position: relative;
+					display: inherit;
+					svg{
+						margin-right: 30px;
+						margin-left: 4px;
+    					font-size: 23px;
+					}
+					a{
+						text-decoration: none;
+						color: white;
+						
 					}
 				}
 				

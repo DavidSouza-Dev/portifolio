@@ -27,12 +27,12 @@
                 <b-collapse id="nav-collapse" is-nav>
                 <div class="menu-in" id="teste" :class=" !active == true ? 'active-menu' : ''">
                     <b-navbar-nav>
-                        <b-nav-item href="#ds-home" @click="active=true; clickScroll($event)">Home</b-nav-item>
-                        <b-nav-item href="#ds-quem-sou" @click="active=true">Quem sou eu?</b-nav-item>
-                        <b-nav-item href="#ds-conhecimento" @click="active=true">Conhecimentos</b-nav-item>
+                        <b-nav-item target="#ds-home" @click="active=true; clickScroll($event)">Home</b-nav-item>
+                        <b-nav-item target="#ds-quem-sou" @click="active=true; clickScroll($event)">Quem sou eu?</b-nav-item>
+                        <b-nav-item target="#ds-conhecimento" @click="active=true; clickScroll($event)">Conhecimentos</b-nav-item>
                         <!-- <b-nav-item href="#tecnologias" @click="active=true">Tecnologias</b-nav-item>
                         <b-nav-item href="#cases" @click="active=true">Cases</b-nav-item> -->
-                        <b-nav-item href="#ds-contato" @click="active=true">Contato</b-nav-item>
+                        <b-nav-item target="#ds-contato" @click="active=true; clickScroll($event)">Contato</b-nav-item>
                     </b-navbar-nav>
                     <div class="ds-background-menu" :class=" !active == true ? 'active-bg':'' " @click="active=!active"></div>
                 </div>
@@ -90,23 +90,19 @@ export default {
         },
         clickScroll: function(event){
             var element = event.target.attributes.target.value;
-            console.log(element)
-            /* .nav-item:nth-child(1) > a */
-            /* document.querySelector('.nav-item:nth-child(1) > a').addEventListener('click', function(){
-                window.scroll({
-                    top: 0, 
-                    left: 0, 
-                    behavior: 'smooth' 
-                });
-            }) */
+            var el = document.querySelector(element); //get element
+            if(window.innerWidth > 768){
+                if(element == '#ds-home'){
+                    $("HTML, BODY").animate({scrollTop: el.offsetTop}, 500)
+                }else{
+                    $("HTML, BODY").animate({scrollTop: el.offsetTop+490}, 500)
+                }
+            }else{
+                $("HTML, BODY").animate({scrollTop: el.offsetTop+250}, 500)
+            }
+           
         },
 
-        clickMenu (){
-            var el = document.querySelector('.x-title-content'); //get element
-            var position = el.getBoundingClientRect(); //method returns properties relative to the element
-            var target = window.innerWidth > 500 ? position.top-200 : position.top-100; //set value if is mobile or desktop
-            $("HTML, BODY").animate({scrollTop: target}, 1000) //creating the animation
-        }
         
     },
 
@@ -429,18 +425,18 @@ export default {
                     }
                     
                 }
-                /* @media only screen and (max-width: 768px){
-                    .ds-background-menu{
-                        position: absolute;
+                @media only screen and (max-width: 768px){
+                    /* .ds-background-menu{
+                        position: fixed;
                         height: 100vh;
                         width: 100vw;
                         background: unset;
-                        //transition: .4s background ease-in-out;
+                        transition: 1s background ease-in-out;
                         &.active-bg{
                             background: rgba(0, 0, 0, 0.81);    
                         }
-                    }
-                } */
+                    } */
+                }
             }
         }
     }
