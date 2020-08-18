@@ -13,7 +13,7 @@
             data-aos-easing="ease-in-out" 
             class="texto-historia">
                 Nascido em Belém do Pará, tenho 34 anos, moro em São Paulo. Casado com a Caroline e pai da Maya <img class="pata-dog" src="../../../static/assets/animal-paw-print.png" ></p>
-                <img class="logo" style="display:none;" src="../../../static/assets/faviconexemplo.jpg" >
+                
             <p 
             class="texto-historia"
             data-aos="fade-right"
