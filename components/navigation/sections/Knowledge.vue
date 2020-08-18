@@ -64,9 +64,6 @@
 <script>
 
 import $ from 'jquery'
-import Vue from 'vue'
-import Typed from 'typed.js';
-import VueTypedJs from 'vue-typed-js'
 
 export default {
     name: 'Knowledge',

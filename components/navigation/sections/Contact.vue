@@ -28,10 +28,10 @@
                 <font-awesome-icon :icon="['fab', 'skype']"/>  
                 Skype: daviiid.souza
             </p>
-            <!-- <p  class="cv">
+            <p  class="cv">
                 <font-awesome-icon :icon="['fa', 'file-invoice']"/>  
                 <a :href="cv.loc"  target="_blank"	>{{cv.title}}</a>
-            </p> -->
+            </p>
         </div>				
     </b-container>
     </Fragment>
@@ -40,18 +40,28 @@
 <script>
 
 import $ from 'jquery'
-import Vue from 'vue'
-import Typed from 'typed.js';
-import VueTypedJs from 'vue-typed-js'
+
+import { Fragment } from 'vue-fragment'
 
 export default {
     name: 'Contact',
+    components: { Fragment },
+    props:{
+        cv: {
+      		type: Object,
+			default: '',
+			required: true
+		},
+    },
     data() {
 		return {
 			
         }
 			
     },
+    mounted(){
+        console.log(this.cv);
+    }
 }
 </script>
 
@@ -68,7 +78,6 @@ h1{
     @media only screen and (max-width: 768px){
         font-size: 30px;
         width: 100vw;
-        margin: auto;
     }
     @media only screen and (max-width: 320px){
         letter-spacing: 0px;
@@ -80,12 +89,10 @@ h1{
         bottom: -22px;
         right: 50%;
         transform: translateX(50%);
-        width: 40%;
+        width: 60%;
         height: 4px;
         background-color: #ff6e19;
-        @media only screen and (max-width: 768px){
-           width: 60%; 
-        }
+       
     }
 }
 .container{
@@ -105,10 +112,11 @@ h1{
         background-color: #424242;
         padding: 10px 10px 10px 30px;
         justify-content: center;
-        margin-top: 5rem;
+        margin-top: 3rem;
         @media only screen and (max-width: 768px){
             padding: 10px 10px 10px 15px;
-            font-size: 12px;	
+            font-size: 12px;
+             margin-top: 2rem;	
         }
         
         &::after{

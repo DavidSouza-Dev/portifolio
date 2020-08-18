@@ -33,6 +33,7 @@
     "nuxt-vuex-localstorage": "^1.2.6",
     "sass": "^1.26.10",
     "typed.js": "^2.0.11",
+    "vue-fragment": "^1.5.1",
     "vue-typed-js": "^0.1.2"
   },
   "devDependencies": {
