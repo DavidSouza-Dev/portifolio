@@ -18,126 +18,15 @@
 		</div>
 		
 		<b-container fluid  id="ds-quem-sou">
-			<b-container >
-				<div class="historia">
-					<div class="foto-historia" alt=""
-						data-aos="zoom-in"
-						
-					>
-					</div>
-					<p 
-					data-aos="fade-right"
-					data-aos-duration="1000" 
-					data-aos-easing="ease-in-out" 
-					class="texto-historia">
-						Nascido em Belém do Pará, tenho 34 anos, moro em São Paulo. Casado com a Caroline e pai da Maya <img class="pata-dog" src="../static/assets/animal-paw-print.png" ></p>
-					<p 
-					class="texto-historia"
-					data-aos="fade-right"
-					data-aos-duration="1200" 
-					data-aos-easing="ease-in-out" 
-					>
-						Formado em Ciência da Computação, atuo desde o inicio da minha carreira como profissional em TI. Recentemente me redescobri na área e hoje trabalho como Front-End Developer. Estudo muito as tecnologias relacionadas e estou muito feliz em trilhar este caminho.
-					</p>
-				</div>
-			</b-container>	
+			<WhoIam />
 		</b-container>
+
 		<b-container  fluid id="ds-conhecimento">
-			<b-container  >
-				<b-row>
-					<b-col lg="12" class="form">
-						<b-col lg="6" sm="12" class="coluna1"
-						 data-aos="fade-up"
-						 data-aos-duration="1000"
-						 data-aos-easing="ease-in-out">
-							<div class="foto-desc">
-								<div class="foto"></div>
-								<div class="desc">
-									<p><span>Nacionalidade:</span> Brasil</p>
-									<p><span>Estado Civil:</span> Casado</p>
-									<p><span>Perfil:</span> Desenvolvedor Front-End</p>
-									<p><span>Formação:</span> Bacharel em Ciência da Computação</p>
-								</div>
-							</div>
-							
-						</b-col>
-						<b-col lg="6" sm="12" class="coluna2"
-							data-aos="fade-up" 
-							data-aos-duration="1000"
-							data-aos-easing="ease-in-out">
-							<div class="habilidades">
-								<h5>Habilidades</h5>
-								<!-- <p class="detalhe">Proficiência no trabalho de equipe </p>
-								<div class="bar" 
-									data-aos="fade-right"
-									data-aos-duration="3000"
-									data-aos-easing="ease-in-out"
-								></div> -->
-								<p class="detalhe">Vanilla</p>
-								<div class="bar"></div>
-								<p class="detalhe">JQuery </p>
-								<div class="bar"></div>
-								<p class="detalhe">KnockoutJS </p>
-								<div class="bar"></div>
-								<p class="detalhe">Pré-processador CSS - SASS/LESS </p>
-								<div class="bar"></div>  
-								<p class="detalhe"> Padrão de Arquitetura CSS - BEM </p>
-								<div class="bar"></div>
-								<p class="detalhe">API REST </p>
-								<div class="bar"></div>
-								<p class="detalhe">Wordpress </p>
-								<div class="bar"></div>
-								<p class="detalhe">Controladores de Versão GIT </p>
-								<div class="bar"></div>
-								<p class="detalhe">Plataforma Oracle Commerce Cloud</p>
-								<div class="bar"></div>
-								<p class="detalhe">ReactJs</p>
-								<div class="bar"></div>
-								<p class="detalhe">Vuejs </p>
-								<div class="bar"></div>
-							</div>
-							
-						</b-col>
-					</b-col>
-				</b-row>
-			</b-container>
+			<Knowledge/>
 		</b-container>
 		
 		<b-container fluid id="ds-contato">
-			<h1 data-aos="zoom-out"
-				data-aos-duration="1000"
-				data-aos-easing="ease-in-out"
-
-			>
-				Entre em Contato ; )
-
-			</h1>
-			<b-container >
-				
-				<div class="card" 
-					data-aos="zoom-in"
-					data-aos-duration="600"
-					data-aos-easing="ease-in-out"
-				>
-					<!-- <p><span>Entre em contato</span> ;)</p> -->
-					<p  class="mail">
-						<font-awesome-icon :icon="['fa', 'envelope']"/>  
-						E-mail: davidrs.souza@gmail.com
-					</p>
-					<p  class="tel">
-						<font-awesome-icon :icon="['fa', 'mobile-alt']"/>  
-						Telefone: (11) 994886041
-					</p>				
-					<p  class="skype">
-						<font-awesome-icon :icon="['fab', 'skype']"/>  
-						Skype: daviiid.souza
-					</p>
-					<p  class="cv">
-						<font-awesome-icon :icon="['fa', 'file-invoice']"/>  
-						<a :href="cv.loc"  target="_blank"	>{{cv.title}}</a>
-					</p>
-				</div>				
-			</b-container>
+			<Contacts/>
 		</b-container>
 
 		<!-- a partir daqui o content está oculto para possivelmente ser usado no futuro -->
@@ -424,12 +313,18 @@ import Typed from 'typed.js';
 import VueTypedJs from 'vue-typed-js'
 import fileTemplate from "../static/files/CV Front-End David Souza.pdf";
 
+import Knowledge from '~/components/navigation/sections/Knowledge.vue'
+import WhoIam from '~/components/navigation/sections/WhoIam.vue'
+import Contact from '~/components/navigation/sections/Contact.vue'
+
 Vue.use(VueTypedJs)
 
 export default {
 	layout: 'default',
 	components: {
-		
+		Knowledge,
+	 	WhoIam,
+		Contact,
 	},
 	data() {
 		return {
@@ -479,31 +374,11 @@ export default {
 			}) 
 
 		},
-		efeitoBars: function(event){
-			 $(window).scroll(function () { 
-				let menuResposivo = $(".navbar-nav")
-				
-				let scroll = $(window).scrollTop();
-				if(scroll >= 1500 && scroll<=2000)
-					$(".bar").css({ "transform": "scaleX(1)"})
-				else
-					$(".bar").css({ "transform": "scaleX(0)"})
-
-				if(menuResposivo.width()< 768){
-					$(".bar").css({ "transform": "scaleX(1)"})
-				}
-
-
-			 });
-
-		}
+		
 	},
 
 	mounted() {
 		this.efeitoModal();
-		/* this.EfeitoDigitacao(); */
-		this.efeitoBars();
-		
 	}, 
 	
 }
@@ -668,155 +543,11 @@ main{
 			height: 760px;
 		}
 
-		.container{
-			background-color: transparent;
-			color: white;
-			font-size: 19px;
-			
-		}
-		.historia{
-			margin:10px;
-			@media only screen and (max-width: 375px){
-			margin: 0;
-			}
-			p:nth-child(3){
-				margin-top:0px!important;
-			}
-			.foto-historia{
-				filter: grayscale(1);
-				margin-top: 40px;
-				background-image: url("../static/assets/foto.jpg");
-				background-size: 100%;
-				background-position: 30% 40%;
-				transform: rotate(10deg) scale(1.3); 
-				background-repeat: no-repeat;
-				border-radius: 50%;
-				height: 200px;
-				width: 200px;
-				margin-left: auto;
-				margin-right: auto;
-				@media only screen and (max-width: 768px){
-					transform: rotate(10deg) scale(1.2);
-					margin-top: 0;
-            	}
-				@media only screen and (max-width: 375px){
-					margin-top: 10px;
-				}
-			}
-			.texto-historia{
-				margin-top: 60px;
-				font-weight: 100;
-				text-align: justify;
-				@media only screen and (max-width: 768px){
-					font-size: 18px;
-					text-align: center;
-					
-            	}
-				@media only screen and (max-width: 325px){
-					font-size: 17px;
-					margin-top: 25px;
-				}
-			}
-			.pata-dog{
-				filter: invert(1);
-				opacity: .7;
-				background-size: 10%;
-				background-repeat: no-repeat;
-				
-				height: 13px;
-				width: 13px;
-				margin-bottom: 3px;
-			}
-		}
+		
 	}
 
 	#ds-conhecimento{
-	
 		height: 800px;
-		.container{
-			border: 1px solid transparent;
-			height:600px;
-			@media only screen and (max-width: 768px){
-				height:auto;
-			}
-			filter: drop-shadow(0px 2px 2px $cor-padrao);
-			.form{
-				display: flex;
-				padding-top: 60px;
-				@media only screen and (max-width: 768px){
-					flex-direction: column; 
-					padding-top: 0px;         
-				}
-			}
-			.coluna1{
-				padding-top: 20px;
-				/* 	width:40%; */
-				padding: 0;
-				
-    			.foto-desc{
-					margin-top: 20px;
-					display:flex;
-					justify-content: space-evenly;
-					margin-bottom: 30px;
-					.foto{
-						border-radius: 6px;
-						background-size: 100%;
-						width: 150px;
-						height: 175px;
-						background-size: 110%;
-						background-image: url(../static/assets/fotoIndice.png);
-						background-repeat: no-repeat;
-						margin-right: 30px;
-						@media only screen and (max-width: 768px){
-							margin-right: 30px;
-						}
-					}
-					.desc{
-						font-size:15px;
-						line-height: 1.5;
-						@media only screen and (max-width: 768px){
-                           font-size: 13px;
-                        }
-						span{
-							font-weight: 600;
-						}
-					}
-				}
-				
-
-				
-				
-			}
-			.coluna2{
-				/* width:60%; */
-				.habilidades{
-					padding-left: 30px;
-					@media only screen and (max-width: 768px){
-						padding-left: 0;
-					}
-					h5{
-						margin-bottom: 1.2rem;
-					}
-					.detalhe{
-						margin-bottom: 0.5rem!important;
-						line-height: .8;
-						@media only screen and (max-width: 768px){
-                           font-size: 13px
-                        }
-					}
-					.bar{
-						height: 1px;
-						width: 100%;
-						background-color: #ff6e19;
-						margin-bottom: 1.5rem!important;
-						transform: scaleX(0);
-						transform-origin: left;
-						transition: transform .7s ease-in;
-					}
-					
-				}
-			}
-		}	
 	}
 
 	#ds-tecnologias{
@@ -1768,122 +1499,7 @@ main{
 		display: flex;
 		flex-direction: column;
 		padding-top: 60px;
-		h1{
-			position: relative;
-			color: white;
-			font-weight: bold!important;
-			letter-spacing: 2px;
-			font-size: 35px;
-			font-weight: 500!important;
-			text-align: center;
-			@media only screen and (max-width: 768px){
-				font-size: 30px
-			}
-			@media only screen and (max-width: 320px){
-				letter-spacing: 0px;
-				font-size: 27px
-			}
-			&::before{
-				content: "";
-				position: absolute;
-				bottom: -22px;
-				transform: translateX(36%);
-				width: 60%;
-				height: 4px;
-				background-color: #ff6e19;
-			}
-		}
-		.container{
-			display: flex;
-			justify-content: space-evenly;
-			align-items: center;
-			background-color: #424242;
-			.card{
-				height: 220px;
-				position: relative;
-				color: white;
-				font-weight: 700;
-				width: 700px;
-				background-color: #424242;
-				padding: 10px 10px 10px 30px;
-				justify-content: center;
-				@media only screen and (max-width: 768px){
-					padding: 10px 10px 10px 15px;
-					font-size: 12px;	
-				}
-				
-				&::after{
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-					opacity: .2;
-					background-image: url("../static/assets/pngguru.com-id-nzsxy.png");
-					background-size: 68%;
-					background-position: 123% 0;
-					background-repeat: no-repeat;
-					filter: grayscale(1);
-					box-shadow: 0px 0px 3px 1px;
-
-				}
-				.mail{
-					z-index: 2;
-					position: relative;
-					display: inherit;
-					svg{
-						margin-right: 25px;
-    					font-size: 23px;
-					}
-					
-				}
-				.tel{
-					z-index: 2;
-					position: relative;
-					display: inherit;
-					svg{
-						margin-right: 30px;
-						font-size: 23px;
-						margin-left: 4px;
-					}
-				}
-				.skype{
-					z-index: 2;
-					position: relative;
-					display: inherit;
-					svg{
-						margin-right: 28px;
-						margin-left: 2px;
-    					font-size: 23px;
-					}
-				}
-				.cv{
-					z-index: 2;
-					position: relative;
-					display: inherit;
-					&:hover, &:active{
-						color:#ff6e19;
-						a{
-							color:#ff6e19;
-						}
-					}
-					svg{
-						margin-right: 30px;
-						margin-left: 4px;
-    					font-size: 23px;
-					}
-					a{
-						text-decoration: none;
-						color: white;
-						
-					}
-				}
-				
-
-			}	
-			
-		}
+		
 		
 	}
 
