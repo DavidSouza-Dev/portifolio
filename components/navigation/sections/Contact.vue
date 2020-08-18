@@ -66,7 +66,9 @@ h1{
     font-weight: 500!important;
     text-align: center;
     @media only screen and (max-width: 768px){
-        font-size: 30px
+        font-size: 30px;
+        width: 80vw;
+        margin: auto;
     }
     @media only screen and (max-width: 320px){
         letter-spacing: 0px;
@@ -88,6 +90,9 @@ h1{
     justify-content: space-evenly;
     align-items: center;
     background-color: #424242;
+    @media only screen and (max-width: 768px){
+        width:80vw;
+    }
     .card{
         height: 220px;
         position: relative;
