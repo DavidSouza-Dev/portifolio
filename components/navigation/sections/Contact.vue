@@ -83,6 +83,9 @@ h1{
         width: 40%;
         height: 4px;
         background-color: #ff6e19;
+        @media only screen and (max-width: 768px){
+           width: 60%; 
+        }
     }
 }
 .container{
@@ -91,7 +94,7 @@ h1{
     align-items: center;
     background-color: #424242;
     @media only screen and (max-width: 768px){
-        width:80vw;
+        width:85vw;
     }
     .card{
         height: 220px;
@@ -102,7 +105,7 @@ h1{
         background-color: #424242;
         padding: 10px 10px 10px 30px;
         justify-content: center;
-        margin-top: 2rem;
+        margin-top: 3rem;
         @media only screen and (max-width: 768px){
             padding: 10px 10px 10px 15px;
             font-size: 12px;	
