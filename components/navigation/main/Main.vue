@@ -91,7 +91,9 @@ main{
 			text-align: center;
 			color: white;
 			font-size: 60px;
+            margin-top: -8rem;
 			@media only screen and (max-width: 768px){
+                margin-top: unset;  
 				font-size: 32px;
 			}
 			@media only screen and (max-width: 320px){
@@ -170,7 +172,5 @@ main{
 		
 		
 	}
-
-
 }
 </style>
