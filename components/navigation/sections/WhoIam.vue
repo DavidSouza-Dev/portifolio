@@ -3,6 +3,7 @@
         <div class="historia">
             <div class="foto-historia" alt=""
                 data-aos="zoom-in"
+                data-aos-easing="ease-in-out"
                 
             >
             </div>

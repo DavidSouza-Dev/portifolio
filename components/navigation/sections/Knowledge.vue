@@ -76,16 +76,22 @@ export default {
     methods:{
         efeitoBars: function(event){
             $(window).scroll(function () { 
-            let menuResposivo = $(".navbar-nav")
-            
-            let scroll = $(window).scrollTop();
-            if(scroll >= 1500 && scroll<=2000)
+            let menuResposivo = $(".navbar-nav"),
+                scrollWindow = $(window).scrollTop(),
+                scrollEl = document.querySelector('#ds-conhecimento').offsetTop;
+
+            if(menuResposivo.width() > 768 && scrollWindow >= scrollEl && scrollWindow <= scrollEl)
                 $(".bar").css({ "transform": "scaleX(1)"})
             else
                 $(".bar").css({ "transform": "scaleX(0)"})
 
-            if(menuResposivo.width()< 768){
+            if(menuResposivo.width() < 768 && scrollWindow >= scrollEl){
                 $(".bar").css({ "transform": "scaleX(1)"})
+            }
+            else{
+                if(menuResposivo.width() < 768 && scrollWindow <= scrollEl){
+                $(".bar").css({ "transform": "scaleX(0)"})
+            }
             }
 
 
