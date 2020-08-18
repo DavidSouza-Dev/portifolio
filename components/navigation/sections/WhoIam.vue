@@ -28,6 +28,8 @@
 
 import $ from 'jquery'
 import Vue from 'vue'
+import Typed from 'typed.js';
+import VueTypedJs from 'vue-typed-js'
 
 export default {
     name: 'WhoIam',
@@ -45,9 +47,9 @@ export default {
 <style lang="scss" scoped>
 $cor-padrao: black;
 .container{
-    background-color: transparent;
-    color: white;
-    font-size: 19px;
+    background-color: transparent!important;
+    color: white!important;
+    font-size: 19px!important;
     
 }
 .historia{

@@ -28,10 +28,10 @@
                 <font-awesome-icon :icon="['fab', 'skype']"/>  
                 Skype: daviiid.souza
             </p>
-            <p  class="cv">
+            <!-- <p  class="cv">
                 <font-awesome-icon :icon="['fa', 'file-invoice']"/>  
                 <a :href="cv.loc"  target="_blank"	>{{cv.title}}</a>
-            </p>
+            </p> -->
         </div>				
     </b-container>
     </Fragment>
@@ -41,6 +41,8 @@
 
 import $ from 'jquery'
 import Vue from 'vue'
+import Typed from 'typed.js';
+import VueTypedJs from 'vue-typed-js'
 
 export default {
     name: 'Contact',
@@ -74,8 +76,9 @@ h1{
         content: "";
         position: absolute;
         bottom: -22px;
-        transform: translateX(36%);
-        width: 60%;
+        right: 50%;
+        transform: translateX(50%);
+        width: 40%;
         height: 4px;
         background-color: #ff6e19;
     }
@@ -94,6 +97,7 @@ h1{
         background-color: #424242;
         padding: 10px 10px 10px 30px;
         justify-content: center;
+        margin-top: 2rem;
         @media only screen and (max-width: 768px){
             padding: 10px 10px 10px 15px;
             font-size: 12px;	

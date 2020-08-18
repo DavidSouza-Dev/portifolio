@@ -26,7 +26,7 @@
 		</b-container>
 		
 		<b-container fluid id="ds-contato">
-			<Contacts/>
+			<Contact/>
 		</b-container>
 
 		<!-- a partir daqui o content está oculto para possivelmente ser usado no futuro -->

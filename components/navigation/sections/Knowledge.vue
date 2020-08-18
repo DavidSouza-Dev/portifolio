@@ -68,8 +68,6 @@ import Vue from 'vue'
 import Typed from 'typed.js';
 import VueTypedJs from 'vue-typed-js'
 
-Vue.use(VueTypedJs)
-
 export default {
     name: 'Knowledge',
     data() {
