@@ -1,5 +1,7 @@
 <template>
-	 <main>
+	<Fragment>
+	<Header/>
+	<main>
 		<b-container id="ds-home"></b-container>
 		<div class="ds-foto-perfil" >
 			<div class="ds-foto-perfil__conteudo">
@@ -304,18 +306,24 @@
 			</b-container>
 		</b-container>
 	</main>
+	<Footer/>
+	</Fragment>
 </template>
 
 <script>
 import $ from 'jquery'
 import Vue from 'vue'
-import Typed from 'typed.js';
+
 import VueTypedJs from 'vue-typed-js'
 import fileTemplate from "../static/files/CV Front-End David Souza.pdf";
+import { Fragment } from 'vue-fragment'
 
 import Knowledge from '~/components/navigation/sections/Knowledge.vue'
 import WhoIam from '~/components/navigation/sections/WhoIam.vue'
 import Contact from '~/components/navigation/sections/Contact.vue'
+import Header from '~/components/navigation/header/Header.vue'
+import Footer from '~/components/navigation/footer/Footer.vue'
+
 
 Vue.use(VueTypedJs)
 
@@ -325,7 +333,11 @@ export default {
 		Knowledge,
 	 	WhoIam,
 		Contact,
+		Header,
+		Footer,
+		Fragment
 	},
+	
 	data() {
 		return {
 			cv:	{title:"Baixar Currículo", loc:require('../static/files/CV Front-End David Souza.pdf') },
@@ -338,17 +350,6 @@ export default {
 	},
 
 	methods:{
-		/* EfeitoDigitacao(){
-		 	var type = new Typed(".texto-digitado",{
-				strings: ["Desenvolvedor Front-End.", "Apaixonado por Tecnologia.", "Nascido em Belém do Pará"],
-				typeSpeed: 60,
-				startDelay: 600,
-				backSpeed: 30,
-				backDelay: 1100,
-				loop: true,
-				loopCount: 999
-			});
-		}, */
 		efeitoModal(){
 			var modal = document.getElementById("myModal");
 			var modalImg = document.getElementById("img01");
@@ -548,6 +549,17 @@ main{
 
 	#ds-conhecimento{
 		height: 800px;
+	}
+
+	#ds-contato{
+		position: relative;
+		height: 460px;
+		background-color: #424242;
+		display: flex;
+		flex-direction: column;
+		padding-top: 60px;
+		
+		
 	}
 
 	#ds-tecnologias{
@@ -1473,36 +1485,6 @@ main{
 		text-decoration: none;
 		cursor: pointer;
 	}
-
-	/* Add Animation */
-/* .modal-content, #caption {  
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
-} */
-
-	#ds-contato{
-		position: relative;
-		height: 460px;
-		background-color: #424242;
-		display: flex;
-		flex-direction: column;
-		padding-top: 60px;
-		
-		
-	}
-
 }
 
 
