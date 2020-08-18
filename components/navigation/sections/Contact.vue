@@ -67,7 +67,7 @@ h1{
     text-align: center;
     @media only screen and (max-width: 768px){
         font-size: 30px;
-        width: 80vw;
+        width: 100vw;
         margin: auto;
     }
     @media only screen and (max-width: 320px){
@@ -105,7 +105,7 @@ h1{
         background-color: #424242;
         padding: 10px 10px 10px 30px;
         justify-content: center;
-        margin-top: 3rem;
+        margin-top: 5rem;
         @media only screen and (max-width: 768px){
             padding: 10px 10px 10px 15px;
             font-size: 12px;	
