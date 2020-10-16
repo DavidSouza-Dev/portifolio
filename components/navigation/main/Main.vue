@@ -37,6 +37,7 @@
 import $ from 'jquery'
 import Vue from 'vue'
 
+import { mapGetters } from 'vuex'
 import VueTypedJs from 'vue-typed-js'
 import { Fragment } from 'vue-fragment'
 
@@ -59,7 +60,8 @@ export default {
         return{
             cv:	{title:"Baixar Currículo", loc:require('../../../static/files/CV Front-End David Souza.pdf') },
         }
-    }
+	},
+	
 }
 </script>
 

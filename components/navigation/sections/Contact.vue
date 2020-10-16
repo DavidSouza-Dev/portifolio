@@ -41,23 +41,22 @@
 
 import $ from 'jquery'
 
+import { mapGetters } from 'vuex'
 import { Fragment } from 'vue-fragment'
 
 export default {
     name: 'Contact',
     components: { Fragment },
-    props:{
-        cv: {
-      		type: Object,
-			default: '',
-			required: true
-		},
-    },
     data() {
 		return {
 			
         }
 			
+    },
+    computed: {
+		...mapGetters({
+            cv: 'store/GET_CV'
+		})
     },
     mounted(){
         console.log(this.cv);

@@ -46,6 +46,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import $ from 'jquery'
 /* https://codepen.io/zebt/pen/aGjOML */
 export default {
@@ -55,8 +56,14 @@ export default {
             active: true,
         }
     },
+    computed: {
+		...mapGetters({
+            teste: 'store/GET_TESTE'
+		})
+    },
     methods: {
         renderizaBar(){
+            console.log('teste',this.$store.state.store.teste, this.teste)
            $(window).scroll(function () {
                
                 let scroll = $(window).scrollTop();

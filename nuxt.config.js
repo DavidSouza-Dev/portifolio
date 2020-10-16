@@ -60,7 +60,7 @@ export default {
         }
       ]
     }],
-    ['nuxt-vuex-localstorage', { sessionStorage: ['posts']}]
+    ['nuxt-vuex-localstorage', { sessionStorage: ['store']}]
   ],
   /*
   ** Axios module configuration
