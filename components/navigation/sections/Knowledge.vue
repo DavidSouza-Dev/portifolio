@@ -9,6 +9,7 @@
                     data-aos-easing="ease-in-out">
                     <div class="foto-desc">
                         <div class="foto"></div>
+                        
                         <div class="desc" >
                             <p v-for="(info,index) in perfil" :key="index">
                                 <span>{{index}}:</span> {{info}}

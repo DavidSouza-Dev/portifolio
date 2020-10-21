@@ -23,7 +23,12 @@ export const state = () => ({
         {habilidade:'Task Runner Gulp'}, 
         {habilidade:'Pré-processador CSS - SASS/LESS'},
         {habilidade:'Padrão de Arquitetura CSS - BEM'},
-    ]
+    ],
+    contatos: {
+        'E-mail':{info:'davidrs.souza@gmail.com',icon:"['fa', 'envelope']"},
+        'Telefone':{info:'(11) 994886041', icon:"['fa', 'mobile-alt']"},
+        'Skype':{info:'daviiid.souza', icon:"['fab', 'skype']"},
+    }
  
 })
 
@@ -51,5 +56,8 @@ export const getters = {
     },
     GET_PERFIL: state => {
         return state.perfil
+    },
+    GET_CONTATOS: state => {
+        return state.contatos
     },
 }

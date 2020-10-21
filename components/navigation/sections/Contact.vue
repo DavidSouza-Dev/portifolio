@@ -16,15 +16,19 @@
             data-aos-easing="ease-in-out"
         >
             <!-- <p><span>Entre em contato</span> ;)</p> -->
-            <p  class="mail">
+            <!-- <p  :class="key" v-for="(item,key) in contatos" :key="key">
+                <font-awesome-icon :icon="item.icon"/>
+                {{key}}: {{item.info}}
+            </p> -->
+            <p  class="E-mail">
                 <font-awesome-icon :icon="['fa', 'envelope']"/>  
                 E-mail: davidrs.souza@gmail.com
             </p>
-            <p  class="tel">
+            <p  class="Telefone">
                 <font-awesome-icon :icon="['fa', 'mobile-alt']"/>  
                 Telefone: (11) 994886041
             </p>				
-            <p  class="skype">
+            <p  class="Skype">
                 <font-awesome-icon :icon="['fab', 'skype']"/>  
                 Skype: daviiid.souza
             </p>
@@ -57,6 +61,9 @@ export default {
     computed: {
 		...mapGetters({
             cv: 'store/GET_CV'
+        }),
+        ...mapGetters({
+            contatos: 'store/GET_CONTATOS'
         })
     },
     mounted(){
@@ -135,7 +142,7 @@ h1{
             box-shadow: 0px 0px 3px 1px;
 
         }
-        .mail{
+        .E-mail{
             z-index: 2;
             position: relative;
             display: inherit;
@@ -145,7 +152,7 @@ h1{
             }
             
         }
-        .tel{
+        .Telefone{
             z-index: 2;
             position: relative;
             display: inherit;
@@ -155,7 +162,7 @@ h1{
                 margin-left: 4px;
             }
         }
-        .skype{
+        .Skype{
             z-index: 2;
             position: relative;
             display: inherit;
