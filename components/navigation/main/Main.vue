@@ -26,7 +26,7 @@
 		</b-container>
 		
 		<b-container fluid id="ds-contato">
-			<Contact :cv="cv" />
+			<Contact  />
 		</b-container>
 
                             
@@ -56,11 +56,7 @@ export default {
 		Contact,
 		Fragment,
 	},
-    data(){
-        return{
-            cv:	{title:"Baixar Currículo", loc:require('../../../static/files/CV Front-End David Souza.pdf') },
-        }
-	},
+    
 	
 }
 </script>

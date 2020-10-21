@@ -9,7 +9,7 @@
             <b-navbar  toggleable="lg" type="light" variant="info">
                 <div class="menu">  
                     <b-navbar-brand class="logo"  href="#">
-                       DAVID SOUZA
+                       DAVID SOUZA 
                     </b-navbar-brand>
                    
                    
@@ -47,6 +47,7 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 import $ from 'jquery'
 /* https://codepen.io/zebt/pen/aGjOML */
 export default {
@@ -59,11 +60,12 @@ export default {
     computed: {
 		...mapGetters({
             teste: 'store/GET_TESTE'
-		})
+        }),
+        ...mapState({teste22:'store/cvss'})
     },
     methods: {
         renderizaBar(){
-            console.log('teste',this.$store.state.store.teste, this.teste)
+            console.log('teste',this.$store.state.store.teste, this.teste, this.$store.state.store,this.teste22)
            $(window).scroll(function () {
                
                 let scroll = $(window).scrollTop();

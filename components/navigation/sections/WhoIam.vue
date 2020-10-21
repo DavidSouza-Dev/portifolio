@@ -12,7 +12,8 @@
             data-aos-duration="1000" 
             data-aos-easing="ease-in-out" 
             class="texto-historia">
-                Nascido em Belém do Pará, tenho 34 anos, moro em São Paulo. Casado com a Caroline e pai da Maya <img class="pata-dog" src="../../../static/assets/animal-paw-print.png" ></p>
+                {{historia_1}} 
+                <img class="pata-dog" :src="paw_img" ></p>
                 
             <p 
             class="texto-historia"
@@ -20,7 +21,7 @@
             data-aos-duration="1200" 
             data-aos-easing="ease-in-out" 
             >
-                Formado em Ciência da Computação, atuo desde o inicio da minha carreira como profissional em TI. Recentemente me redescobri na área e hoje trabalho como Front-End Developer. Estudo muito as tecnologias relacionadas e estou muito feliz em trilhar este caminho.
+                {{historia_2}}
             </p>
         </div>
     </b-container>	
@@ -28,16 +29,18 @@
 
 <script>
 
+import { mapGetters } from 'vuex'
 import $ from 'jquery'
 
 export default {
     name: 'WhoIam',
-    data() {
-		return {
-			
-        }
-			
-    },
+    computed:{
+        ...mapGetters({
+            historia_1: 'store/GET_HISTORIA1',
+            historia_2: 'store/GET_HISTORIA2',
+            paw_img: 'store/GET_PAW_IMG'
+        }),
+    }
     
 
 }

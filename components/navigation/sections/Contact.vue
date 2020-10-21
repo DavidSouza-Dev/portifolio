@@ -42,6 +42,7 @@
 import $ from 'jquery'
 
 import { mapGetters } from 'vuex'
+import { mapState } from 'vuex'
 import { Fragment } from 'vue-fragment'
 
 export default {
@@ -56,7 +57,7 @@ export default {
     computed: {
 		...mapGetters({
             cv: 'store/GET_CV'
-		})
+        })
     },
     mounted(){
         console.log(this.cv);
