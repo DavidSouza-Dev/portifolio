@@ -57,8 +57,10 @@ export default {
             active: true,
         }
     },
+    
     methods: {
         renderizaBar(){
+            //console.log('teste',this.$store.state.store.teste, this.teste, this.$store.state.store,this.teste22)
            $(window).scroll(function () {
                
                 let scroll = $(window).scrollTop();

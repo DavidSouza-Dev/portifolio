@@ -11,19 +11,7 @@ export const state = () => ({
         Perfil:'Desenvolvedor Front-End',
         Formação: 'Bacharel em Ciência da Computação'
     },
-    habilidades: [
-        {habilidade:'Vanilla'}, 
-        {habilidade:'JQuery'}, 
-        {habilidade:'KnockoutJS'},
-        {habilidade:'Vue / Vuex'},
-        {habilidade:'Reactjs'},
-        {habilidade:'API REST'},
-        {habilidade:'Plataforma Oracle Commerce Cloud'}, 
-        {habilidade:'GIT'}, 
-        {habilidade:'Task Runner Gulp'}, 
-        {habilidade:'Pré-processador CSS - SASS/LESS'},
-        {habilidade:'Padrão de Arquitetura CSS - BEM'},
-    ],
+    habilidades: [],
     contatos: {
         'E-mail':{info:'davidrs.souza@gmail.com',icon:"['fa', 'envelope']"},
         'Telefone':{info:'(11) 994886041', icon:"['fa', 'mobile-alt']"},
@@ -60,4 +48,22 @@ export const getters = {
     GET_CONTATOS: state => {
         return state.contatos
     },
+}
+
+export const mutations = {
+    lista_habilidades: state => {
+        state.habilidades = [
+            {habilidade:'Vanilla'}, 
+            {habilidade:'JQuery'}, 
+            {habilidade:'KnockoutJS'},
+            {habilidade:'Vue / Vuex'},
+            {habilidade:'Reactjs'},
+            {habilidade:'API REST'},
+            {habilidade:'Plataforma Oracle Commerce Cloud'}, 
+            {habilidade:'GIT'}, 
+            {habilidade:'Task Runner Gulp'}, 
+            {habilidade:'Pré-processador CSS - SASS/LESS'},
+            {habilidade:'Padrão de Arquitetura CSS - BEM'},
+        ]
+    }
 }

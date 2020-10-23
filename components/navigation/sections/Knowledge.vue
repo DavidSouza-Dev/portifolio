@@ -47,10 +47,13 @@ import $ from 'jquery'
 export default {
     name: 'Knowledge',
     computed:{
-        ...mapGetters({
+        ...mapGetters({//aciona o getter do store.js
             habilidades: 'store/GET_HABILIDADES',
             perfil:'store/GET_PERFIL'
         }),
+    },
+    created(){
+        this.$store.commit('store/lista_habilidades') //starta o mutation, atualizando o state.
     },
     methods:{
         efeitoBars: function(event){
@@ -91,107 +94,106 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$cor-padrao: black;
+    $cor-padrao: black;
 
+    .container{
+        border: 1px solid transparent;
+        height:600px;
+        @media only screen and (max-width: 768px){
+            height:auto!important;
+            
+        }
+        filter: drop-shadow(0px 2px 2px $cor-padrao);
+        .form{
+            display: flex;
+            padding-top: 60px;
+            @media only screen and (max-width: 768px){
+                flex-direction: column; 
+                padding-top: 0px;         
+            }
+        }
+        .coluna1{
+            padding-top: 20px;
+            /* 	width:40%; */
+            padding: 0;
+            
+            .foto-desc{
+                margin-top: 20px;
+                display:flex;
+                justify-content: space-evenly;
+                margin-bottom: 30px;
+                .foto{
+                    border-radius: 6px;
+                    background-size: 100%;
+                    width: 150px;
+                    height: 175px;
+                    background-size: 110%;
+                    background-image: url('../../../static/assets/fotoIndice.png');
+                    background-repeat: no-repeat;
+                    margin-right: 30px;
+                    @media only screen and (max-width: 768px){
+                        margin-right: 30px;
+                    }
+                }
+                .desc{
+                    font-size:15px;
+                    line-height: 1.5;
+                    @media only screen and (max-width: 768px){
+                        font-size: 13px;
+                    }
+                    span{
+                        font-weight: 600;
+                    }
+                }
+            }
+            
 
-		.container{
-			border: 1px solid transparent;
-			height:600px;
-			@media only screen and (max-width: 768px){
-				height:auto!important;
+            
+            
+        }
+        .coluna2{
+            /* width:60%; */
+            .habilidades{
+                padding-left: 30px;
+                @media only screen and (max-width: 768px){
+                    padding-left: 0;
+                }
+                h5{
+                    margin-bottom: 1.2rem;
+                }
+                .detalhe{
+                    position: relative;
+                    margin-bottom: 1.5rem !important;
+                    line-height: .8;
+                    @media only screen and (max-width: 768px){
+                        font-size: 13px
+                    }
+                    &:after{
+                        position: absolute;
+                        content: '';
+                        bottom: -.4rem;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: #ff6e19;
+                        transform: scaleX(1);
+                        transition: transform .7s ease-in; 
+                    }
+                }
+                .bar{
+                    height: 1px;
+                    width: 100%;
+                    background-color: #ff6e19;
+                    margin-bottom: 1.5rem!important;
+                    transform: scaleX(0);
+                    transform-origin: left;
+                    transition: transform .7s ease-in;
+                    
+                    
+                }
                 
-			}
-			filter: drop-shadow(0px 2px 2px $cor-padrao);
-			.form{
-				display: flex;
-				padding-top: 60px;
-				@media only screen and (max-width: 768px){
-					flex-direction: column; 
-					padding-top: 0px;         
-				}
-			}
-			.coluna1{
-				padding-top: 20px;
-				/* 	width:40%; */
-				padding: 0;
-				
-    			.foto-desc{
-					margin-top: 20px;
-					display:flex;
-					justify-content: space-evenly;
-					margin-bottom: 30px;
-					.foto{
-						border-radius: 6px;
-						background-size: 100%;
-						width: 150px;
-						height: 175px;
-						background-size: 110%;
-						background-image: url('../../../static/assets/fotoIndice.png');
-						background-repeat: no-repeat;
-						margin-right: 30px;
-						@media only screen and (max-width: 768px){
-							margin-right: 30px;
-						}
-					}
-					.desc{
-						font-size:15px;
-						line-height: 1.5;
-						@media only screen and (max-width: 768px){
-                           font-size: 13px;
-                        }
-						span{
-							font-weight: 600;
-						}
-					}
-				}
-				
-
-				
-				
-			}
-			.coluna2{
-				/* width:60%; */
-				.habilidades{
-					padding-left: 30px;
-					@media only screen and (max-width: 768px){
-						padding-left: 0;
-					}
-					h5{
-						margin-bottom: 1.2rem;
-					}
-					.detalhe{
-                        position: relative;
-                        margin-bottom: 1.5rem !important;
-                        line-height: .8;
-						@media only screen and (max-width: 768px){
-                           font-size: 13px
-                        }
-                        &:after{
-                            position: absolute;
-                            content: '';
-                            bottom: -.4rem;
-                            left: 0;
-                            height: 1px;
-                            width: 100%;
-                            background-color: #ff6e19;
-                            transform: scaleX(1);
-                            transition: transform .7s ease-in; 
-                        }
-					}
-					.bar{
-						height: 1px;
-						width: 100%;
-						background-color: #ff6e19;
-						margin-bottom: 1.5rem!important;
-						transform: scaleX(0);
-						transform-origin: left;
-						transition: transform .7s ease-in;
-                        
-                        
-					}
-					
-				}
-			}
-		}	
+            }
+        }
+    }	
 	
 </style>
