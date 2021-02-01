@@ -60,8 +60,8 @@ export const mutations = {
             {habilidade:'Reactjs'},
             {habilidade:'API REST'},
             {habilidade:'Plataforma Oracle Commerce Cloud'}, 
+            {habilidade:'VTEX'}, 
             {habilidade:'GIT'}, 
-            {habilidade:'Task Runner Gulp'}, 
             {habilidade:'Pré-processador CSS - SASS/LESS'},
             {habilidade:'Padrão de Arquitetura CSS - BEM'},
         ]
