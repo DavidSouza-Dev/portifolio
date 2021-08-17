@@ -54,7 +54,6 @@ export const mutations = {
     lista_habilidades: state => {
         state.habilidades = [
             {habilidade:'Vanilla'}, 
-            {habilidade:'Reactjs'}, 
             {habilidade:'Nodejs'},
             {habilidade:'Vue / Vuex'},
             {habilidade:'Reactjs'},
