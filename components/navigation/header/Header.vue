@@ -247,7 +247,7 @@ export default {
                         transform: scale(.7)!important;
                     }
                     &::after{
-                        content: 'FrontEnd Dev.';
+                        content: 'Fullstack Dev.';
                         font-family: none;
                         font-size: 1rem;
                         position: absolute;
