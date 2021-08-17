@@ -32,10 +32,10 @@
                 <font-awesome-icon :icon="['fab', 'skype']"/>  
                 Skype: daviiid.souza
             </p>
-            <p  class="cv">
+            <!-- <p  class="cv">
                 <font-awesome-icon :icon="['fa', 'file-invoice']"/>  
                 <a :href="cv.loc"  target="_blank"	>{{cv.title}}</a>
-            </p>
+            </p> -->
         </div>				
     </b-container>
     </Fragment>

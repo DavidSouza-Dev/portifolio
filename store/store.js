@@ -54,15 +54,14 @@ export const mutations = {
     lista_habilidades: state => {
         state.habilidades = [
             {habilidade:'Vanilla'}, 
-            {habilidade:'JQuery'}, 
-            {habilidade:'KnockoutJS'},
+            {habilidade:'Reactjs'}, 
+            {habilidade:'Nodejs'},
             {habilidade:'Vue / Vuex'},
             {habilidade:'Reactjs'},
-            {habilidade:'API REST'},
+            {habilidade:'Graphql'},
             {habilidade:'Plataforma Oracle Commerce Cloud'}, 
-            {habilidade:'VTEX'}, 
+            {habilidade:'Vtex Certified'}, 
             {habilidade:'GIT'}, 
-            {habilidade:'Pré-processador CSS - SASS/LESS'},
             {habilidade:'Padrão de Arquitetura CSS - BEM'},
         ]
     }
