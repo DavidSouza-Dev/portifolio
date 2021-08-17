@@ -8,7 +8,7 @@ export const state = () => ({
     perfil:{
         Nacionalidade:'Brasileiro',
         'Estado Civil': 'Casado',
-        Perfil:'Desenvolvedor Front-End',
+        Perfil:'Desenvolvedor Full stack',
         Formação: 'Bacharel em Ciência da Computação'
     },
     habilidades: [],
