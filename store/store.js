@@ -2,7 +2,7 @@ export const state = () => ({
     teste:null,
     cv: {title:"Baixar Currículo", loc:require('../static/files/CV Front-End David Souza.pdf') },
     cvss: 'teste2234',
-    historia_1:'Nascido em Belém do Pará, tenho 35 anos, moro em São Paulo. Casado com a Caroline e pai da Maya',
+    historia_1:'Nascido em Belém do Pará, tenho 36 anos, moro em São Paulo. Casado com a Caroline e pai da Maya',
     historia_2: 'Formado em Ciência da Computação, atuo desde o inicio da minha carreira como profissional em TI. Recentemente me redescobri na área e hoje trabalho como Front-End Developer. Estudo muito as tecnologias relacionadas e estou muito feliz em trilhar este caminho.',
     paw_img:require('../static/assets/animal-paw-print.png') ,
     perfil:{
