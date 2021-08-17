@@ -5,7 +5,7 @@
 			<div class="ds-foto-perfil__conteudo">
 				<p class="ds-foto-perfil__conteudo--meu-nome">Oi! meu nome é David.</p>
 				<!-- <p class="texto-digitado"></P> -->
-				<vue-typed-js :strings="['Desenvolvedor Front-End', 'Apaixonado por Tecnologia', 'Nascido em Belém do Pará']" 
+				<vue-typed-js :strings="['Desenvolvedor Full stack', 'Apaixonado por Tecnologia', 'Nascido em Belém do Pará']" 
 					:loop="true"
 					:typeSpeed="50"
 					:startDelay="600"
